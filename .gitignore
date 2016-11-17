@@ -1,0 +1,7 @@
+#Ignored files
+
+/.sass-cache
+
+# IDE files
+
+/.idea
