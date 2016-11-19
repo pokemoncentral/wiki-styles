@@ -1,0 +1,15 @@
+////
+///     This file contains string utility functions
+////
+
+@function first-upper($string) {
+    $first: to-upper-case(str-slice($string, 1, 1));
+    $rest: str-slice($string, 2);
+    @return unquote("#{$first}#{$rest}");
+}
+
+@function str-remove($string, $start, $end: str-length($string)) {
+    $lead: str-slice($string, 1, $start - 1);
+    $trail: str-slice($string, $end + 1, str-length($string));
+    @return unquote("#{$lead}#{$trail}");
+}

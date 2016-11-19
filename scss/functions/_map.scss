@@ -1,0 +1,7 @@
+////
+///     This file contains string utility functions
+////
+
+@function map-add-alias($map, $alias, $key) {
+    @return map-set($map, $alias, map-get($map, $key));
+}
