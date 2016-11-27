@@ -1,0 +1,25 @@
+////
+///     This file contains all solid color styles
+////
+
+/**************************************************
+
+Solid color styles
+
+**************************************************/
+
+@each $name, $variants in $colors {
+
+    $aliases: get-color-aliases($name);
+
+    @each $variant, $_ in $variants {
+        @if ($variant == text) {
+            @include solid-color($name, null, $aliases, text);
+        }
+        @else {
+            @each $css-prop in $solid-color-css-props {
+                @include solid-color($name, $css-prop, $aliases, $variant);
+            }
+        }
+    }
+}

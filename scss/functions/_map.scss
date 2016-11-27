@@ -2,6 +2,14 @@
 ///     This file contains string utility functions
 ////
 
+///
+/// Adds an alias for a key of a map.
+///
+/// @param {Map} $map - The map the alias will be added to.
+/// @param {*} $alias - The alias that will be added to the map.
+/// @param {*} $key - The key which will be aliased.
+/// @return {Map} $map with $key aliased to $alias.
+///
 @function map-add-alias($map, $alias, $key) {
     @return map-set($map, $alias, map-get($map, $key));
 }

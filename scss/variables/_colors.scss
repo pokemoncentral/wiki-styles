@@ -1,5 +1,5 @@
 ////
-///     This file contains the huge color table
+///     This file contains the huge colors table.
 ////
 
 $colors: (
@@ -99,7 +99,7 @@ $colors: (
     auros: (normale: #817548, light: #ADA588, dark: #544C2F),
 
     // Anime regions
-    orange: (normale: #FF7F00, light: #FFAC59, dark: #A65300),
+    'orange': (normale: #FF7F00, light: #FFAC59, dark: #A65300),
     cristalline: (normale: #FFB200, light: #FFD36B, dark: #AE7E00),
 
     // Stats
@@ -113,30 +113,29 @@ $colors: (
     // PokéAthlon stats
     forza: (normale: #FF4131, light: #FF9494, dark: #BD2018),
     resistenza: (normale: #EECD31, light: #FFE683, dark: #C58308),
-    thlon: (normale: #90a8e0, light: #B7C6EB, dark: #5E6D92), // check aliases
+    thlon: (normale: #90a8e0, light: #B7C6EB, dark: #5E6D92),
 
     // Areas
-    // No text means 0000 - add later
-    zona-cenere: (normale: #9C8583, light: #B8A09E, dark: #856765),
-    zona-città: (normale: #D9D9D9, light: #E6E6E6, dark: #CCCCCC),
-    zona-distorsione: (normale: #5A65DB, light: #CC8562, dark: #2622A8, text: #E0FAFF),
-    zona-edificio: (normale: #A8B9BD, light: #C3D8DE, dark: #8A9CA1),
-    zona-foresta: (normale: #3A822D, light: #71AD64, dark: #34612D),
-    zona-grotta: (normale: #CC8F66, light: #E0B192, dark: #A66A42),
-    zona-lago: (normale: #66BDCC, light: #85D4DE, dark: #538FBD),
-    zona-montagna: (normale: #B8907D, light: #D4B5A7, dark: #7A5443),
-    zona-nebbia: (normale: #B5ADC7, light: #CAC1DE, dark: #9E98AD),
-    zona-neve: (normale: #DCEBEF, light: #E1EFF2, dark: #BBCDD1),
-    zona-oceano: (normale: #485CC2, light: #5A98F5, dark: #1E3F94),
-    zona-ombra: (normale: #472E63, light: #604E82, dark: #1A0A2C, text: #FFFFFF),
-    zona-palude: (normale: #7792BD, light: #BDA595, dark: #3D6633, text: #573118),
-    zona-rovine: (normale: #BFB895, light: #EBE5CA, dark: #9E9773),
-    zona-sabbia: (normale: #D6BD7C, light: #DBCFA0, dark: #B59B59),
-    zona-sottacqua: (normale: #6053AD, light: #737AC7, dark: #553894),
-    zona-spazio: (normale: #222222, light: #555555, dark: #000000, text: #FFFFFF),
-    zona-strada: (normale: #ABA9A4, light: #CFCDC7, dark: #949391),
-    zona-terra: (normale: #75C977, light: #A2E0A3, dark: #4AA14D),
-    zona-vulcano: (normale: #D20000, light: #D23434, dark: #A30000, text: #FFBC00),
+    zona_cenere: (normale: #9C8583, light: #B8A09E, dark: #856765),
+    zona_città: (normale: #D9D9D9, light: #E6E6E6, dark: #CCCCCC),
+    zona_distorsione: (normale: #5A65DB, light: #CC8562, dark: #2622A8, text: #E0FAFF),
+    zona_edificio: (normale: #A8B9BD, light: #C3D8DE, dark: #8A9CA1),
+    zona_foresta: (normale: #3A822D, light: #71AD64, dark: #34612D),
+    zona_grotta: (normale: #CC8F66, light: #E0B192, dark: #A66A42),
+    zona_lago: (normale: #66BDCC, light: #85D4DE, dark: #538FBD),
+    zona_montagna: (normale: #B8907D, light: #D4B5A7, dark: #7A5443),
+    zona_nebbia: (normale: #B5ADC7, light: #CAC1DE, dark: #9E98AD),
+    zona_neve: (normale: #DCEBEF, light: #E1EFF2, dark: #BBCDD1),
+    zona_oceano: (normale: #485CC2, light: #5A98F5, dark: #1E3F94),
+    zona_ombra: (normale: #472E63, light: #604E82, dark: #1A0A2C, text: #FFFFFF),
+    zona_palude: (normale: #7792BD, light: #BDA595, dark: #3D6633, text: #573118),
+    zona_rovine: (normale: #BFB895, light: #EBE5CA, dark: #9E9773),
+    zona_sabbia: (normale: #D6BD7C, light: #DBCFA0, dark: #B59B59),
+    zona_sottacqua: (normale: #6053AD, light: #737AC7, dark: #553894),
+    zona_spazio: (normale: #222222, light: #555555, dark: #000000, text: #FFFFFF),
+    zona_strada: (normale: #ABA9A4, light: #CFCDC7, dark: #949391),
+    zona_terra: (normale: #75C977, light: #A2E0A3, dark: #4AA14D),
+    zona_vulcano: (normale: #D20000, light: #D23434, dark: #A30000, text: #FFBC00),
 
     // PCWiki
     pcwiki: (normale: #9FC1E7, light: #E4ECF5, medium-light: #CEE0F4, dark: #437DBF, medium-dark: #779FD3),
@@ -222,33 +221,33 @@ $colors: (
 
 
 // Aliases
-
-$aliases: (
+$color-aliases: (
     coleottero: (coleot),
-    sconosciuto: (
-        '???',
-        '?',
-        "'l)_m)_ZM",
-        '6!2?2_A',
-        ',K_Pk(nome_del_giocatore)xX',
-        'B',
-        '8_8_9_5',
-        '999',
-        'Pokémaniaco',
-        'Uccello',
-        'Allen._Jr_♀',
-        'Glitch',
-        'IIIItoto',
-        'Qi_JT(nome_del_giocatore)?_POké_BB(nome_del_Pokémon)_de_W_N',
-        'x v zA',
-        "(Classe_dell'ultimo_allenatore_affrontato)",
-        '66848.04',
-        'L',
-        "'_♀_♀_'_2222_37572",
-        'Poké BB',
-        'Normale_(glitch)',
-        'normale_(glitch)'
-    ),
+    zona_coleottero: (zona_coleot),
+    //sconosciuto: (
+    //    '???',
+    //    '?',
+    //    "'l)_m)_ZM",
+    //    '6!2?2_A',
+    //    ',K_Pk(nome_del_giocatore)xX',
+    //    'B',
+    //    '8_8_9_5',
+    //    '999',
+    //    'Pokémaniaco',
+    //    'Uccello',
+    //    'Allen._Jr_♀',
+    //    'Glitch',
+    //    'IIIItoto',
+    //    'Qi_JT(nome_del_giocatore)?_POké_BB(nome_del_Pokémon)_de_W_N',
+    //    'x v zA',
+    //    "(Classe_dell'ultimo_allenatore_affrontato)",
+    //    '66848.04',
+    //    'L',
+    //    "'_♀_♀_'_2222_37572",
+    //    'Poké BB',
+    //    'Normale_(glitch)',
+    //    'normale_(glitch)'
+    //),
     md-super: (super-md),
     battle-revolution: (br),
     colosseum: (colo),
@@ -257,31 +256,31 @@ $aliases: (
     kalos-costiera: (kalosco),
     kalos-montana: (kalosmo),
     auros: (orre),
-    orange: (arancione),
+    'orange': (arancione),
     cristalline: (decolora),
     attacco-speciale: (spatk),
     difesa-speciale: (spdef),
     thlon: (pokéathlon),
-    zona-grotta: (zona-caverna, zona-cave),
-    zona-terra: (zona-land),
-    zona-foresta: (zona-bosco, zona-forest),
-    zona-nebbia: (zona-fog),
-    zona-palude: (zona-marsh),
-    zona-cenere: (zona-ash),
-    zona-rovine: (zona-ruins),
-    zona-sabbia: (zona-sand),
-    zona-lago: (zona-lake),
-    zona-oceano: (zona-ocean),
-    zona-sottacqua: (zona-underwater),
-    zona-montagna: (zona-mountain),
-    zona-vulcano: (zona-volcano),
-    zona-neve: (zona-snow),
-    zona-spazio: (zona-space),
-    zona-distorsione: (zona-distortion),
-    zona-ombra: (zona-shadow),
-    zona-edificio: (zona-palazzo, zona-building),
-    zona-strada: (zona-road),
-    zona-città: (zona-city),
+    zona_grotta: (zona_caverna, zona_cave),
+    zona_terra: (zona_land),
+    zona_foresta: (zona_bosco, zona_forest),
+    zona_nebbia: (zona_fog),
+    zona_palude: (zona_marsh),
+    zona_cenere: (zona_ash),
+    zona_rovine: (zona_ruins),
+    zona_sabbia: (zona_sand),
+    zona_lago: (zona_lake),
+    zona_oceano: (zona_ocean),
+    zona_sottacqua: (zona_underwater),
+    zona_montagna: (zona_mountain),
+    zona_vulcano: (zona_volcano),
+    zona_neve: (zona_snow),
+    zona_spazio: (zona_space),
+    zona_distorsione: (zona_distortion),
+    zona_ombra: (zona_shadow),
+    zona_edificio: (zona_palazzo, zona_building),
+    zona_strada: (zona_road),
+    zona_città: (zona_city),
     acume: (amaro),
     bellezza: (secco),
     classe: (pepato),
@@ -292,18 +291,7 @@ $aliases: (
 );
 
 // Type areas
-@each $type in join($types, map-get($aliases, coleottero)) {
+@each $type in $types {
     $alias: if($type == terra, terratipo, $type);
-    $colors: map-add-alias($colors, zona_#{$alias}, $type);
-}
-
-// Dashes
-@each $name, $variants in $colors {
-    $colors: map-add-alias($colors, str-replace($name, '-', '_'), $name);
-    $colors: map-add-alias($colors, str-replace($name, '-', ''), $name);
-}
-
-// First uppercase
-@each $name, $variants in $colors {
-    $colors: map-add-alias($colors, first-upper($name), $name);
+    $colors: map-add-alias($colors, unquote('zona_#{$alias}'), $type);
 }

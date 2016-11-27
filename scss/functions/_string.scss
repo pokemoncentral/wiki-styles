@@ -2,12 +2,29 @@
 ///     This file contains string utility functions
 ////
 
+///
+/// Turns the first letter of a string to uppercase.
+///
+/// @param {string} $string - The source string.
+/// @return {string} $source with the first letter turned to uppercase.
+///
 @function first-upper($string) {
     $first: to-upper-case(str-slice($string, 1, 1));
     $rest: str-slice($string, 2);
     @return unquote("#{$first}#{$rest}");
 }
 
+///
+/// Removes the portion of a string ranging between
+/// two indexes, bounds included. Both indexes can be
+/// negative, which means counting from the end of the
+/// string backwards.
+///
+/// @param {string} $string - The source string.
+/// @param {int} $start - Start of the slice to be removed.
+/// @param {int} $end [str-length($string)] - End of the part to be deleted.
+/// @return {string} $string with the section delimited by $start and $end removed.
+///
 @function str-remove($string, $start, $end: str-length($string)) {
     $lead: str-slice($string, 1, $start - 1);
     $trail: str-slice($string, $end + 1, str-length($string));

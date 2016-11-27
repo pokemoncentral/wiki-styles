@@ -1,5 +1,30 @@
 ////
-///     CSS styles for Pokémon Central Wiki
+///     This file is the compass compilation entry point.
 ////
 
-@import 'partials';
+///
+///     Libraries
+///
+
+@import 'compass/utilities/color/contrast';
+@import 'SassyLists';
+@import 'sassy-maps';
+
+///
+///     Custom code
+///
+
+/**************************************************
+
+CSS styles for Pokémon Central Wiki.
+
+This file is compiled from SCSS sources:
+project available on Pokémon Central GitHub,
+at https://github.com/pokemoncentral/wiki-styles
+
+**************************************************/
+
+@import 'functions/all';
+@import 'variables/all';
+@import 'mixins/all';
+@import 'partials/all';

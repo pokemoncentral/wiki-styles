@@ -1,0 +1,144 @@
+////
+///     This file groups together all map alias
+///     related functions.
+////
+
+///
+///     Aliases generation
+///
+
+///
+/// Returns a list of all standard case aliases
+/// for a given key.
+/// Standard case aliases are:
+///     * First uppercase
+///
+/// @param {*} $key - The key which will be aliased.
+/// @param {bool} $keep-original [false] - When true, $key will be in the returned list.
+/// @return {List} List of all standard case alias for $key.
+///
+/// @requires first-upper
+///
+@function make-case-aliases($key, $keep-original: false) {
+
+    $aliases: $key;
+
+    $aliases: append($aliases, first-upper($key));
+
+    $aliases: sl-unique($aliases);
+    @if not $keep-original {
+        $aliases: sl-remove($aliases, $key);
+    }
+    @return $aliases;
+}
+
+///
+/// Returns a list of all standard white spaces
+/// aliases for a given key.
+/// Standard white spaces aliases are:
+///     * Dash to underscore ('-' => '_')
+///     * Dash to empty string ('-' => '')
+///
+/// @param {*} $key - The key which will be aliased.
+/// @param {bool} $keep-original [false] - When true, $key will be in the returned list.
+/// @return {List} List of all standard white spaces alias for $key.
+///
+@function make-whitespaces-aliases($key, $keep-original: false) {
+
+    $aliases: $key;
+
+    $aliases: append($aliases, str-replace($key, '-', '_'));
+    $aliases: append($aliases, str-replace($key, '-', ''));
+
+    $aliases: sl-unique($aliases);
+    @if not $keep-original {
+        $aliases: sl-remove($aliases, $key);
+    }
+    @return $aliases;
+}
+
+///
+///     Aliases addition
+///
+
+///
+/// Adds standard case aliases for all of the
+/// keys of a map.
+/// Standard case aliases are:
+///     * First uppercase
+///
+/// @param {Map} $map - The map to which case aliases will be added.
+/// @return {Map} $map with all keys case-aliased.
+///
+/// @requires make-case-aliases
+///
+@function map-case-aliases($map) {
+
+    @each $key, $_ in $map {
+        @each $case-alias in make-case-aliases($key) {
+            $map: map-add-alias($map, $case-alias, $key);
+        }
+    }
+
+    @return $map;
+}
+
+///
+/// Adds standard white spaces aliases for all
+/// of the keys of a map.
+/// Standard white spaces aliases are:
+///     * Dash to underscore ('-' => '_')
+///     * Dash to empty string ('-' => '')
+///
+/// @param {Map} $map - The map to which white spaces aliases will be added.
+/// @return {Map} $map with all keys white-space-aliased.
+///
+/// @requires make-whitespaces-aliases
+///
+@function map-whitespaces-aliases($map) {
+
+    @each $key, $_ in $map {
+        @each $ws-alias in make-whitespaces-aliases($key) {
+            $map: map-add-alias($map, $ws-alias, $key);
+        }
+    }
+
+    @return $map;
+}
+
+///
+///     Map-specific aliases
+///
+
+///
+/// This function returns a list containing all
+/// aliases for a given color name.
+/// Said aliases are both the original name and
+/// all aliases defined in $colors-aliases, all
+/// case- and white-space aliased.
+///
+/// @param {string} $name - The name of the color whose aliases will be returned.
+/// @return {List} A list of all alias of a color name.
+///
+/// @requires make-whitespaces-aliases
+/// @requires make-case-aliases
+///
+@function get-color-aliases($name) {
+
+    $sources: map-get($color-aliases, $name);
+    $sources: if($sources, sl-prepend($sources, $name), $name);
+    $name-aliases: ();
+
+    @each $source in $sources {
+
+        $ws-aliases: make-whitespaces-aliases($source, true);
+        $source-aliases: ();
+        @each $alias in $ws-aliases {
+            $source-aliases: join($source-aliases, make-case-aliases($alias, true));
+        }
+
+        $name-aliases: join($name-aliases, $source-aliases);
+    }
+
+    @return $name-aliases;
+}

@@ -1,0 +1,14 @@
+////
+///     This file hosts all solid color variables.
+////
+
+/// Css property that will get a solid-color style.
+$solid-color-css-props: (
+    background,
+    border,
+    border-top,
+    border-right,
+    border-bottom,
+    border-left,
+    text
+);
