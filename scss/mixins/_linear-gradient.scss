@@ -1,0 +1,78 @@
+////
+////
+
+@function make-gradient-class($from-name, $from-variant, $to-name, $to-variant,
+        $conf-name: null, $sep: '-') {
+
+    $class-name: sl-to-string(sl-purge($conf-name grad $from-name $from-variant $to-name $to-variant), $sep);
+    @return unquote(".#{$class-name}");
+}
+
+@function make-linear-gradient-selector($from-name, $from-variant, $to-name, $to-variant,
+        $conf-name: null, $sep: '-') {
+
+    $selector: sl-comma-list();
+
+    @if $from-name == $to-name {
+        $aliases: get-color-aliases($from-name, whitespaces);
+
+        @each $alias in $aliases {
+            $class-name: make-gradient-class($alias, $from-variant, $alias,
+                $to-variant, $conf-name, $sep);
+            $selector: append($selector, $class-name);
+        }
+    }
+    @else {
+        $from-aliases: get-color-aliases($from-name, whitespaces);
+        $to-aliases: get-color-aliases($to-name, whitespaces);
+
+        @each $from-alias in $from-aliases {
+            @each $to-alias in $to-aliases {
+                $class-name: make-gradient-class($from-alias, $from-variant, $to-alias,
+                    $to-variant, $conf-name, $sep);
+                $selector: append($selector, $class-name);
+            }
+        }
+    }
+
+    @return $selector;
+}
+
+///
+///
+@mixin linear-gradient($conf, $from-name, $from-variant, $to-name, $to-variant,
+        $conf-name: null, $sep: '-') {
+
+    $from-hex: get-color($from-name, $from-variant);
+    $to-hex: get-color($to-name, $to-variant);
+
+    $selector: make-linear-gradient-selector($from-name, $from-variant, $to-name,
+            $to-variant, $conf-name, $sep);
+
+    @if $from-variant == normale and $to-variant == normale {
+        $normal-less: make-linear-gradient-selector($from-name, null, $to-name,
+            null, $conf-name, $sep);
+        $selector: join($selector, $normal-less);
+    }
+
+    @if $from-variant == normale {
+        $normal-less: make-linear-gradient-selector($from-name, null, $to-name,
+            $to-variant, $conf-name, $sep);
+        $selector: join($selector, $normal-less);
+    }
+
+    @if $to-variant == normale {
+        $normal-less: make-linear-gradient-selector($from-name, $from-variant, $to-name,
+            null, $conf-name, $sep);
+        $selector: join($selector, $normal-less);
+    }
+
+    #{$selector} {
+        background-image: linear-gradient($conf, $from-hex, $to-hex);
+    }
+}
+
+@mixin horizontal-gradient($from-name, $from-variant, $to-name, $to-variant) {
+    @include linear-gradient(to right, $from-name, $from-variant, $to-name,
+            $to-variant, horiz);
+}

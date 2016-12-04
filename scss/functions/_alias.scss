@@ -123,18 +123,22 @@
 /// @requires make-whitespaces-aliases
 /// @requires make-case-aliases
 ///
-@function get-color-aliases($name) {
-
+@function get-color-aliases($name, $aliases-functs: whitespaces case) {
     $sources: map-get($color-aliases, $name);
     $sources: if($sources, sl-prepend($sources, $name), $name);
     $name-aliases: ();
 
     @each $source in $sources {
+        $source-aliases: $source;
 
-        $ws-aliases: make-whitespaces-aliases($source, true);
-        $source-aliases: ();
-        @each $alias in $ws-aliases {
-            $source-aliases: join($source-aliases, make-case-aliases($alias, true));
+        @each $funct in $aliases-functs {
+            $funct-aliases: ();
+
+            @each $alias in $source-aliases {
+                $funct-aliases: join($funct-aliases, call(make-#{$funct}-aliases, $alias));
+            }
+
+            $source-aliases: join($source-aliases, $funct-aliases);
         }
 
         $name-aliases: join($name-aliases, $source-aliases);

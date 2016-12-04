@@ -2,6 +2,9 @@
 
 /.sass-cache
 
+# Compiled files
+/css/*
+
 # IDE files
 
 /.idea
