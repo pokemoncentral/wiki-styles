@@ -1,0 +1,8 @@
+////
+///     This file all fonts related variables
+////
+
+$font-families: (
+    rooney-sans-web: ("RooneySansWeb", Helvetica, Arial, sans-serif)
+);
+$font-families: map-add-alias($font-families, base, rooney-sans-web);

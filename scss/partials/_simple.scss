@@ -1,0 +1,124 @@
+////
+///     This file contains simple, single-statement
+///     CSS classes, to be used in replacement of
+///     style attributes and obsolete HTML tags.
+////
+
+/**************************************************
+
+Display classes
+
+**************************************************/
+
+.inline-block, .same-line {
+    display: inline-block;
+}
+
+.grid {
+    display: table;
+
+    > * {
+        @extend .grid-row;
+
+        > * {
+            @extend .grid-cell;
+        }
+    }
+}
+
+.grid-row {
+    display: table-row;
+
+    > * {
+        @extend .grid-cell;
+    }
+}
+
+.grid-cell {
+    display: table-cell;
+}
+
+/**************************************************
+
+Element-aligning classes
+
+**************************************************/
+
+.pull-left {
+    float: left;
+}
+
+.pull-right {
+    float: right;
+}
+
+.pull-center {
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.align-top, .pull-top {
+    vertical-align: top;
+}
+
+.align-bottom, .pull-bottom {
+    vertical-align: bottom;
+}
+
+.align-middle, .align-center {
+    vertical-align: middle;
+}
+
+/**************************************************
+
+Text-aligning classes
+
+**************************************************/
+
+.text-center, .center-text {
+    text-align: center;
+}
+
+.text-right, .right-text {
+    text-align: right;
+}
+
+.text-left, .left-text {
+    text-align: left;
+}
+
+/**************************************************
+
+Font-size classes
+
+**************************************************/
+
+.font-small, .small-font, .text-small, .small-text {
+    font-size: smaller;
+}
+
+.font-big, .big-font, .text-big, .big-text {
+    font-size: larger;
+}
+
+.font-triple-big, .triple-big-font, .text-triple-big, .triple-big-text {
+    font-size: 198%;
+}
+
+/**************************************************
+
+Clear related classes
+
+**************************************************/
+
+.clear-left {
+    clear: left;
+}
+
+.clear-right {
+    clear: right;
+}
+
+.clear-all, .clear-both {
+    clear: both;
+}

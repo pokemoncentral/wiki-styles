@@ -1,0 +1,123 @@
+////
+///     This file contains all border-radius related styles.
+////
+
+/**************************************************
+
+Border-radius classes
+
+**************************************************/
+
+// Basic border-radius classes
+@for $radius from 1 through 20 {
+    $border-radius: #{$radius}px;
+
+    .roundy-#{$radius} {
+        border-radius: $border-radius;
+    }
+
+    .roundy-tr-#{$radius} {
+        border-top-right-radius: $border-radius;
+    }
+
+    .roundy-br-#{$radius} {
+        border-bottom-right-radius: $border-radius;
+    }
+
+    .roundy-bl-#{$radius} {
+        border-bottom-left-radius: $border-radius;
+    }
+
+    .roundy-tl-#{$radius} {
+        border-top-left-radius: $border-radius;
+    }
+
+    .roundy-top-#{$radius} {
+        @extend .roundy-tl-#{$radius}, .roundy-tr-#{$radius};
+    }
+
+    .roundy-right-#{$radius} {
+        @extend .roundy-tr-#{$radius}, .roundy-br-#{$radius};
+    }
+
+    .roundy-bottom-#{$radius} {
+        @extend .roundy-bl-#{$radius}, .roundy-br-#{$radius};
+    }
+
+    .roundy-left-#{$radius} {
+        @extend .roundy-tl-#{$radius}, .roundy-bl-#{$radius};
+    }
+
+}
+
+.roundy-full {
+    border-radius: 50%;
+}
+
+// Unit-less aliases
+.roundy {
+    @extend .roundy-#{$unitless-roundyness};
+}
+
+.roundy-tr {
+    @extend .roundy-tr-#{$unitless-roundyness};
+}
+
+.roundy-br {
+    @extend .roundy-br-#{$unitless-roundyness};
+}
+
+.roundy-bl {
+    @extend .roundy-bl-#{$unitless-roundyness};
+}
+
+.roundy-tl {
+    @extend .roundy-tl-#{$unitless-roundyness};
+}
+
+.roundy-top {
+    @extend .roundy-top-#{$unitless-roundyness};
+}
+
+.roundy-right {
+    @extend .roundy-right-#{$unitless-roundyness};
+}
+
+.roundy-bottom {
+    @extend .roundy-bottom-#{$unitless-roundyness};
+}
+
+.roundy-left {
+    @extend .roundy-left-#{$unitless-roundyness};
+}
+
+// Advanced border-radius classes
+.roundy-footer {
+    tr:last-of-type {
+        td, th {
+            &:first-child {
+                @extend .roundy-bl;
+            }
+
+            &:last-child {
+                @extend .roundy-br;
+            }
+        }
+    }
+}
+
+.roundy-corners {
+    @extend .roundy-footer;
+
+    tr:first-of-type {
+        td, th {
+            &:first-child {
+                @extend .roundy-tl;
+            }
+
+            &:last-child {
+                @extend .roundy-tr;
+            }
+        }
+    }
+}

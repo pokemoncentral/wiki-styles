@@ -1,0 +1,30 @@
+////
+///     This file contains all miscellaneous styles,
+///     that don't find home anywhere else.
+////
+
+/**************************************************
+
+Miscellaneous styles
+
+**************************************************/
+
+// Table of content
+.toc {
+    @extend .roundy;
+}
+
+// Code (lua, css, etc)
+pre {
+    font-size: 90%;
+}
+
+.mw-echo-icon-pcw {
+    background-image: url('//media.pokemoncentral.it/wiki/wiki-icn.png');
+}
+
+.white-rows {
+    tbody td {
+        background-color: get-color(white);
+    }
+}

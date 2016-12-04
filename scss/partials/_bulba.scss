@@ -1,0 +1,260 @@
+////
+///     This file holds all Bulbapedia CSS
+////
+
+/**************************************************
+
+Bulbapedia styles
+
+**************************************************/
+
+table.collapsed tr.collapsable { display: none; }
+
+.sc { font-variant: small-caps; }
+
+.blueinfobox, .bluetable .bg1, .blueinfobox .bg1, .lightbluebg { background: #f8f8ff; }
+.grayinfobox, .graytable .bg1, .grayinfobox .bg1, .lightgraybg { background: #f8f8f8; }
+.blueborder { border: 1px solid #88a; }
+.grayborder { border: 1px solid #999; }
+
+.bluetable .bg2, .blueinfobox .bg2 { background: #eef; }
+.bluetable .bg3, .blueinfobox .bg3 { background: #ddf; }
+.bluetable .bg4, .blueinfobox .bg4 { background: #ccf; }
+
+.graytable .bg2, .grayinfobox .bg2 { background: #f0f0f0; }
+.graytable .bg3, .grayinfobox .bg3 { background: #e1e1e1; }
+.graytable .bg4, .grayinfobox .bg4 { background: #d2d2d2; }
+
+.bluetable, .graytable, .blueinfobox, .grayinfobox { border-collapse: collapse; }
+
+.blueinfobox, .grayinfobox {
+    float: right;
+    clear: right;
+    margin: 0 0 0.5em 0.5em;
+}
+
+.graytable, .grayinfobox { border: 1px solid #999; }
+
+.bluetable, .blueinfobox {
+    border: 1px solid #88a;
+
+    td, th {
+        border: 1px solid #88a;
+    }
+}
+
+.graytable, .grayinfobox {
+    td, th {
+        border: 1px solid #999;
+    }
+}
+
+.bluetable, .graytable, .blueinfobox {
+    td, th {
+        padding: 2px;
+    }
+}
+
+.bluetable th { background: #ccf; }
+.graytable th { background: #d2d2d2; }
+
+.bluetable th:first-child, .graytable th:first-child, .blueinfobox th, .grayinfobox th {
+    text-align: right;
+}
+
+.bluetable, .blueinfobox, .graytable, .grayinfobox {
+    .divider, .header {
+        text-align: center !important;
+    }
+}
+
+.bluetable, .blueinfobox {
+    .divider, .header {
+        background: #ccf;
+    }
+}
+
+.graytable, .grayinfobox {
+    .divider, .header {
+        background: #d2d2d2;
+    }
+}
+
+.whitelinks a { color: white !important; }
+
+div.listcol {
+    float: left;
+    clear: right;
+    padding: 0.5em 1.0em 0.5em 0;
+    margin: 0.25em;
+    min-width: 21.5%;
+    border: 1px solid #aaf;
+    line-height: 130%;
+}
+
+div.listcolend {
+    clear: both;
+}
+
+div.babelbox, div.userbox {
+    border: 1px solid #999;
+    background: #f8f8f8;
+    float: right;
+    width: 25%;
+    padding: 0.25em 0.5em;
+    margin-left: 1em;
+    margin-bottom: 0.5em;
+}
+
+table.babelitem, table.userboxitem {
+    margin: 0.25em 0;
+    width: 100%;
+}
+
+table.babelitem, table.userboxitem {
+    th {
+        width: 45pt;
+        height: 45pt;
+        font-size: 14pt;
+        text-align: center;
+        vertical-align: middle;
+    }
+}
+
+table.babelitem, table.userboxitem {
+    td {
+        font-size: 8pt;
+        line-height: 1.25em;
+        padding: 4pt;
+        text-align: left;
+    }
+}
+
+table.credits-table {
+    tr {
+        vertical-align: top;
+    }
+
+    th {
+        text-align: right;
+    }
+
+    td {
+        text-align: left;
+    }
+
+    ul {
+        padding-top: 0;
+        margin-top: 0;
+    }
+}
+
+table.learnset {
+    border: 1px solid #88a;
+    border-collapse: collapse;
+    background: white;
+
+    td, th {
+        border: 1px solid #88a; padding: 2px;
+    }
+
+    td {
+        text-align: center;
+
+        &:first-child {
+            text-align: right;
+        }
+    }
+
+    tr.learnset-header th {
+        text-align: center;
+        background: #ccf;
+    }
+}
+
+.seriesbox {
+    background: #f8f8ff;
+    border: 1px solid #88a;
+    padding: 0.5em;
+    margin: 0 0 0.5em 0.5em;
+    float: right;
+    clear: right;
+    font-size: 90%;
+
+    .title {
+        background: #ccf;
+        padding: 0.1em;
+        text-align: center;
+        font-size: 111%
+    }
+
+    ul {
+        margin-left: 0;
+        list-style: none;
+
+        ul {
+            margin-left: 1.0em;
+        }
+    }
+
+    hr {
+        border: none;
+        border-bottom: 1px solid #88a;
+    }
+}
+
+table.copytag {
+    border: 1px solid #88a;
+    background: #f8f8ff;
+    margin: 0.25em 0;
+    padding: 0;
+    width: 100%;
+
+    &-red {
+        border: 1px solid #a88;
+        background: #fdd;
+    }
+
+    &-yellow {
+        border: 1px solid #aa8;
+        background: #fffff8;
+    }
+
+    td.copytag {
+        &-text {
+            padding: 0.5em;
+            text-align: center;
+            width: 99%;
+        }
+
+        &-sym {
+            padding: 0;
+        }
+    }
+}
+
+.allpagesredirect a { font-style: italic; color: #888; }
+
+/* extra buttons for edit dialog */
+/* from commons:MediaWiki:Common.css */
+
+.my-buttons {
+    padding: 0.5em;
+
+    a {
+        color: black;
+        background-color: #ccddee !important;
+        font-weight: bold;
+        font-size: 0.9em;
+        text-decoration: none;
+        border: thin #006699 outset;
+        padding: 0 0.1em 0.1em 0.1em;
+
+        &:hover, &:active {
+            background-color: #bbccdd;
+            border-style: inset;
+        }
+    }
+}
+
+#siteSub { display:block; font-weight:normal; font-size:small; }
