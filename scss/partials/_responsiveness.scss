@@ -1,0 +1,13 @@
+////
+///     This file contains all responsive design classes
+////
+
+/**************************************************
+
+Responsive design classes
+
+**************************************************/
+
+@each $breakpoint in sl-reverse(map-keys($grid-breakpoints)) {
+    @include responsive-width($breakpoint);
+}

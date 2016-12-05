@@ -1,5 +1,6 @@
 require 'compass/import-once/activate'
 # Require any additional compass plugins here.
+require 'bootstrap'
 require 'SassyLists'
 require 'sassy-maps'
 require 'sassy-strings'

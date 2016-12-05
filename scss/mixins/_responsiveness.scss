@@ -1,0 +1,60 @@
+////
+///     This file holds utility mixins for responsive design
+////
+
+///
+/// Writes a responsive class for given breakpoint,
+/// percentage and width type.
+///
+/// @param {string} $breakpoint - The breakpoint name width classes will be written for.
+/// @param {int} $perc - The percentage the width property will have. The actual percentage is divided by 100.
+/// @param {string} $width-type - The CSS property the classes will contain, one of width, min-width or max-width.
+///
+@mixin single-value-responsive-width($breakpoint, $perc, $width-type: null) {
+    $selector: sl-to-string(sl-purge($width-type width $breakpoint $perc), '-');
+    $width-prop: sl-to-string(sl-purge($width-type width), '-');
+
+    .#{$selector} {
+        #{$width-prop}: percentage($perc / 100);
+    }
+}
+
+///
+/// Writes responsive width classes for every percentage
+/// from 5% to 100%, with a step of 5, in addition to 33%.
+/// Every class is for a single property, either width,
+/// min-width or max-width.
+///
+/// @param {string} $breakpoint - The breakpoint name width classes will be written for.
+/// @param {string} $width-type - The CSS property the classes will contain, one of width, min-width or max-width.
+///
+@mixin single-type-responsive-width($breakpoint, $width-type: null) {
+    @for $width from 1 through 20 {
+        @include single-value-responsive-width($breakpoint, $width * 5, $width-type);
+    }
+
+    @include single-value-responsive-width($breakpoint, 33, $width-type);
+}
+
+///
+/// Writes all width, min-width and max-width classes
+/// for a given breakpoint.
+///
+/// @param {string} $breakpoint - The breakpoint name width classes will be written for.
+///
+@mixin responsive-width($breakpoint) {
+    @include media-breakpoint-down($breakpoint) {
+
+        /* #{$breakpoint} width */
+
+        @include single-type-responsive-width($breakpoint, null);
+
+        /* #{$breakpoint} min-width */
+
+        @include single-type-responsive-width($breakpoint, min);
+
+        /* #{$breakpoint} max-width */
+
+        @include single-type-responsive-width($breakpoint, max);
+    }
+}
