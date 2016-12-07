@@ -1,0 +1,178 @@
+////
+///     This file contains all flexbox-related classes
+////
+
+/**************************************************
+
+Flexbox styles
+
+**************************************************/
+
+// Basic, single property classes
+
+%flex-child {
+    flex: 0 1 auto;
+}
+
+.inline-flex {
+    display: inline-flex;
+
+    > * {
+        @extend %flex-child;
+    }
+}
+
+.flex {
+    display: flex;
+
+    > * {
+        @extend %flex-child;
+    }
+
+    &-row {
+        flex-direction: row;
+    }
+
+    &-row-reverse {
+        flex-direction: row-reverse;
+    }
+
+    &-column {
+        flex-direction: row;
+    }
+
+    &-column-reverse {
+        flex-direction: row-reverse;
+    }
+
+    &-nowrap {
+        flex-wrap: nowrap;
+    }
+
+    &-wrap {
+        flex-wrap: wrap;
+    }
+
+    &-wrap-reverse {
+        flex-wrap: wrap-reverse;
+    }
+
+    &-main {
+        &-start {
+            justify-content: flex-start;
+        }
+
+        &-end {
+            justify-content: flex-end;
+        }
+
+        &-center {
+            justify-content: center;
+        }
+
+        &-space-between {
+            justify-content: space-between;
+        }
+
+        &-space-around {
+            justify-content: space-around;
+        }
+    }
+
+    &-items {
+        &-start {
+            align-items: flex-start;
+        }
+
+        &-end {
+            align-items: flex-end;
+        }
+
+        &-center {
+            align-items: center;
+        }
+
+        &-stretch {
+            align-items: stretch;
+        }
+
+        &-baseline {
+            align-items: baseline;
+        }
+    }
+
+    &-cross {
+        &-start {
+            align-content: flex-start;
+        }
+
+        &-end {
+            align-content: flex-end;
+        }
+
+        &-center {
+            align-content: center;
+        }
+
+        &-stretch {
+            align-content: stretch;
+        }
+
+        &-space-between {
+            align-content: space-between;
+        }
+
+        &-space-around {
+            align-content: space-around;
+        }
+    }
+
+    &-item-self {
+        &-start {
+            align-self: flex-start;
+        }
+
+        &-end {
+            align-self: flex-end;
+        }
+
+        &-center {
+            align-self: center;
+        }
+
+        &-stretch {
+            align-self: stretch;
+        }
+
+        &-baseline {
+            align-self: baseline;
+        }
+    }
+}
+
+// Advanced flexbox styles
+
+/* Makes the elements fill the main axis */
+
+.flex-main-stretch > * {
+    flex: 1 1 auto;
+}
+
+/*
+    Makes all elements fill the main axis
+    and be equal sized
+*/
+
+.flex-main-equal > * {
+    flex: 1 1 0;
+}
+
+// Shortcuts for most common used combinations
+
+.flex-row-stretch-around {
+    @extend .flex, .flex-row, .flex-items-stretch, .flex-main-space-around;
+}
+
+.flex-row-center-around {
+    @extend .flex, .flex-row, .flex-items-center, .flex-main-space-around;
+}
