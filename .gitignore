@@ -1,10 +1,13 @@
 #Ignored files
 
-/.sass-cache
+# Compiled and auto-generated files
+/css/**/*.css
 
-# Compiled files
-/css/*
+# Libraries
+/node_modules
 
 # IDE files
-
 /.idea
+
+# Misc
+/.sass-cache

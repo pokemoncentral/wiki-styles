@@ -1,0 +1,30 @@
+{
+  "name": "wiki-styles",
+  "version": "0.0.1",
+  "description": "Sass refactoring of Pokémon Central Wiki main CSS file",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/pokemoncentral/wiki-styles.git"
+  },
+  "keywords": [
+    "Pokémon",
+    "Central",
+    "Wiki",
+    "SASS",
+    "CSS"
+  ],
+  "author": "Maze",
+  "license": "CC-BY-NC-SA-3.0",
+  "bugs": {
+    "url": "https://github.com/pokemoncentral/wiki-styles/issues"
+  },
+  "homepage": "https://github.com/pokemoncentral/wiki-styles#readme",
+  "devDependencies": {
+    "gulp": "github:gulpjs/gulp#4.0",
+    "gulp-autoprefixer": "^3.1.1"
+  }
+}
