@@ -13,45 +13,45 @@ Border-radius classes
     $border-radius: #{$radius}px;
 
     .roundy-#{$radius} {
-        border-radius: $border-radius;
+        @include border-radius($border-radius);
     }
 
-    .roundy-tr-#{$radius} {
-        border-top-right-radius: $border-radius;
+    .roundytr-#{$radius} {
+        @include border-top-right-radius($border-radius);
     }
 
-    .roundy-br-#{$radius} {
-        border-bottom-right-radius: $border-radius;
+    .roundybr-#{$radius} {
+        @include border-bottom-right-radius($border-radius);
     }
 
-    .roundy-bl-#{$radius} {
-        border-bottom-left-radius: $border-radius;
+    .roundybl-#{$radius} {
+        @include border-bottom-left-radius($border-radius);
     }
 
-    .roundy-tl-#{$radius} {
-        border-top-left-radius: $border-radius;
+    .roundytl-#{$radius} {
+        @include border-top-left-radius($border-radius);
     }
 
-    .roundy-top-#{$radius} {
-        @extend .roundy-tl-#{$radius}, .roundy-tr-#{$radius};
+    .roundytop-#{$radius} {
+        @extend .roundytl-#{$radius}, .roundytr-#{$radius};
     }
 
-    .roundy-right-#{$radius} {
-        @extend .roundy-tr-#{$radius}, .roundy-br-#{$radius};
+    .roundyright-#{$radius} {
+        @extend .roundytr-#{$radius}, .roundybr-#{$radius};
     }
 
-    .roundy-bottom-#{$radius} {
-        @extend .roundy-bl-#{$radius}, .roundy-br-#{$radius};
+    .roundybottom-#{$radius} {
+        @extend .roundybl-#{$radius}, .roundybr-#{$radius};
     }
 
-    .roundy-left-#{$radius} {
-        @extend .roundy-tl-#{$radius}, .roundy-bl-#{$radius};
+    .roundyleft-#{$radius} {
+        @extend .roundytl-#{$radius}, .roundybl-#{$radius};
     }
 
 }
 
 .roundy-full {
-    border-radius: 50%;
+    @include border-radius(50%);
 }
 
 // Unit-less aliases
@@ -59,36 +59,36 @@ Border-radius classes
     @extend .roundy-#{$unitless-roundyness};
 }
 
-.roundy-tr {
-    @extend .roundy-tr-#{$unitless-roundyness};
+.roundytr {
+    @extend .roundytr-#{$unitless-roundyness};
 }
 
-.roundy-br {
-    @extend .roundy-br-#{$unitless-roundyness};
+.roundybr {
+    @extend .roundybr-#{$unitless-roundyness};
 }
 
-.roundy-bl {
-    @extend .roundy-bl-#{$unitless-roundyness};
+.roundybl {
+    @extend .roundybl-#{$unitless-roundyness};
 }
 
-.roundy-tl {
-    @extend .roundy-tl-#{$unitless-roundyness};
+.roundytl {
+    @extend .roundytl-#{$unitless-roundyness};
 }
 
-.roundy-top {
-    @extend .roundy-top-#{$unitless-roundyness};
+.roundytop {
+    @extend .roundytop-#{$unitless-roundyness};
 }
 
-.roundy-right {
-    @extend .roundy-right-#{$unitless-roundyness};
+.roundyright {
+    @extend .roundyright-#{$unitless-roundyness};
 }
 
-.roundy-bottom {
-    @extend .roundy-bottom-#{$unitless-roundyness};
+.roundybottom {
+    @extend .roundybottom-#{$unitless-roundyness};
 }
 
-.roundy-left {
-    @extend .roundy-left-#{$unitless-roundyness};
+.roundyleft {
+    @extend .roundyleft-#{$unitless-roundyness};
 }
 
 // Advanced border-radius classes
@@ -96,11 +96,11 @@ Border-radius classes
     tr:last-of-type {
         td, th {
             &:first-child {
-                @extend .roundy-bl;
+                @extend .roundybl;
             }
 
             &:last-child {
-                @extend .roundy-br;
+                @extend .roundybr;
             }
         }
     }
@@ -112,11 +112,11 @@ Border-radius classes
     tr:first-of-type {
         td, th {
             &:first-child {
-                @extend .roundy-tl;
+                @extend .roundytl;
             }
 
             &:last-child {
-                @extend .roundy-tr;
+                @extend .roundytr;
             }
         }
     }

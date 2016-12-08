@@ -176,3 +176,7 @@ Flexbox styles
 .flex-row-center-around {
     @extend .flex, .flex-row, .flex-items-center, .flex-main-space-around;
 }
+
+.flex-row-center-stretch {
+    @extend .flex, .flex-row, .flex-nowrap, .flex-items-center, .flex-main-stretch;
+}
