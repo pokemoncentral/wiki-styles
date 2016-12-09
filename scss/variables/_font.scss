@@ -2,7 +2,14 @@
 ///     This file all fonts related variables
 ////
 
+// Site font families
 $font-families: (
     rooney-sans-web: ("RooneySansWeb", Helvetica, Arial, sans-serif)
 );
 $font-families: map-add-alias($font-families, base, rooney-sans-web);
+
+// Site font sizes
+$font-sizes: (
+    base: 10px,
+    body: 17px
+);

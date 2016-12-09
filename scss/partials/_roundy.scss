@@ -10,7 +10,7 @@ Border-radius classes
 
 // Basic border-radius classes
 @for $radius from 1 through 20 {
-    $border-radius: #{$radius}px;
+    $border-radius: $radius / 10 * 1rem;
 
     .roundy-#{$radius} {
         @include border-radius($border-radius);
