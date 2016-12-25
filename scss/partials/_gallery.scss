@@ -1,0 +1,35 @@
+////
+///     This file contains the standard gallery restyling.
+////
+
+/**************************************************
+
+Gallery styles
+
+**************************************************/
+
+li.gallerybox {
+    @extend .roundy;
+    display: inline-block;
+    border: 1px solid get-color(pcwiki, dark);
+    background: get-color(pcwiki);
+    height: 205px;
+    vertical-align: top;
+
+    div.thumb {
+        @extend .roundy;
+        margin: 2px 2px 0 2px;
+        border: 1px solid get-color(pcwiki, dark);
+        background: get-color(pcwiki, light);
+        text-align: center;
+    }
+}
+
+div.gallerytext {
+    padding: 0 4px;
+    height: 50px;
+    font-size: 85%;
+    line-height: 1.1;
+    overflow: hidden;
+    word-wrap: break-word;
+}

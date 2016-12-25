@@ -26,7 +26,7 @@ Responsive design classes
         // Can't @extend due to media queries
 
         .flex-#{$breakpoint}-wrap {
-            flex-wrap: wrap;
+            flex-wrap: wrap
         }
 
         .flex-#{$breakpoint}-nowrap {
