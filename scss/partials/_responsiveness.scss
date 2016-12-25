@@ -9,5 +9,28 @@ Responsive design classes
 **************************************************/
 
 @each $breakpoint in sl-reverse(map-keys($grid-breakpoints)) {
-    @include responsive-width($breakpoint);
+    @include media-breakpoint-down($breakpoint) {
+
+        /* Width classes */
+
+        @include responsive-width($breakpoint);
+
+        /* Hidden classes */
+
+        .hidden-#{$breakpoint} {
+            display: none;
+        }
+
+        /* Flex classes */
+
+        // Can't @extend due to media queries
+
+        .flex-#{$breakpoint}-wrap {
+            flex-wrap: wrap;
+        }
+
+        .flex-#{$breakpoint}-nowrap {
+            flex-wrap: nowrap;
+        }
+    }
 }

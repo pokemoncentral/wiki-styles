@@ -43,18 +43,15 @@
 /// @param {string} $breakpoint - The breakpoint name width classes will be written for.
 ///
 @mixin responsive-width($breakpoint) {
-    @include media-breakpoint-down($breakpoint) {
+    /* #{$breakpoint} width */
 
-        /* #{$breakpoint} width */
+    @include single-type-responsive-width($breakpoint, null);
 
-        @include single-type-responsive-width($breakpoint, null);
+    /* #{$breakpoint} min-width */
 
-        /* #{$breakpoint} min-width */
+    @include single-type-responsive-width($breakpoint, min);
 
-        @include single-type-responsive-width($breakpoint, min);
+    /* #{$breakpoint} max-width */
 
-        /* #{$breakpoint} max-width */
-
-        @include single-type-responsive-width($breakpoint, max);
-    }
+    @include single-type-responsive-width($breakpoint, max);
 }
