@@ -93,14 +93,16 @@ Border-radius classes
 
 // Advanced border-radius classes
 .roundy-footer {
-    tr:last-of-type {
-        td, th {
-            &:first-child {
-                @extend .roundybl;
-            }
+    tfoot, tbody:only-child {
+        tr:last-of-type {
+            td, th {
+                &:first-child {
+                    @extend .roundybl;
+                }
 
-            &:last-child {
-                @extend .roundybr;
+                &:last-child {
+                    @extend .roundybr;
+                }
             }
         }
     }
@@ -109,14 +111,16 @@ Border-radius classes
 .roundy-corners {
     @extend .roundy-footer;
 
-    tr:first-of-type {
-        td, th {
-            &:first-child {
-                @extend .roundytl;
-            }
+    thead, tbody:only-child {
+        tr:first-of-type {
+            td, th {
+                &:first-child {
+                    @extend .roundytl;
+                }
 
-            &:last-child {
-                @extend .roundytr;
+                &:last-child {
+                    @extend .roundytr;
+                }
             }
         }
     }
