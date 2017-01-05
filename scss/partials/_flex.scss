@@ -38,11 +38,11 @@ Flexbox styles
     }
 
     &-column {
-        flex-direction: row;
+        flex-direction: column;
     }
 
     &-column-reverse {
-        flex-direction: row-reverse;
+        flex-direction: column-reverse;
     }
 
     &-nowrap {
