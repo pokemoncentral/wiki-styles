@@ -1,0 +1,26 @@
+////
+///     This file contains all non prefix-related
+///     border-radius mixins
+////
+
+///
+/// Rounds a corner of both the first and
+/// the last table headers/cells: the former
+/// has the upper/lower left corner rounded,
+/// the latter the upper/lower right one.
+///
+/// @param {string} $vertical-corner - Which of upper or lower corner should be rounded; either 'top' or 'bottom'.
+///
+@mixin roundy-end-cells($vertical-corner) {
+    $vertical-corner: str_extract($vertical-corner, 1, 1);
+
+    td, th {
+        &:first-child {
+            @extend .roundy#{$vertical-corner}l;
+        }
+
+        &:last-child {
+            @extend .roundy#{$vertical-corner}r;
+        }
+    }
+}

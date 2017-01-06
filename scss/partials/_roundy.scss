@@ -93,26 +93,12 @@ Border-radius classes
 
 // Advanced border-radius classes
 
-@mixin roundy-sides-cells($vertical-corner) {
-    $vertical-corner: str_extract($vertical-corner, 1, 1);
-
-    td, th {
-        &:first-child {
-            @extend .roundy#{$vertical-corner}l;
-        }
-
-        &:last-child {
-            @extend .roundy#{$vertical-corner}r;
-        }
-    }
-}
-
 .roundy-footer {
     @extend .roundybottom;
 
     tfoot, tbody:only-child {
         tr:last-of-type {
-            @include roundy-sides-cells(bottom);
+            @include roundy-end-cells(bottom);
         }
     }
 }
@@ -122,7 +108,7 @@ Border-radius classes
 
     thead, tbody:only-child {
         tr:first-of-type {
-            @include roundy-sides-cells(top);
+            @include roundy-end-cells(top);
         }
     }
 }
