@@ -36,7 +36,7 @@ conf.dest = {
  */
 const opts = {
     autoprefixer: {
-        remove: false
+        browsers: 'last 10 versions'
     }
 };
 

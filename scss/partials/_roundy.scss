@@ -9,27 +9,28 @@ Border-radius classes
 **************************************************/
 
 // Basic border-radius classes
-@for $radius from 1 through 20 {
+@for $k from 1 through 4 {
+    $radius: $k * 5;
     $border-radius: $radius / 10 * 1rem;
 
     .roundy-#{$radius} {
-        @include border-radius($border-radius);
+        border-radius:  $border-radius;
     }
 
     .roundytr-#{$radius} {
-        @include border-top-right-radius($border-radius);
+        border-top-left-radius: $border-radius;
     }
 
     .roundybr-#{$radius} {
-        @include border-bottom-right-radius($border-radius);
+        border-bottom-right-radius: $border-radius;
     }
 
     .roundybl-#{$radius} {
-        @include border-bottom-left-radius($border-radius);
+        border-bottom-left-radius: $border-radius;
     }
 
     .roundytl-#{$radius} {
-        @include border-top-left-radius($border-radius);
+        border-top-left-radius: $border-radius;
     }
 
     .roundytop-#{$radius} {
@@ -51,7 +52,7 @@ Border-radius classes
 }
 
 .roundy-full {
-    @include border-radius(50%);
+    border-radius: 50%;
 }
 
 // Unit-less aliases

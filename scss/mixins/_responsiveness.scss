@@ -29,11 +29,13 @@
 /// @param {string} $width-type - The CSS property the classes will contain, one of width, min-width or max-width.
 ///
 @mixin single-type-responsive-width($breakpoint, $width-type: null) {
-    @for $width from 1 through 20 {
-        @include single-value-responsive-width($breakpoint, $width * 5, $width-type);
+    @for $width from 1 through 10 {
+        @include single-value-responsive-width($breakpoint, $width * 10, $width-type);
     }
 
-    @include single-value-responsive-width($breakpoint, 33, $width-type);
+    @each $width in (15, 25, 33, 66, 75) {
+        @include single-value-responsive-width($breakpoint, $width, $width-type);
+    }
 }
 
 ///

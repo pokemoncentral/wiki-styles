@@ -14,7 +14,7 @@
 
 /**************************************************
 
-Desktop CSS styles for Pokémon Central Wiki.
+Mobile CSS styles for Pokémon Central Wiki.
 
 This file is compiled from SCSS sources:
 project available on Pokémon Central GitHub,
@@ -26,4 +26,4 @@ at https://github.com/pokemoncentral/wiki-styles
 @import 'variables/all';
 @import 'mixins/all';
 @import 'partials/shared';
-@import 'partials/common';
+@import 'partials/mobile';
