@@ -97,7 +97,8 @@ Border-radius classes
 .roundy-footer {
     @extend .roundybottom;
 
-    tfoot, tbody:only-child {
+    // tfoot is always empty in MediaWiki
+    tbody {
         tr:last-of-type {
             @include roundy-end-cells(bottom);
         }
@@ -107,6 +108,10 @@ Border-radius classes
 .roundy-header {
     @extend .roundytop;
 
+    //
+    // thead is sometimes added by browsers
+    // to contain th elements.
+    //
     thead, tbody:only-child {
         tr:first-of-type {
             @include roundy-end-cells(top);

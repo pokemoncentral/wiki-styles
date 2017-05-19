@@ -38,11 +38,11 @@ PLATFORMS
 
 DEPENDENCIES
   SassyLists (>= 2.2.5)
-  bootstrap (~> 4.0.0.alpha3)
+  bootstrap (~> 4.0.0.alpha05)
   compass (>= 1.0.3)
   sass (>= 3.4.22)
   sassy-maps (>= 0.4.0)
   sassy-strings (>= 1.0.0)
 
 BUNDLED WITH
-   1.13.6
+   1.15.0
