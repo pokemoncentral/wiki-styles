@@ -33,6 +33,29 @@ pre {
     padding-left: 0.7rem;
 }
 
+.copytag {
+    padding: 0.25em;
+    width: 100%;
+
+    &-red {
+        background: linear-gradient(to right, #FFF6F6, #FFDDDD);
+    }
+
+    &-yellow {
+        background: linear-gradient(to right, #FFFFE6, #FFFFC5);
+    }
+
+    &-text {
+        padding: 0.5em;
+        text-align: center;
+        width: 99%;
+    }
+
+    &-sym {
+        padding: 0;
+    }
+}
+
 /*
     Expands an inner element on hover on
     bigger screens, on smaller ones allows
