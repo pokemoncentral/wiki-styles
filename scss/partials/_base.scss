@@ -24,6 +24,11 @@ body {
     }
 }
 
+th {
+    @extend .text-center;
+    font-weight: bolder;
+}
+
 /**************************************************
 
 MediaWiki overriding styles
