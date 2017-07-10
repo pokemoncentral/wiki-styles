@@ -16,6 +16,10 @@
 
     .#{$selector} {
         #{$width-prop}: percentage($perc / 100);
+
+        @if $perc >= $no-float-with {
+            float: none;
+        }
     }
 }
 

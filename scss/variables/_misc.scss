@@ -5,3 +5,7 @@
 
 // Border-radius in px for unitless border-radius classes.
 $unitless-roundyness: 10;
+
+// Minimum percentage responsive width for which
+// no float is allowed
+$no-float-with: 80;
