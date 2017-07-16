@@ -11,17 +11,17 @@ Responsive design classes
 @each $breakpoint in sl-reverse(map-keys($grid-breakpoints)) {
     @include media-breakpoint-down($breakpoint) {
 
-        /* Width classes */
+        /* #{$breakpoint} responsive width classes */
 
         @include responsive-width($breakpoint);
 
-        /* Hidden classes */
+        /* #{$breakpoint} responsive hidden class */
 
         .hidden-#{$breakpoint} {
             display: none;
         }
 
-        /* Flex classes */
+        /* #{$breakpoint} responsive flex classes */
 
         // Can't @extend due to media queries
 
@@ -33,16 +33,26 @@ Responsive design classes
             flex-wrap: nowrap;
         }
 
-        /* Margin classes */
+        /* #{$breakpoint} responsive-margins classes */
 
-        // !important because margins are
-        // usually set in style tags
+        /*
+            !important because margins are
+            usually set in style tags
+        */
         .no-margin-#{$breakpoint} {
             margin-right: initial !important;
             margin-left: initial !important;
         }
     }
+
+    @include media-breakpoint-up($breakpoint) {
+
+        // Visible classes
+        @include responsive-visible($breakpoint);
+    }
 }
+
+
 
 /* Breakpoint-independent classes */
 

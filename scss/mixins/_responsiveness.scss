@@ -49,15 +49,48 @@
 /// @param {string} $breakpoint - The breakpoint name width classes will be written for.
 ///
 @mixin responsive-width($breakpoint) {
-    /* #{$breakpoint} width */
+    /* width */
 
     @include single-type-responsive-width($breakpoint, null);
 
-    /* #{$breakpoint} min-width */
+    /* min-width */
 
     @include single-type-responsive-width($breakpoint, min);
 
-    /* #{$breakpoint} max-width */
+    /* max-width */
 
     @include single-type-responsive-width($breakpoint, max);
+}
+
+///
+/// Writes visible responsive classes.
+/// In a desktop-first approach, this means that
+/// elements should be hidden from the immediately
+/// larger breakpoint upwards. This in turn leads
+/// any breakpoint media query to have classes
+/// related to the immediately smaller breakpoint.
+///
+/// @param {string} $breakpoint - The current breakpoint.
+///
+@mixin responsive-visible($breakpoint) {
+    $breakpoints: map-keys($grid-breakpoints);
+
+    $this-index: index($breakpoints, $breakpoint);
+
+    @if $this-index > 1 {
+
+        // Immediately smaller breakpoint
+        $smaller: nth($breakpoints, $this-index - 1);
+
+        /*
+            #{$smaller} responsive visible class:
+            desktop-first approach means that elements
+            should be hidden from the immediately larger
+            breakpoint upwards, that leads to #{$smaller}
+            being in #{$breakpoint} media query.
+        */
+        .visible-#{$smaller} {
+            display: none;
+        }
+    }
 }
