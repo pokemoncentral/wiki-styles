@@ -24,7 +24,7 @@ pre {
 }
 
 .white-rows {
-    tbody td {
+    tbody td, &.grid > :not(:first-child) > :not(.grid-header) {
         background-color: get-color(ffffff);
     }
 }
@@ -53,39 +53,5 @@ pre {
 
     &-sym {
         padding: 0;
-    }
-}
-
-/*
-    Expands an inner element on hover on
-    bigger screens, on smaller ones allows
-    combination with mw-collapsible.
-*/
-.hover-expand {
-    $content-selector: '.hover-expand-content';
-
-    /* Hiding content and mw-collapsible togglers. */
-    #{$content-selector}, .mw-collapsible-toggle {
-        display: none;
-    }
-
-    &:hover {
-
-        /* !important to override js-set style tags. */
-        #{$content-selector}, .mw-collapsible-content {
-            display: initial !important;
-        }
-    }
-
-    /* Resetting every used selector and property to initial. */
-    @include media-breakpoint-down(md) {
-        &,
-        &:hover {
-            #{$content-selector},
-            .mw-collapsible-toggle,
-            .mw-collapsible-content {
-                display: initial;
-            }
-        }
     }
 }

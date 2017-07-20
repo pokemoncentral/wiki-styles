@@ -4,17 +4,18 @@
 ////
 
 ///
-/// Rounds a corner of both the first and
-/// the last table headers/cells: the former
-/// has the upper/lower left corner rounded,
-/// the latter the upper/lower right one.
+/// Rounds a corner of  the cells matched by
+/// the given selector: the first one will
+/// have the upper/lower left corner rounded,
+/// the last the upper/lower right one.
 ///
+/// @param {string} $cells-selector - CSS Selector for the cells being rounded.
 /// @param {string} $vertical-corner - Which of upper or lower corner should be rounded; either 'top' or 'bottom'.
 ///
-@mixin roundy-end-cells($vertical-corner) {
+@mixin roundy-end-cells($cells-selector, $vertical-corner) {
     $vertical-corner: str_extract($vertical-corner, 1, 1);
 
-    td, th {
+    #{$cells-selector} {
         &:first-child {
             @extend .roundy#{$vertical-corner}l;
         }
@@ -23,4 +24,28 @@
             @extend .roundy#{$vertical-corner}r;
         }
     }
+}
+
+///
+/// Rounds a corner of both the first and
+/// the last table headers/cells: the former
+/// has the upper/lower left corner rounded,
+/// the latter the upper/lower right one.
+///
+/// @param {string} $vertical-corner - Which of upper or lower corner should be rounded; either 'top' or 'bottom'.
+///
+@mixin roundy-end-table-cells($vertical-corner) {
+    @include roundy-end-cells('td, th', $vertical-corner);
+}
+
+///
+/// Rounds a corner of both the first and
+/// the last grid cell/header: the former
+/// has the upper/lower left corner rounded,
+/// the latter the upper/lower right one.
+///
+/// @param {string} $vertical-corner - Which of upper or lower corner should be rounded; either 'top' or 'bottom'.
+///
+@mixin roundy-end-grid-cells($vertical-corner) {
+    @include roundy-end-cells('> *', $vertical-corner);
 }

@@ -98,10 +98,12 @@ Border-radius classes
     @extend .roundybottom;
 
     // tfoot is always empty in MediaWiki
-    tbody {
-        tr:last-of-type {
-            @include roundy-end-cells(bottom);
-        }
+    tbody tr:last-of-type {
+        @include roundy-end-table-cells(bottom);
+    }
+
+    &.grid > :last-of-type {
+        @include roundy-end-grid-cells(bottom);
     }
 }
 
@@ -114,8 +116,12 @@ Border-radius classes
     //
     thead, tbody:only-child {
         tr:first-of-type {
-            @include roundy-end-cells(top);
+            @include roundy-end-table-cells(top);
         }
+    }
+
+    &.grid > :first-of-type {
+        @include roundy-end-grid-cells(top);
     }
 }
 
