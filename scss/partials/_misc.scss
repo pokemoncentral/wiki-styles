@@ -55,3 +55,21 @@ pre {
         padding: 0;
     }
 }
+
+/**************************************************
+
+Shorthand classes
+
+**************************************************/
+
+.std-table {
+    @extend .roundy-corners;
+    @extend .pull-center;
+    @extend .text-center;
+    @extend .white-rows;
+    @extend .no-border-spacing;
+
+    th, td, > * > * {
+        padding: 0.8ex 0.3ex;
+    }
+}
