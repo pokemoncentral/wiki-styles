@@ -69,6 +69,8 @@ Shorthand classes
     @extend .white-rows;
     @extend .no-border-spacing;
 
+    padding: 0.3ex;
+
     th, td, > * > * {
         padding: 0.8ex 0.3ex;
     }
