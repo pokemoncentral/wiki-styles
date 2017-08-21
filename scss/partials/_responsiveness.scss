@@ -54,7 +54,7 @@ Responsive design classes
 
 /* Breakpoint-independent classes */
 
-.img-fluid img, img {
+.img-fluid img, img.img-fluid {
     max-width: 100%;
     height: auto;
 }
