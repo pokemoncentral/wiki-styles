@@ -19,6 +19,16 @@ pre {
     font-size: 90%;
 }
 
+// Sitenotice
+.sitenotice {
+    @extend .roundy-20, .pull-center, .text-center;
+
+    margin-bottom: 1.5ex;
+    padding: 0.5ex;
+    background: linear-gradient(to right,
+        get-color(pcwiki, light), get-color(pcwiki, normale));
+}
+
 .mw-echo-icon-pcw {
     background-image: url('//media.pokemoncentral.it/wiki/wiki-icn.png');
 }
@@ -75,3 +85,4 @@ Shorthand classes
         padding: 0.8ex 0.3ex;
     }
 }
+
