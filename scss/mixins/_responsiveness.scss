@@ -11,8 +11,8 @@
 /// @param {string} $width-type - The CSS property the classes will contain, one of width, min-width or max-width.
 ///
 @mixin single-value-responsive-width($breakpoint, $perc, $width-type: null) {
-    $selector: sl-to-string(sl-purge($width-type width $breakpoint $perc), '-');
-    $width-prop: sl-to-string(sl-purge($width-type width), '-');
+    $selector: _join(list-purge($width-type width $breakpoint $perc), '-');
+    $width-prop: _join(list-purge($width-type width), '-');
 
     .#{$selector} {
         #{$width-prop}: percentage($perc / 100);

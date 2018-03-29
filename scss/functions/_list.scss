@@ -1,0 +1,7 @@
+////
+///     This file contains map utility functions
+////
+
+@function list-purge($list) {
+    @return _filter($list, _negate(_is-null));
+}

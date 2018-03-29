@@ -8,7 +8,7 @@ Responsive design classes
 
 **************************************************/
 
-@each $breakpoint in sl-reverse(map-keys($grid-breakpoints)) {
+@each $breakpoint in _reverse(map-keys($grid-breakpoints)) {
     @include media-breakpoint-down($breakpoint) {
 
         /* #{$breakpoint} responsive width classes */

@@ -6,9 +6,7 @@
 ///
 /// Returns a color, picking it from colors table.
 /// When 'text' variant is specified and it does
-/// not exist for the chosen color, the most contrasting
-/// with the standard color out of background color
-/// and black is returned.
+/// not exist for the chosen color, black is returned.
 ///
 /// @param {string} $name - The name of the color to be picked.
 /// @param {string} $shade [normal] - The shade of the color to be returned.
@@ -18,15 +16,11 @@
     $shade: to-lower-case($shade);
 
     // Normalizing 'normale' key aliases
-    @if sl-contain(med std, $shade) {
+    @if _includes(med std, $shade) {
         $shade: normale;
     }
 
-    $hex: map-get-deep($colors, $name, $shade);
+    $hex: _get($colors, $name $shade);
 
-    @if $hex == null and $shade == text {
-        @return contrast-color(get-color($name));
-    }
-
-    @return $hex;
+    @return if($hex == null and $shade == text, #000000, $hex);
 }

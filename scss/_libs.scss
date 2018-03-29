@@ -2,8 +2,7 @@
 ///     This file contains libraries imports
 ////
 
-@import '../../../../../../../var/lib/gems/2.3.0/gems/bootstrap-4.0.0.alpha5/assets/stylesheets/bootstrap/variables';
-@import '../../../../../../../var/lib/gems/2.3.0/gems/bootstrap-4.0.0.alpha5/assets/stylesheets/bootstrap/mixins/breakpoints';
-@import '../../../../../../../var/lib/gems/2.3.0/gems/compass-core-1.0.3/stylesheets/compass/utilities/color/contrast';
-@import 'SassyLists';
-@import 'sassy-maps';
+@import 'functions';
+@import 'variables';
+@import 'mixins/breakpoints';
+@import 'sassdash';

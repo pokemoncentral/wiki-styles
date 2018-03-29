@@ -11,5 +11,5 @@
 /// @return {Map} $map with $key aliased to $alias.
 ///
 @function map-add-alias($map, $alias, $key) {
-    @return map-set($map, $alias, map-get($map, $key));
+    @return map-merge($map, ($alias: map-get($map, $key)));
 }

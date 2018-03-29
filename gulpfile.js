@@ -1,62 +1,67 @@
 /**
  * @fileoverview
  *
- * This is the main gulp file.
+ * This is the main gulpfile
  *
- * By now, it just handles CSS vendor prefixing
+ * It compiles the SCSS code into CSS and adds vendor prefixes
  *
  * Created by maze on 12/8/16.
  */
 
-const autoprefixer = require('gulp-autoprefixer');
+
+const bootstrap = require.resolve('bootstrap/package.json');
 const gulp = require('gulp');
 const path = require('path');
+const prefix = require('gulp-autoprefixer');
+const sass = require('gulp-sass');
+const sassDash = require.resolve('sassdash/package.json');
+
 
 /**
- * Configurable values.
+ * Gulp-related configuration values.
  */
 const conf = {
-    paths: {
-        cssBase: 'css',
-        clean: 'clean',
-        prefixed: 'prefixed'
-    }
-};
-
-conf.src = {
-    cleanCss: path.join(conf.paths.cssBase, conf.paths.clean, '*.css')
-};
-
-conf.dest = {
-    prefixedCss: path.join(conf.paths.cssBase, conf.paths.prefixed)
+    dest: 'css',
+    src: 'scss'
 };
 
 /**
- * Plugins options.
+ * Plugins-related configuration values.
  */
 const opts = {
-    autoprefixer: {
+    prefix: {
         browsers: 'last 10 versions'
+    },
+
+    scss: {
+        includePaths: [
+            bootstrap,
+            sassDash
+        ].map(lib => path.join(path.dirname(lib), 'scss')),
+
+        indentWidth: 4,
+        outputStyle: 'expanded'
     }
 };
 
 /**
- * This task adds CSS vendor prefixes.
+ * Compiles SCSS files to CSS and adds vendor prefixes.
  */
-gulp.task('prefix', () => {
-    return gulp.src(conf.src.cleanCss)
-        .pipe(autoprefixer(opts.autoprefixer))
-        .pipe(gulp.dest(conf.dest.prefixedCss));
-});
+gulp.task('compile', () =>
+    gulp.src(`${ conf.src }/**/*.scss`)
+        .pipe(sass(opts.scss))
+        .pipe(prefix(opts.prefix))
+        .pipe(gulp.dest(conf.dest))
+);
 
 /**
- * Watches for CSS files to be prefixed.
+ * Watches SCSS for compilation.
  */
-gulp.task('watch', () => {
-    gulp.watch(conf.src.cleanCss, 'prefix');
-});
+gulp.task('watch', () =>
+    gulp.watch(`${ conf.src }/**/*.scss`, gulp.task('compile'))
+);
 
 /**
- * Default task to watch.
+ * Default task is to watch.
  */
 gulp.task('default', gulp.task('watch'));

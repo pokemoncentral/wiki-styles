@@ -13,7 +13,7 @@
 /// @param {string} $vertical-corner - Which of upper or lower corner should be rounded; either 'top' or 'bottom'.
 ///
 @mixin roundy-end-cells($cells-selector, $vertical-corner) {
-    $vertical-corner: str_extract($vertical-corner, 1, 1);
+    $vertical-corner: str-slice($vertical-corner, 1, 1);
 
     #{$cells-selector} {
         &:first-child {
