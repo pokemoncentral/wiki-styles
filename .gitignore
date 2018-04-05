@@ -2,6 +2,7 @@
 
 # Compiled and auto-generated files
 /css/**/*.css
+/scss/icons/_sass-inline-svg*.scss
 
 # Libraries
 /node_modules

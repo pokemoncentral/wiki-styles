@@ -27,7 +27,10 @@
     "bootstrap": "^4.0.0",
     "gulp": "github:gulpjs/gulp#4.0",
     "gulp-autoprefixer": "^3.1.1",
+    "gulp-remote-src": "^0.4.3",
     "gulp-sass": "^3.2.1",
+    "gulp-sass-inline-svg": "^1.0.3",
+    "gulp-svgmin": "^1.2.4",
     "sassdash": "^0.8.2"
   }
 }

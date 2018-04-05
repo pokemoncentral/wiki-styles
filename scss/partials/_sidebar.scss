@@ -1,0 +1,32 @@
+////
+///     This file contains the styles for the sidebar.
+////
+
+/**************************************************
+
+Sidebar styles
+
+**************************************************/
+
+#p-Pok\.C3\.A9mon_Central {
+
+    [id^="n-"] a::before {
+        display: inline-block;
+        margin-right: 0.5em;
+        height: 1.125em;
+        width: 1.125em;
+        background-position: center center;
+        background-repeat: no-repeat;
+        background-size: cover;
+        vertical-align: top;
+        content: '';
+    }
+
+    @each $icon-id in $icons {
+        $icon-name: to-lower-case($icon-id);
+
+        #n-#{$icon-id} a::before {
+            background-image: inline-svg($icon-name, get-color($icon-name));
+        }
+    }
+}
