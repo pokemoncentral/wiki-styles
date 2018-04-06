@@ -3,7 +3,8 @@
  *
  * This is the main gulpfile
  *
- * It compiles the SCSS code into CSS and adds vendor prefixes
+ * Its overall task is to compile SCSS to CSS, but other minor ones are
+ * implied by this.
  *
  * Created by maze on 12/8/16.
  */
@@ -26,7 +27,12 @@ const svgmin = require('gulp-svgmin');
 const conf = {
     dest: 'css',
 
-    icons: fs.readFileSync('scss/variables/_icons.scss', {encoding: 'UTF-8'})
+    /*
+        The icons list is taken from the SCSS file. It is much easier than
+        taking it from JavaScript in SCSS.
+    */
+    icons: fs.readFileSync(path.join('scss', 'variables', '_icons.scss'),
+                {encoding: 'UTF-8'})
             .match(/\$icons: ([\w,\s]+);/)[1]
             .split(/,\s*/)
             .map(icon => icon.toLowerCase() + '.svg'),
@@ -73,11 +79,12 @@ gulp.task('icons', () =>
 
 
 /**
- * Compiles SCSS files to CSS and adds vendor prefixes.
+ * Compiles SCSS files to CSS. In orded to do this, it needs to inline icons
+ * and to add vendor prefixes after compilation.
  */
 gulp.task('compile', gulp.series('icons', () =>
     gulp.src(`${ conf.src }/**/*.scss`)
-        .pipe(sass(opts.scss))
+        .pipe(sass(opts.scss).on('error', sass.logError))
         .pipe(prefix(opts.prefix))
         .pipe(gulp.dest(conf.dest))
 ));

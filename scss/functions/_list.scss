@@ -1,7 +1,13 @@
 ////
-///     This file contains map utility functions
+///     This file contains list utility functions
 ////
 
+///
+/// Removes all null-elements from a list.
+///
+/// @param {List} $list - The list null elements will be deleted from.
+/// @return {List} $list with null elements filtered out.
+///
 @function list-purge($list) {
     @return _filter($list, _negate(_is-null));
 }
