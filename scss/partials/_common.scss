@@ -1,6 +1,18 @@
 ////
-///     This file holds all the style that
-///     should be part of Common.css only
+///     This file holds all the style that should be part of Common.css only.
 ////
 
 @import 'sidebar';
+
+/**************************************************
+
+Twitter timeline desktop styles
+
+**************************************************/
+
+.twitter-timeline {
+    /*
+        !important to override Twitter inline default.
+    */
+    position: absolute !important;
+}
