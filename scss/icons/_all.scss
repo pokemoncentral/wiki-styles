@@ -4,4 +4,8 @@
 ///     main scss file and thus avoid git conflicts.
 ////
 
+// Import order matters here: pclogo augments a variable that is
+// created in 
+
 @import 'sass-inline-svg';
+@import 'pclogo';

@@ -22,11 +22,23 @@ Sidebar styles
         content: '';
     }
 
+    // Standard icons
     @each $icon-id in $icons {
         $icon-name: to-lower-case($icon-id);
 
         #n-#{$icon-id} a::before {
             background-image: inline-svg($icon-name, get-color($icon-name));
+        }
+
+    }
+
+    // Pokémon Central logo variations
+    @each $logo-id in $pc-logos {
+        $color-name: to-lower-case($logo-id);
+
+        #n-#{$logo-id} a::before {
+            background-image: inline-svg(pc-logo, get-color($color-name),
+                get-color($color-name, dark));
         }
     }
 }
