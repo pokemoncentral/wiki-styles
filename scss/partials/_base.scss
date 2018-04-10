@@ -18,10 +18,10 @@ html {
 
 body {
     font-size: map-get($font-sizes, body);
+}
 
-    * {
-        box-sizing: border-box;
-    }
+#mw-content-text * {
+    box-sizing: border-box;
 }
 
 th, .grid-header {
