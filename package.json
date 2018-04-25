@@ -24,7 +24,7 @@
   },
   "homepage": "https://github.com/pokemoncentral/wiki-styles#readme",
   "dependencies": {
-    "bootstrap": "^4.0.0",
+    "bootstrap": "^4.1.0",
     "gulp": "github:gulpjs/gulp#4.0",
     "gulp-autoprefixer": "^3.1.1",
     "gulp-remote-src": "^0.4.3",
