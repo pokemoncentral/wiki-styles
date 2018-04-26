@@ -11,14 +11,10 @@ Sidebar styles
 #p-Pok\.C3\.A9mon_Central {
 
     [id^="n-"] a::before {
-        display: inline-block;
+        @extend %icon;
         margin-right: 0.5em;
         height: 1.125em;
         width: 1.125em;
-        background-position: center center;
-        background-repeat: no-repeat;
-        background-size: cover;
-        vertical-align: top;
         content: '';
     }
 
@@ -27,18 +23,17 @@ Sidebar styles
         $icon-name: to-lower-case($icon-id);
 
         #n-#{$icon-id} a::before {
-            background-image: inline-svg($icon-name, get-color($icon-name));
+            @extend %icon-#{$icon-name};
         }
 
     }
 
     // Pokémon Central logo variations
     @each $logo-id in $pc-logos {
-        $color-name: to-lower-case($logo-id);
+        $icon-name: to-lower-case($logo-id);
 
         #n-#{$logo-id} a::before {
-            background-image: inline-svg(pc-logo, get-color($color-name),
-                get-color($color-name, dark));
+            @extend %icon-#{$icon-name};
         }
     }
 }

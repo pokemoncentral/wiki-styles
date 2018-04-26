@@ -1,0 +1,26 @@
+////
+///     This file contains the styles for the home page.
+////
+
+/**************************************************
+
+Home styles
+
+**************************************************/
+
+#home-social-link-container {
+    [id$="-icon"]::before {
+        @extend %icon;
+        height: 2em;
+        width: 2em;
+        content: '';
+    }
+
+    @each $icon-id in $icons {
+        $icon-name: to-lower-case($icon-id);
+
+        #home-#{$icon-id}-icon::before {
+            @extend %icon-#{$icon-name};
+        }
+    }
+}

@@ -1,0 +1,33 @@
+////
+///     This file contains the placeholder selectors for the icons
+////
+
+/**************************************************
+
+Shared styles for icons
+
+**************************************************/
+
+%icon {
+    display: inline-block;
+    background-position: center center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    vertical-align: top;
+}
+
+// Standard icons
+@each $icon in _map($icons, to-lower-case) {
+    %icon-#{$icon} {
+        background-image: inline-svg($icon, get-color($icon));
+    }
+
+}
+
+// Pokémon Central logo variations
+@each $logo in _map($pc-logos, to-lower-case) {
+    %icon-#{$logo} {
+        background-image: inline-svg(pc-logo, get-color($logo),
+            get-color($logo, dark));
+    }
+}
