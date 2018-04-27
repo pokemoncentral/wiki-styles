@@ -43,6 +43,20 @@ Responsive design classes
             margin-right: initial !important;
             margin-left: initial !important;
         }
+
+        /* #{$breakpoint} responsive text align classes */
+
+        .text-left-#{$breakpoint} {
+            text-align: left;
+        }
+
+        .text-center-#{$breakpoint} {
+            text-align: center;
+        }
+
+        .text-right-#{$breakpoint} {
+            text-align: right;
+        }
     }
 
     @include media-breakpoint-up($breakpoint) {
