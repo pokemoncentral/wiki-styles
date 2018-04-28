@@ -9,18 +9,16 @@ Home styles
 **************************************************/
 
 #home-social-link-container {
-    [id$="-icon"] {
-        a {
-            &::before {
-                @extend %icon;
-                height: 2em;
-                width: 2em;
-                content: '';
-            }
+    [id$="-icon"] a {
+        display: inline-block;
+        padding-right: 0;
+        background-image: none;
 
-            padding-right: 0;
-            background-image: none;
-            display: inline-block;
+        &::before {
+            @extend %icon;
+            height: 2em;
+            width: 2em;
+            content: '';
         }
     }
 

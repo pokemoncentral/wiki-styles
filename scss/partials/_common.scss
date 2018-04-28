@@ -6,13 +6,12 @@
 
 /**************************************************
 
-Twitter timeline desktop styles
+Collapsible styles
 
 **************************************************/
 
-.twitter-timeline {
-    /*
-        !important to override Twitter inline default.
-    */
-    position: absolute !important;
+.mw-collapsible.light-text .mw-collapsible-toggle a {
+    &, &:active, &:link, &:visited {
+        color: get-color(background);
+    }
 }

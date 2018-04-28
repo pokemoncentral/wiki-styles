@@ -39,12 +39,6 @@ pre {
     }
 }
 
-.mw-collapsible.light-text .mw-collapsible-toggle a {
-    &, &:active, &:link, &:visited {
-        color: get-color(background);
-    }
-}
-
 .mw-collapsible-toggle {
     padding-left: 0.7rem;
 }
@@ -90,4 +84,17 @@ Shorthand classes
     th, td, > * > * {
         padding: 0.8ex 0.3ex;
     }
+}
+
+/**************************************************
+
+Twitter timeline desktop styles
+
+**************************************************/
+
+.twitter-timeline {
+    /*
+        !important to override Twitter inline default.
+    */
+    position: absolute !important;
 }
