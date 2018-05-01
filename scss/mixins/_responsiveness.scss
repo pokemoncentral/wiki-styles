@@ -3,31 +3,32 @@
 ////
 
 ///
-/// Writes a responsive class for given breakpoint,
-/// percentage and width type.
+/// Writes a responsive class for given breakpoint, width and width type.
+/// If the passed width is a percentage greater than $no-float-width the
+/// float property is also set to none.
 ///
 /// @param {string} $breakpoint - The breakpoint name width classes will be written for.
-/// @param {int} $perc - The percentage the width property will have. The actual percentage is divided by 100.
+/// @param {int|string} $width - The width value will have. If it is a number, is divided by 100.
 /// @param {string} $width-type - The CSS property the classes will contain, one of width, min-width or max-width.
 ///
-@mixin single-value-responsive-width($breakpoint, $perc, $width-type: null) {
-    $selector: _join(list-purge($width-type width $breakpoint $perc), '-');
+@mixin single-value-responsive-width($breakpoint, $width, $width-type: null) {
+    $selector: _join(list-purge($width-type width $breakpoint $width), '-');
     $width-prop: _join(list-purge($width-type width), '-');
+    $is-perc: type-of($width) == 'number';
 
     .#{$selector} {
-        #{$width-prop}: percentage($perc / 100);
+        #{$width-prop}: if($is-perc, percentage($width / 100), $width);
 
-        @if $perc >= $no-float-with {
+        @if $is-perc and $width >= $no-float-with {
             float: none;
         }
     }
 }
 
 ///
-/// Writes responsive width classes for every percentage
-/// from 5% to 100%, with a step of 5, and some extras.
-/// Every class is for a single property, either width,
-/// min-width or max-width.
+/// Writes responsive width classes for every percentage from 5% to 100%, with
+/// a step of 5; furthermore, it adds some other percentages and auto. Every
+/// class is for a single property, either width, min-width or max-width.
 ///
 /// @param {string} $breakpoint - The breakpoint name width classes will be written for.
 /// @param {string} $width-type - The CSS property the classes will contain, one of width, min-width or max-width.
@@ -40,6 +41,8 @@
     @each $width in (33, 66) {
         @include single-value-responsive-width($breakpoint, $width, $width-type);
     }
+
+    @include single-value-responsive-width($breakpoint, auto, $width-type);
 }
 
 ///
