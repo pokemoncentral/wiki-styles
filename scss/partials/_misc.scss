@@ -88,7 +88,7 @@ Shorthand classes
 
 /**************************************************
 
-Twitter timeline desktop styles
+Twitter timeline styles
 
 **************************************************/
 
@@ -97,4 +97,5 @@ Twitter timeline desktop styles
         !important to override Twitter inline default.
     */
     position: absolute !important;
+    z-index: -1;
 }
