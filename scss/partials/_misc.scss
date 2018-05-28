@@ -1,6 +1,6 @@
 ////
-///     This file contains all miscellaneous styles,
-///     that don't find home anywhere else.
+///     This file contains all miscellaneous styles, that don't find home
+///     anywhere else.
 ////
 
 /**************************************************
@@ -65,6 +65,30 @@ pre {
         padding: 0;
     }
 }
+
+/**************************************************
+
+Vertical alignment
+
+**************************************************/
+
+.vert-middle, .vert-center {
+    white-space: nowrap;
+
+    &::before {
+        @extend .align-middle;
+
+        display: inline-block;
+        height: 100%;
+        content: '';
+    }
+
+    > * {
+        @extend .align-middle;
+        white-space: normal;
+    }
+}
+
 
 /**************************************************
 
