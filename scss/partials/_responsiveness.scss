@@ -60,12 +60,18 @@ Responsive design classes
 
         /* #{$breakpoint} responsive table classes */
 
-        .responsive-table-#{$breakpoint} {
+        .responsive-table-#{$breakpoint} > tbody {
             display: block;
 
-            > tr {
+            > tr:not(:first-of-type) {
                 display: flex;
                 margin-top: 0.5rem;
+                border-radius: 1rem;
+                background: #FFFFFF;
+
+                > * {
+                    background: transparent;
+                }
             }
         }
     }
