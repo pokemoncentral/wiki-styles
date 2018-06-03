@@ -57,6 +57,17 @@ Responsive design classes
         .text-right-#{$breakpoint} {
             text-align: right;
         }
+
+        /* #{$breakpoint} responsive table classes */
+
+        .responsive-table-#{$breakpoint} {
+            display: block;
+
+            > tr {
+                display: flex;
+                margin-top: 0.5rem;
+            }
+        }
     }
 
     @include media-breakpoint-up($breakpoint) {
