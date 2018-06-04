@@ -58,20 +58,21 @@ Responsive design classes
             text-align: right;
         }
 
-        /* #{$breakpoint} responsive table classes */
+        /* #{$breakpoint} display classes */
 
-        .responsive-table-#{$breakpoint} > tbody {
+        .block-#{$breakpoint} {
             display: block;
 
-            > tr:not(:first-of-type) {
-                display: flex;
-                margin-top: 0.5rem;
-                border-radius: 1rem;
-                background: #FFFFFF;
+            > tbody {
+                display: block;
+            }
+        }
 
-                > * {
-                    background: transparent;
-                }
+        .flex-#{$breakpoint} {
+            display: flex;
+
+            > tbody {
+                display: flex;
             }
         }
     }

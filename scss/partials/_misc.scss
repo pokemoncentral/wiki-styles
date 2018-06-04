@@ -34,8 +34,8 @@ pre {
 }
 
 .white-rows {
-    tbody td, &.grid > :not(:first-child) > :not(.grid-header) {
-        background-color: get-color(ffffff);
+    tbody > :not(:first-child), &.grid > :not(:first-child)  {
+        background: get-color(ffffff);
     }
 }
 

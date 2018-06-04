@@ -181,8 +181,8 @@ pre {
     background-image: url("//media.pokemoncentral.it/wiki/wiki-icn.png");
 }
 
-.white-rows tbody td, .std-table tbody td, .white-rows.grid > :not(:first-child) > :not(.grid-header), .grid.std-table > :not(:first-child) > :not(.grid-header) {
-    background-color: #FFFFFF;
+.white-rows tbody > :not(:first-child), .std-table tbody > :not(:first-child), .white-rows.grid > :not(:first-child), .grid.std-table > :not(:first-child) {
+    background: #FFFFFF;
 }
 
 .mw-collapsible-toggle {
@@ -1070,23 +1070,27 @@ Responsive design classes
     text-align: right;
 }
 
-/* xl responsive table classes */
-.responsive-table-xl > tbody {
+/* xl display classes */
+.block-xl {
     display: block;
 }
 
-.responsive-table-xl > tbody > tr:not(:first-of-type) {
+.block-xl > tbody {
+    display: block;
+}
+
+.flex-xl {
     display: -webkit-box;
     display: -webkit-flex;
     display: -ms-flexbox;
     display: flex;
-    margin-top: 0.5rem;
-    border-radius: 1rem;
-    background: #FFFFFF;
 }
 
-.responsive-table-xl > tbody > tr:not(:first-of-type) > * {
-    background: transparent;
+.flex-xl > tbody {
+    display: -webkit-box;
+    display: -webkit-flex;
+    display: -ms-flexbox;
+    display: flex;
 }
 
 @media (min-width: 1200px) {
@@ -1363,21 +1367,24 @@ Responsive design classes
     .text-right-lg {
         text-align: right;
     }
-    /* lg responsive table classes */
-    .responsive-table-lg > tbody {
+    /* lg display classes */
+    .block-lg {
         display: block;
     }
-    .responsive-table-lg > tbody > tr:not(:first-of-type) {
+    .block-lg > tbody {
+        display: block;
+    }
+    .flex-lg {
         display: -webkit-box;
         display: -webkit-flex;
         display: -ms-flexbox;
         display: flex;
-        margin-top: 0.5rem;
-        border-radius: 1rem;
-        background: #FFFFFF;
     }
-    .responsive-table-lg > tbody > tr:not(:first-of-type) > * {
-        background: transparent;
+    .flex-lg > tbody {
+        display: -webkit-box;
+        display: -webkit-flex;
+        display: -ms-flexbox;
+        display: flex;
     }
 }
 
@@ -1655,21 +1662,24 @@ Responsive design classes
     .text-right-md {
         text-align: right;
     }
-    /* md responsive table classes */
-    .responsive-table-md > tbody {
+    /* md display classes */
+    .block-md {
         display: block;
     }
-    .responsive-table-md > tbody > tr:not(:first-of-type) {
+    .block-md > tbody {
+        display: block;
+    }
+    .flex-md {
         display: -webkit-box;
         display: -webkit-flex;
         display: -ms-flexbox;
         display: flex;
-        margin-top: 0.5rem;
-        border-radius: 1rem;
-        background: #FFFFFF;
     }
-    .responsive-table-md > tbody > tr:not(:first-of-type) > * {
-        background: transparent;
+    .flex-md > tbody {
+        display: -webkit-box;
+        display: -webkit-flex;
+        display: -ms-flexbox;
+        display: flex;
     }
 }
 
@@ -1947,21 +1957,24 @@ Responsive design classes
     .text-right-sm {
         text-align: right;
     }
-    /* sm responsive table classes */
-    .responsive-table-sm > tbody {
+    /* sm display classes */
+    .block-sm {
         display: block;
     }
-    .responsive-table-sm > tbody > tr:not(:first-of-type) {
+    .block-sm > tbody {
+        display: block;
+    }
+    .flex-sm {
         display: -webkit-box;
         display: -webkit-flex;
         display: -ms-flexbox;
         display: flex;
-        margin-top: 0.5rem;
-        border-radius: 1rem;
-        background: #FFFFFF;
     }
-    .responsive-table-sm > tbody > tr:not(:first-of-type) > * {
-        background: transparent;
+    .flex-sm > tbody {
+        display: -webkit-box;
+        display: -webkit-flex;
+        display: -ms-flexbox;
+        display: flex;
     }
 }
 
@@ -2239,21 +2252,24 @@ Responsive design classes
     .text-right-xs {
         text-align: right;
     }
-    /* xs responsive table classes */
-    .responsive-table-xs > tbody {
+    /* xs display classes */
+    .block-xs {
         display: block;
     }
-    .responsive-table-xs > tbody > tr:not(:first-of-type) {
+    .block-xs > tbody {
+        display: block;
+    }
+    .flex-xs {
         display: -webkit-box;
         display: -webkit-flex;
         display: -ms-flexbox;
         display: flex;
-        margin-top: 0.5rem;
-        border-radius: 1rem;
-        background: #FFFFFF;
     }
-    .responsive-table-xs > tbody > tr:not(:first-of-type) > * {
-        background: transparent;
+    .flex-xs > tbody {
+        display: -webkit-box;
+        display: -webkit-flex;
+        display: -ms-flexbox;
+        display: flex;
     }
 }
 
