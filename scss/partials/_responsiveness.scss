@@ -62,18 +62,18 @@ Responsive design classes
 
         .block-#{$breakpoint} {
             display: block;
+        }
 
-            > tbody {
-                display: block;
-            }
+        tr.block-#{$breakpoint} td {
+            display: inline-block;
         }
 
         .flex-#{$breakpoint} {
             display: flex;
+        }
 
-            > tbody {
-                display: flex;
-            }
+        tr.flex-#{$breakpoint} {
+            flex-wrap: wrap;
         }
     }
 
