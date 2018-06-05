@@ -10,6 +10,31 @@ at https://github.com/pokemoncentral/wiki-styles
 **************************************************/
 /**************************************************
 
+Reset styles
+
+**************************************************/
+div {
+    display: block;
+}
+
+span {
+    display: inline;
+}
+
+table {
+    display: table;
+}
+
+tr {
+    display: table-row;
+}
+
+td, th {
+    display: table-cell;
+}
+
+/**************************************************
+
 Root styles
 
 **************************************************/
@@ -1075,8 +1100,8 @@ Responsive design classes
     display: block;
 }
 
-.block-xl > tbody {
-    display: block;
+tr.block-xl td {
+    display: inline-block;
 }
 
 .flex-xl {
@@ -1086,11 +1111,10 @@ Responsive design classes
     display: flex;
 }
 
-.flex-xl > tbody {
-    display: -webkit-box;
-    display: -webkit-flex;
-    display: -ms-flexbox;
-    display: flex;
+tr.flex-xl {
+    -webkit-flex-wrap: wrap;
+        -ms-flex-wrap: wrap;
+            flex-wrap: wrap;
 }
 
 @media (min-width: 1200px) {
@@ -1371,8 +1395,8 @@ Responsive design classes
     .block-lg {
         display: block;
     }
-    .block-lg > tbody {
-        display: block;
+    tr.block-lg td {
+        display: inline-block;
     }
     .flex-lg {
         display: -webkit-box;
@@ -1380,11 +1404,10 @@ Responsive design classes
         display: -ms-flexbox;
         display: flex;
     }
-    .flex-lg > tbody {
-        display: -webkit-box;
-        display: -webkit-flex;
-        display: -ms-flexbox;
-        display: flex;
+    tr.flex-lg {
+        -webkit-flex-wrap: wrap;
+            -ms-flex-wrap: wrap;
+                flex-wrap: wrap;
     }
 }
 
@@ -1666,8 +1689,8 @@ Responsive design classes
     .block-md {
         display: block;
     }
-    .block-md > tbody {
-        display: block;
+    tr.block-md td {
+        display: inline-block;
     }
     .flex-md {
         display: -webkit-box;
@@ -1675,11 +1698,10 @@ Responsive design classes
         display: -ms-flexbox;
         display: flex;
     }
-    .flex-md > tbody {
-        display: -webkit-box;
-        display: -webkit-flex;
-        display: -ms-flexbox;
-        display: flex;
+    tr.flex-md {
+        -webkit-flex-wrap: wrap;
+            -ms-flex-wrap: wrap;
+                flex-wrap: wrap;
     }
 }
 
@@ -1961,8 +1983,8 @@ Responsive design classes
     .block-sm {
         display: block;
     }
-    .block-sm > tbody {
-        display: block;
+    tr.block-sm td {
+        display: inline-block;
     }
     .flex-sm {
         display: -webkit-box;
@@ -1970,11 +1992,10 @@ Responsive design classes
         display: -ms-flexbox;
         display: flex;
     }
-    .flex-sm > tbody {
-        display: -webkit-box;
-        display: -webkit-flex;
-        display: -ms-flexbox;
-        display: flex;
+    tr.flex-sm {
+        -webkit-flex-wrap: wrap;
+            -ms-flex-wrap: wrap;
+                flex-wrap: wrap;
     }
 }
 
@@ -2256,8 +2277,8 @@ Responsive design classes
     .block-xs {
         display: block;
     }
-    .block-xs > tbody {
-        display: block;
+    tr.block-xs td {
+        display: inline-block;
     }
     .flex-xs {
         display: -webkit-box;
@@ -2265,11 +2286,10 @@ Responsive design classes
         display: -ms-flexbox;
         display: flex;
     }
-    .flex-xs > tbody {
-        display: -webkit-box;
-        display: -webkit-flex;
-        display: -ms-flexbox;
-        display: flex;
+    tr.flex-xs {
+        -webkit-flex-wrap: wrap;
+            -ms-flex-wrap: wrap;
+                flex-wrap: wrap;
     }
 }
 
