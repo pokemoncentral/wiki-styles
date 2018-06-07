@@ -1,6 +1,7 @@
 #Ignored files
 
 # Compiled and auto-generated files
+/css/*
 /scss/icons/_sass-inline-svg*.scss
 
 # Libraries
