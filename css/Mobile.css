@@ -198,8 +198,8 @@ pre {
     background-image: url("//media.pokemoncentral.it/wiki/wiki-icn.png");
 }
 
-.white-rows tbody > :not(:first-child), .std-table tbody > :not(:first-child), .white-rows.grid > :not(:first-child), .grid.std-table > :not(:first-child) {
-    background: #FFFFFF;
+.white-rows tbody td, .std-table tbody td, .white-rows.grid > :not(:first-child) > :not(.grid-header), .grid.std-table > :not(:first-child) > :not(.grid-header) {
+    background-color: #FFFFFF;
 }
 
 .mw-collapsible-toggle {
@@ -1092,10 +1092,6 @@ Responsive design classes
     display: block;
 }
 
-tr.block-xl td {
-    display: inline-block;
-}
-
 .flex-xl {
     display: -webkit-box;
     display: -webkit-flex;
@@ -1107,6 +1103,11 @@ tr.flex-xl {
     -webkit-flex-wrap: wrap;
         -ms-flex-wrap: wrap;
             flex-wrap: wrap;
+}
+
+.white-rows tr.block-xl, .std-table tr.block-xl, .white-rows tr.flex-xl, .std-table tr.flex-xl {
+    overflow: hidden;
+    background: #FFFFFF;
 }
 
 @media (min-width: 1200px) {
@@ -1387,9 +1388,6 @@ tr.flex-xl {
     .block-lg {
         display: block;
     }
-    tr.block-lg td {
-        display: inline-block;
-    }
     .flex-lg {
         display: -webkit-box;
         display: -webkit-flex;
@@ -1400,6 +1398,10 @@ tr.flex-xl {
         -webkit-flex-wrap: wrap;
             -ms-flex-wrap: wrap;
                 flex-wrap: wrap;
+    }
+    .white-rows tr.block-lg, .std-table tr.block-lg, .white-rows tr.flex-lg, .std-table tr.flex-lg {
+        overflow: hidden;
+        background: #FFFFFF;
     }
 }
 
@@ -1681,9 +1683,6 @@ tr.flex-xl {
     .block-md {
         display: block;
     }
-    tr.block-md td {
-        display: inline-block;
-    }
     .flex-md {
         display: -webkit-box;
         display: -webkit-flex;
@@ -1694,6 +1693,10 @@ tr.flex-xl {
         -webkit-flex-wrap: wrap;
             -ms-flex-wrap: wrap;
                 flex-wrap: wrap;
+    }
+    .white-rows tr.block-md, .std-table tr.block-md, .white-rows tr.flex-md, .std-table tr.flex-md {
+        overflow: hidden;
+        background: #FFFFFF;
     }
 }
 
@@ -1975,9 +1978,6 @@ tr.flex-xl {
     .block-sm {
         display: block;
     }
-    tr.block-sm td {
-        display: inline-block;
-    }
     .flex-sm {
         display: -webkit-box;
         display: -webkit-flex;
@@ -1988,6 +1988,10 @@ tr.flex-xl {
         -webkit-flex-wrap: wrap;
             -ms-flex-wrap: wrap;
                 flex-wrap: wrap;
+    }
+    .white-rows tr.block-sm, .std-table tr.block-sm, .white-rows tr.flex-sm, .std-table tr.flex-sm {
+        overflow: hidden;
+        background: #FFFFFF;
     }
 }
 
@@ -2269,9 +2273,6 @@ tr.flex-xl {
     .block-xs {
         display: block;
     }
-    tr.block-xs td {
-        display: inline-block;
-    }
     .flex-xs {
         display: -webkit-box;
         display: -webkit-flex;
@@ -2282,6 +2283,10 @@ tr.flex-xl {
         -webkit-flex-wrap: wrap;
             -ms-flex-wrap: wrap;
                 flex-wrap: wrap;
+    }
+    .white-rows tr.block-xs, .std-table tr.block-xs, .white-rows tr.flex-xs, .std-table tr.flex-xs {
+        overflow: hidden;
+        background: #FFFFFF;
     }
 }
 

@@ -64,16 +64,19 @@ Responsive design classes
             display: block;
         }
 
-        tr.block-#{$breakpoint} td {
-            display: inline-block;
-        }
-
         .flex-#{$breakpoint} {
             display: flex;
         }
 
         tr.flex-#{$breakpoint} {
             flex-wrap: wrap;
+        }
+
+        .white-rows tr {
+            &.block-#{$breakpoint}, &.flex-#{$breakpoint} {
+                overflow: hidden;
+                background: get-color(ffffff);
+            }
         }
     }
 
