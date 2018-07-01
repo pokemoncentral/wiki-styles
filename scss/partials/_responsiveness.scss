@@ -68,6 +68,10 @@ Responsive design classes
             display: flex;
         }
 
+        .inline-block-#{$breakpoint} {
+            display: inline-block;
+        }
+
         tr.flex-#{$breakpoint} {
             flex-wrap: wrap;
         }
