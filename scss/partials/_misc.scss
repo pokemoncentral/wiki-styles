@@ -82,15 +82,15 @@ Vertical alignment
     white-space: nowrap;
 
     &::before {
-        @extend .align-middle;
+        @extend .align-middle, .inline-block;
 
-        display: inline-block;
         height: 100%;
         content: '';
     }
 
     > * {
-        @extend .align-middle;
+        @extend .align-middle, .inline-block;
+        
         white-space: normal;
     }
 }
