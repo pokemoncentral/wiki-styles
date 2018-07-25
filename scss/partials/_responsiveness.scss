@@ -76,7 +76,7 @@ Responsive design classes
             flex-wrap: wrap;
         }
 
-        .white-rows tr {
+        .white-rows tbody tr {
             &.block-#{$breakpoint}, &.flex-#{$breakpoint} {
                 overflow: hidden;
                 background: get-color(ffffff);
