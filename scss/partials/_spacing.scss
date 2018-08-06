@@ -1,0 +1,32 @@
+////
+///     This file contains spacing-related styles
+////
+
+/**************************************************
+
+Spacing classes
+
+**************************************************/
+
+/*
+    The whole spacing system is a reimplementation of bootstrap grid gutters,
+    with some automatic selectors for the columns.
+
+    The > * selector is ok for tables as well, since thead, tbody and tfoot
+    ignore padding. Furthermore, they are not accessible via wikicode, so their
+    display property can not be set from outside this CSS file.
+*/
+
+@each $name, $value in $spacing {
+    $value: $value / 2;
+
+    /* #{$name} spacing classes */
+
+    .#{$name}-spacing {
+        margin: -$value;
+
+        &-item, > *, td, th {
+            padding: $value;
+        }
+    }
+}
