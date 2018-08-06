@@ -90,7 +90,7 @@ Vertical alignment
 
     > * {
         @extend .align-middle, .inline-block;
-        
+
         white-space: normal;
     }
 }
@@ -127,4 +127,18 @@ Twitter timeline desktop styles
         !important to override Twitter inline default.
     */
     position: absolute !important;
+}
+
+
+/**************************************************
+
+Twitter timeline desktop styles
+
+**************************************************/
+
+.Zebra_Tooltip_Message {
+    /*
+        !important to override Zebra_Tooltip default, imported after this file.
+    */
+    box-shadow: none !important;
 }
