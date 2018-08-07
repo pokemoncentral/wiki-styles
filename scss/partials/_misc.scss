@@ -132,7 +132,7 @@ Twitter timeline desktop styles
 
 /**************************************************
 
-Twitter timeline desktop styles
+Zebra tooltip styles
 
 **************************************************/
 
@@ -141,4 +141,15 @@ Twitter timeline desktop styles
         !important to override Zebra_Tooltip default, imported after this file.
     */
     box-shadow: none !important;
+}
+
+/**************************************************
+
+Modal styles
+
+**************************************************/
+
+.open-popup-element {
+    text-decoration: underline dotted;
+    cursor: pointer;
 }
