@@ -23,7 +23,9 @@ Spacing classes
     /* #{$name} spacing classes */
 
     .#{$name}-spacing {
-        margin: -$value;
+        &:not(table) {
+            margin: -$value;            
+        }
 
         &-item, > *, td, th {
             padding: $value;
