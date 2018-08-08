@@ -19,6 +19,14 @@
       .box.height-setter {
         height: 300px;
       }
+
+      label {
+        padding: 0.5em;
+      }
+
+      input {
+        display: block;
+      }
     </style>
 
     <script
@@ -28,10 +36,30 @@
     <script src="https://cdnjs.cloudflare.com/ajax/libs/axios/0.18.0/axios.min.js"></script>
     <script src="script.js"></script>
 
-
-
   </head>
   <body id="mw-content-text">
+      <form class="flex flex-row flex-wrap flex-items-center flex-main-equal">
+        <label>
+          tiny spacing:
+          <input type="text" name="tiny-spacing" value="0.2ex" />
+        </label>
+        <label>
+          small spacing:
+          <input type="text" name="small-spacing" value="0.5ex" />
+        </label>
+        <label>
+          medium spacing:
+          <input type="text" name="medium-spacing" value="0.5em" />
+        </label>
+        <label>
+          large spacing:
+          <input type="text" name="large-spacing" value="0.8em" />
+        </label>
+        <label>
+          huge spacing:
+          <input type="text" name="huge-spacing" value="1em" />
+        </label>
+      </form>
       <section>
         <header>
           <h1>Boxes</h1>
