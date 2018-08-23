@@ -171,6 +171,12 @@ Flexbox styles
     flex: 1 1 0;
 }
 
+/* Makes a flex item fill all the available space on the main axis */
+
+.flex-item-fill {
+    flex: 1 1 0;
+}
+
 // Shortcuts for most common used combinations
 
 .flex-row-stretch-around {
