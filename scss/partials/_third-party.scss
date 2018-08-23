@@ -1,6 +1,11 @@
+////
+///     This styles contains styles related to non-MediaWiki third-party
+///     software.
+////
+
 /**************************************************
 
-Iubenda cookies notification styles.
+Iubenda cookies notification
 
 **************************************************/
 
@@ -56,4 +61,41 @@ Iubenda cookies notification styles.
         font-size: 14px;
         font-weight: 900;
     }
+}
+
+/**************************************************
+
+Modal styles
+
+**************************************************/
+
+.open-popup-element {
+    text-decoration: underline dotted;
+    cursor: pointer;
+}
+
+/**************************************************
+
+Twitter timeline desktop styles
+
+**************************************************/
+
+.twitter-timeline {
+    /*
+    !important to override Twitter inline default.
+    */
+    position: absolute !important;
+}
+
+/**************************************************
+
+Zebra tooltip styles
+
+**************************************************/
+
+.Zebra_Tooltip_Message {
+    /*
+    !important to override Zebra_Tooltip default, imported after this file.
+    */
+    box-shadow: none !important;
 }
