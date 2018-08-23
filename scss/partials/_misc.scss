@@ -3,6 +3,76 @@
 ///     anywhere else.
 ////
 
+
+/**************************************************
+
+Overused styles
+
+**************************************************/
+
+.black-text, .black-white {
+    &, & a {
+        color: get-color(000000);
+    }
+}
+
+.height-100 {
+    height: 100%;
+}
+
+.white-bg, .bg-white {
+    background: get-color(ffffff);
+}
+
+.white-text, .text-white {
+    &, & a {
+        color: get-color(ffffff);
+    }
+}
+
+/**************************************************
+
+Vertical alignment
+
+**************************************************/
+
+.vert-middle, .vert-center {
+    white-space: nowrap;
+
+    &::before {
+        @extend .align-middle, .inline-block;
+
+        height: 100%;
+        content: '';
+    }
+
+    > * {
+        @extend .align-middle, .inline-block;
+
+        white-space: normal;
+    }
+}
+
+/**************************************************
+
+Shorthand classes
+
+**************************************************/
+
+.std-table {
+    @extend .roundy-corners;
+    @extend .pull-center;
+    @extend .text-center;
+    @extend .white-rows;
+    @extend .no-border-spacing;
+
+    padding: 0.3ex;
+
+    th, td, > * > * {
+        padding: 0.8ex 0.3ex;
+    }
+}
+
 /**************************************************
 
 Miscellaneous styles
@@ -12,11 +82,6 @@ Miscellaneous styles
 // Table of content
 .toc {
     @extend .roundy;
-}
-
-// Code (lua, css, etc)
-pre {
-    font-size: 90%;
 }
 
 // Sitenotice
@@ -66,90 +131,7 @@ pre {
     }
 }
 
-// Title style
 .explain[title] {
     text-decoration: underline dotted;
     cursor: initial;
-}
-
-/**************************************************
-
-Vertical alignment
-
-**************************************************/
-
-.vert-middle, .vert-center {
-    white-space: nowrap;
-
-    &::before {
-        @extend .align-middle, .inline-block;
-
-        height: 100%;
-        content: '';
-    }
-
-    > * {
-        @extend .align-middle, .inline-block;
-
-        white-space: normal;
-    }
-}
-
-
-/**************************************************
-
-Shorthand classes
-
-**************************************************/
-
-.std-table {
-    @extend .roundy-corners;
-    @extend .pull-center;
-    @extend .text-center;
-    @extend .white-rows;
-    @extend .no-border-spacing;
-
-    padding: 0.3ex;
-
-    th, td, > * > * {
-        padding: 0.8ex 0.3ex;
-    }
-}
-
-/**************************************************
-
-Twitter timeline desktop styles
-
-**************************************************/
-
-.twitter-timeline {
-    /*
-        !important to override Twitter inline default.
-    */
-    position: absolute !important;
-}
-
-
-/**************************************************
-
-Zebra tooltip styles
-
-**************************************************/
-
-.Zebra_Tooltip_Message {
-    /*
-        !important to override Zebra_Tooltip default, imported after this file.
-    */
-    box-shadow: none !important;
-}
-
-/**************************************************
-
-Modal styles
-
-**************************************************/
-
-.open-popup-element {
-    text-decoration: underline dotted;
-    cursor: pointer;
 }
