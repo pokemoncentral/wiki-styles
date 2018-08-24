@@ -156,6 +156,12 @@ Flexbox styles
 
 // Advanced flexbox styles
 
+/* Makes a flex item fill all the available space on the main axis */
+
+.flex-item-fill {
+    flex: 1 1 0;
+}
+
 /* Makes the elements fill the main axis */
 
 .flex-main-stretch > * {
@@ -168,7 +174,7 @@ Flexbox styles
 */
 
 .flex-main-equal > * {
-    flex: 1 1 0;
+    @extend .flex-item-fill;
 }
 
 // Shortcuts for most common used combinations
