@@ -59,6 +59,10 @@ th, .grid-header {
     font-weight: bolder;
 }
 
+pre {
+    font-size: 90%;
+}
+
 /**************************************************
 
 MediaWiki overriding styles
@@ -71,60 +75,6 @@ MediaWiki overriding styles
 
 .page-Home #firstHeading, .page-Home #siteSub, .page-Home #contentSub {
     display: none;
-}
-
-/**************************************************
-
-Iubenda cookies notification styles.
-
-**************************************************/
-#iubenda-cs-banner {
-    bottom: 0px !important;
-    left: 0px !important;
-    position: fixed !important;
-    width: 100% !important;
-    z-index: 99999998 !important;
-    background-color: black;
-}
-
-.iubenda-cs-content {
-    display: block;
-    margin: 0 auto;
-    padding: 20px;
-    width: auto;
-    font-family: "RooneySansWeb", Helvetica, Arial, sans-serif !important;
-    font-size: 14px;
-    background: #000;
-    color: #fff;
-}
-
-.iubenda-banner-content > p {
-    font-family: "RooneySansWeb", Helvetica, Arial, sans-serif !important;
-    line-height: 1.5;
-}
-
-.iubenda-cs-rationale {
-    max-width: 900px;
-    position: relative;
-    margin: 0 auto;
-}
-
-.iubenda-cs-close-btn {
-    margin: 0;
-    color: #fff;
-    text-decoration: none;
-    font-size: 14px;
-    position: absolute;
-    top: 0;
-    right: 0;
-    border: none;
-}
-
-.iubenda-cs-cookie-policy-lnk {
-    text-decoration: underline;
-    color: #fff;
-    font-size: 14px;
-    font-weight: 900;
 }
 
 /**************************************************
@@ -179,13 +129,61 @@ Home styles
 
 /**************************************************
 
+Overused styles
+
+**************************************************/
+.black-text, .black-text a, .black-white, .black-white a {
+    color: #000000;
+}
+
+.height-100 {
+    height: 100%;
+}
+
+.white-bg, .bg-white {
+    background: #FFFFFF;
+}
+
+.white-text, .white-text a, .text-white, .text-white a {
+    color: #FFFFFF;
+}
+
+/**************************************************
+
+Vertical alignment
+
+**************************************************/
+.vert-middle, .vert-center {
+    white-space: nowrap;
+}
+
+.vert-middle::before, .vert-center::before {
+    height: 100%;
+    content: '';
+}
+
+.vert-middle > *, .vert-center > * {
+    white-space: normal;
+}
+
+/**************************************************
+
+Shorthand classes
+
+**************************************************/
+.std-table {
+    padding: 0.3ex;
+}
+
+.std-table th, .std-table td, .std-table > * > * {
+    padding: 0.8ex 0.3ex;
+}
+
+/**************************************************
+
 Miscellaneous styles
 
 **************************************************/
-pre {
-    font-size: 90%;
-}
-
 .sitenotice {
     margin-bottom: 1.5ex;
     padding: 0.5ex;
@@ -236,49 +234,6 @@ pre {
 .explain[title] {
     text-decoration: underline dotted;
     cursor: initial;
-}
-
-/**************************************************
-
-Vertical alignment
-
-**************************************************/
-.vert-middle, .vert-center {
-    white-space: nowrap;
-}
-
-.vert-middle::before, .vert-center::before {
-    height: 100%;
-    content: '';
-}
-
-.vert-middle > *, .vert-center > * {
-    white-space: normal;
-}
-
-/**************************************************
-
-Shorthand classes
-
-**************************************************/
-.std-table {
-    padding: 0.3ex;
-}
-
-.std-table th, .std-table td, .std-table > * > * {
-    padding: 0.8ex 0.3ex;
-}
-
-/**************************************************
-
-Twitter timeline desktop styles
-
-**************************************************/
-.twitter-timeline {
-    /*
-        !important to override Twitter inline default.
-    */
-    position: absolute !important;
 }
 
 /**************************************************
@@ -404,7 +359,7 @@ Element-aligning classes
     float: right;
 }
 
-.pull-center, .sitenotice, .std-table {
+.pull-center, .std-table, .sitenotice {
     margin-left: auto;
     margin-right: auto;
 }
@@ -426,7 +381,7 @@ Element-aligning classes
 Text-aligning classes
 
 **************************************************/
-.text-center, th, .grid-header, .sitenotice, .std-table, .center-text {
+.text-center, th, .grid-header, .std-table, .sitenotice, .center-text {
     text-align: center;
 }
 
@@ -488,6 +443,10 @@ Overflow related classes
 **************************************************/
 .overflow-auto {
     overflow: auto;
+}
+
+.overflow-hidden {
+    overflow: hidden;
 }
 
 /**************************************************
@@ -738,6 +697,14 @@ Flexbox styles
             align-self: baseline;
 }
 
+/* Makes a flex item fill all the available space on the main axis */
+.flex-item-fill, .flex-main-equal > * {
+    -webkit-box-flex: 1;
+    -webkit-flex: 1 1 0;
+        -ms-flex: 1 1 0;
+            flex: 1 1 0;
+}
+
 /* Makes the elements fill the main axis */
 .flex-main-stretch > *, .flex-row-center-stretch > * {
     -webkit-box-flex: 1;
@@ -750,13 +717,6 @@ Flexbox styles
     Makes all elements fill the main axis
     and be equal sized
 */
-.flex-main-equal > * {
-    -webkit-box-flex: 1;
-    -webkit-flex: 1 1 0;
-        -ms-flex: 1 1 0;
-            flex: 1 1 0;
-}
-
 /**************************************************
 
 Responsive design classes
@@ -2379,6 +2339,95 @@ Spacing classes
 
 .huge-spacing-item, .huge-spacing > *, .huge-spacing td, .huge-spacing th {
     padding: 0.5em;
+}
+
+/**************************************************
+
+Iubenda cookies notification
+
+**************************************************/
+#iubenda-cs-banner {
+    bottom: 0px !important;
+    left: 0px !important;
+    position: fixed !important;
+    width: 100% !important;
+    z-index: 99999998 !important;
+    background-color: black;
+}
+
+.iubenda-cs-content {
+    display: block;
+    margin: 0 auto;
+    padding: 20px;
+    width: auto;
+    font-family: "RooneySansWeb", Helvetica, Arial, sans-serif !important;
+    font-size: 14px;
+    background: #000;
+    color: #fff;
+}
+
+.iubenda-banner-content > p {
+    font-family: "RooneySansWeb", Helvetica, Arial, sans-serif !important;
+    line-height: 1.5;
+}
+
+.iubenda-cs-rationale {
+    max-width: 900px;
+    position: relative;
+    margin: 0 auto;
+}
+
+.iubenda-cs-close-btn {
+    margin: 0;
+    color: #fff;
+    text-decoration: none;
+    font-size: 14px;
+    position: absolute;
+    top: 0;
+    right: 0;
+    border: none;
+}
+
+.iubenda-cs-cookie-policy-lnk {
+    text-decoration: underline;
+    color: #fff;
+    font-size: 14px;
+    font-weight: 900;
+}
+
+/**************************************************
+
+Modal styles
+
+**************************************************/
+.open-popup-element {
+    text-decoration: underline dotted;
+    cursor: pointer;
+}
+
+/**************************************************
+
+Twitter timeline desktop styles
+
+**************************************************/
+.twitter-timeline {
+    /*
+    !important to override Twitter inline default.
+    */
+    position: absolute !important;
+}
+
+/**************************************************
+
+Zebra tooltip styles
+
+**************************************************/
+.Zebra_Tooltip_Message {
+    /*
+    !important to override Zebra_Tooltip default, imported after this file.
+    */
+    -webkit-box-shadow: none !important;
+            box-shadow: none !important;
 }
 
 /******************************************
