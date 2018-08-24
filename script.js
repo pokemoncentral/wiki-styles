@@ -110,14 +110,10 @@ $(function() {
             return acc;
         }, {});
 
-        if ($('[name="overwrite-vote"]').is(':checked')) {
-            axios.put(endpoint, vote)
-                 .then(resp => displayVote(vote));
-        }
-        else {
-            axios.patch(endpoint, vote)
-                 .then(resp => displayVote(resp.data));
-        }
+        const method = $('[name="request-method"]:checked').val();
+        axios[method](endpoint, vote)
+             .then(resp => displayVote(typeof(resp.data) === 'object'
+                    ? resp.data : vote));
 
         return false;
     });
@@ -131,7 +127,6 @@ $(function() {
                  const vote = resp.data;
 
                  displayVote(vote);
-                 console.log(vote);
                  sizes.forEach(size => {
                      const value = vote[size];
                      if (value) {

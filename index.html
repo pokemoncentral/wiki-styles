@@ -73,10 +73,16 @@
             <input type="text" name="huge-spacing" value="1em" />
           </label>
         </section>
-        <label class="inline-block width-xl-50">
-          <input type="checkbox" name="overwrite-vote" /> Overwrite my previous
-            vote
-        </label>
+        <div class="inline-block width-xl-50">
+          <label class="block-xl">
+            <input type="radio" name="request-method" value="put" checked="checked" />
+            This is my first vote/I want to overwrite my previous vote.
+          </label>
+          <label class="block-xl">
+            <input type="radio" name="request-method" value="patch" />
+            Only change the values I provide and leave the empty ones untouched.
+          </label>
+        </div>
         <label class="inline-block width-xl-50">
           name:
           <input type="text" name="voter-name" />
