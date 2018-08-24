@@ -24,8 +24,20 @@
         padding: 0.5em;
       }
 
-      input {
+      input[type="text"] {
         display: block;
+      }
+
+      table {
+        display: inline-block;
+        margin: 0 1em 0 -1.25em;
+        border-spacing: 2.5em 1em;
+        vertical-align: top;
+        text-align: center;
+      }
+
+      table caption {
+        font-weight: bolder;
       }
     </style>
 
@@ -38,7 +50,7 @@
 
   </head>
   <body id="mw-content-text">
-      <form>
+      <form name="vote">
         <section class="flex flex-row flex-wrap flex-items-center flex-main-equal">
           <label>
             tiny spacing:
@@ -61,10 +73,19 @@
             <input type="text" name="huge-spacing" value="1em" />
           </label>
         </section>
-        <label class="inline-block width-xs-100">
+        <label class="inline-block width-xl-50">
+          <input type="checkbox" name="overwrite-vote" /> Overwrite my previous
+            vote
+        </label>
+        <label class="inline-block width-xl-50">
           name:
           <input type="text" name="voter-name" />
         </label>
+        <div>
+          <button type="submit">Vote</button>
+          <button type="button" name="get-vote">See my vote</button>
+          <button type="button" name="get-all">See all votes</button>
+        </div>
       </form>
       <section>
         <header>
