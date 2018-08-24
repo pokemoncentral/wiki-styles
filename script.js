@@ -1,7 +1,6 @@
 -function($){
 
-// axios.defaults.baseURL = 'http://maze0.mooo.com:20752';
-axios.defaults.baseURL = 'http://localhost:13980';
+axios.defaults.baseURL = 'http://maze0.mooo.com:20752';
 axios.interceptors.response.use(null, error => alert(error));
 
 var name, form;
