@@ -64,6 +64,7 @@ const getName = () => {
 };
 
 $(function() {
+    form = $('form[name="vote"]');
     const inputs = sizes.reduce((acc, size) => {
         const className = size + '-spacing';
         acc[size] = $(`[name="${ className }"]`);
@@ -90,14 +91,8 @@ $(function() {
         });
     });
 
-    form = $('form[name="vote"]');
-    form.submit(function() {
-        try {
-            const voter = getName();
-        }
-        catch (e) {
-            return false;
-        }
+    $('[name="submit-vote"]').click(function() {
+        const voter = getName();
         const endpoint = `/votes/${ name.val().trim() }`;
 
         const vote = Object.keys(inputs).reduce((acc, size) => {
@@ -113,8 +108,6 @@ $(function() {
         axios[method](endpoint, vote)
              .then(resp => displayVote(typeof(resp.data) === 'object'
                     ? resp.data : vote));
-
-        return false;
     });
 
     $('[name="get-vote"]').click(function() {
