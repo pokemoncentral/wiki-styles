@@ -13,19 +13,21 @@ li.gallerybox {
     display: inline-block;
     background: linear-gradient(to right,
         get-color(pcwiki, light), get-color(pcwiki, normale));
-    height: 20.5rem;
+    height: px-to-rem(205px);
     vertical-align: top;
 
     div.thumb {
+        $margin: px-to-rem(2px);
+
         @extend .roundy;
-        margin: 0.2rem 0.2rem 0 0.2rem;
+        margin: $margin $margin 0 $margin;
         text-align: center;
     }
 }
 
 div.gallerytext {
-    padding: 0 0.4rem;
-    height: 5rem;
+    padding: 0 px-to-rem(4px);
+    height: px-to-rem(50px);
     font-size: 85%;
     line-height: 1.1;
     overflow: hidden;
