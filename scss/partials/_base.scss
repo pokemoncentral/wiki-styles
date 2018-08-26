@@ -38,10 +38,6 @@ html, body {
     font-family: map-get($font-families, base);
 }
 
-html {
-    font-size: map-get($font-sizes, base);
-}
-
 body {
     font-size: map-get($font-sizes, body);
 }

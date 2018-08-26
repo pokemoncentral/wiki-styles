@@ -3,3 +3,15 @@
 ///     by some other means.
 ////
 
+///
+/// Converts a pixel number to a rem one, given the root font-size in px.
+///
+/// @param {number} $px - The source number, in pixles.
+/// @param {number} $rem [16px] - The root font-size, in pixles.
+/// @return {number} $px converted to rem unit, using $rem as root font-size.
+///
+@function px-to-rem($px, $rem: 16px) {
+
+    // Division strips unit, multiplication adds rem
+    @return $px / $rem * 1rem;
+}
