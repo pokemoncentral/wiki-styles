@@ -59,17 +59,11 @@ Shorthand classes
 **************************************************/
 
 .std-table {
-    @extend .roundy-corners;
+    @extend .roundy-footer;
     @extend .pull-center;
     @extend .text-center;
     @extend .white-rows;
     @extend .no-border-spacing;
-
-    padding: 0.3ex;
-
-    th, td, > * > * {
-        padding: 0.8ex 0.3ex;
-    }
 }
 
 /**************************************************
@@ -99,7 +93,7 @@ Miscellaneous styles
 
 .white-rows {
     tbody td, &.grid > :not(:first-child) > :not(.grid-header) {
-        background-color: get-color(ffffff);
+        @extend .white-bg;
     }
 }
 
