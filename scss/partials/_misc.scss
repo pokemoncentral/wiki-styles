@@ -59,6 +59,7 @@ Shorthand classes
 **************************************************/
 
 .std-table {
+    @extend .roundy;
     @extend .roundy-footer;
     @extend .pull-center;
     @extend .text-center;
