@@ -51,10 +51,6 @@ Border-radius classes
 
 }
 
-.roundy-full {
-    border-radius: 50%;
-}
-
 // Unit-less aliases
 .roundy {
     @extend .roundy-#{$unitless-roundyness};
@@ -92,14 +88,24 @@ Border-radius classes
     @extend .roundyleft-#{$unitless-roundyness};
 }
 
+.roundy-full {
+    border-radius: 50%;
+}
+
+// Have no clue why this works, but this is CSS, it's not meant to make sense
+.roundy-full-sides {
+    border-radius: 1000rem;
+}
+
 // Advanced border-radius classes
 
 .roundy-footer {
     @extend .roundybottom;
 
-    // tfoot is always empty in MediaWiki
-    tbody tr:last-of-type {
-        @include roundy-end-table-cells(bottom);
+    tbody {
+        tr:last-of-type {
+            @include roundy-end-table-cells(bottom);
+        }
     }
 
     &.grid > :last-of-type {
@@ -110,10 +116,7 @@ Border-radius classes
 .roundy-header {
     @extend .roundytop;
 
-    //
-    // thead is sometimes added by browsers
-    // to contain th elements.
-    //
+    // thead is sometimes added by browsers to contain th elements.
     thead, tbody:only-child {
         tr:first-of-type {
             @include roundy-end-table-cells(top);
