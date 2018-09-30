@@ -28,7 +28,7 @@
         display: block;
       }
 
-      table {
+      table:not(.std-table) {
         display: inline-block;
         margin: 0 1em 0 -1.25em;
         border-spacing: 2.5em 1em;
@@ -38,6 +38,10 @@
 
       table caption {
         font-weight: bolder;
+      }
+
+      #grids {
+        display: none;
       }
     </style>
 
@@ -87,13 +91,26 @@
           name:
           <input type="text" name="voter-name" />
         </label>
-        <div>
-          <button type="button" name="submit-vote">Vote</button>
-          <button type="button" name="get-vote">See my vote</button>
-          <button type="button" name="get-all">See all votes</button>
+        <div class="flex flex-row flex-nowrap flex-main-equal">
+          <fieldset>
+            <legend>
+              Table vote
+            </legend>
+            <button type="button" name="submit-vote-current">Vote (table)</button>
+            <button type="button" name="get-vote-current">See my vote (table)</button>
+            <button type="button" name="get-all-current">See all votes (table)</button>
+          </fieldset>
+          <fieldset>
+            <legend>
+              Grid vote
+            </legend>
+            <button type="button" name="submit-vote-old">Vote (grid)</button>
+            <button type="button" name="get-vote-old">See my vote (grid)</button>
+            <button type="button" name="get-all-old">See all votes (grid)</button>
+          </fieldset>
         </div>
       </form>
-      <section>
+      <section id="grids">
         <header>
           <h1>Boxes</h1>
         </header>
@@ -187,6 +204,152 @@
             </div>
           </div>
         </div>
+      </section>
+
+      <section id="tables">
+        <header>
+          <h1>Tables</h1>
+        </header>
+
+        <h2>tiny-spacing</h2>
+        <table class="bg-colored std-table tiny-spacing">
+          <tr>
+            <th>Gave you</th>
+            <th>love</th>
+            <th>Gave you</th>
+            <th>heart</th>
+          </tr>
+          <tr>
+            <td>SnorloInutile</td>
+            <td>DenelioPuzza</td>
+            <td>Fr&aelig;nkyLercio</td>
+            <td>MazeTypoman</td>
+          </tr>
+          <tr>
+            <td>SnorloInutile</td>
+            <td>DenelioPuzza</td>
+            <td>Fr&aelig;nkyLercio</td>
+            <td>MazeTypoman</td>
+          </tr>
+          <tr>
+            <td>SnorloInutile</td>
+            <td>DenelioPuzza</td>
+            <td>Fr&aelig;nkyLercio</td>
+            <td>MazeTypoman</td>
+          </tr>
+        </table>
+
+        <h2>small-spacing</h2>
+        <table class="bg-colored std-table small-spacing">
+          <tr>
+            <th>Gave you</th>
+            <th>love</th>
+            <th>Gave you</th>
+            <th>heart</th>
+          </tr>
+          <tr>
+            <td>SnorloInutile</td>
+            <td>DenelioPuzza</td>
+            <td>Fr&aelig;nkyLercio</td>
+            <td>MazeTypoman</td>
+          </tr>
+          <tr>
+            <td>SnorloInutile</td>
+            <td>DenelioPuzza</td>
+            <td>Fr&aelig;nkyLercio</td>
+            <td>MazeTypoman</td>
+          </tr>
+          <tr>
+            <td>SnorloInutile</td>
+            <td>DenelioPuzza</td>
+            <td>Fr&aelig;nkyLercio</td>
+            <td>MazeTypoman</td>
+          </tr>
+        </table>
+
+        <h2>medium-spacing</h2>
+        <table class="bg-colored std-table medium-spacing">
+          <tr>
+            <th>Gave you</th>
+            <th>love</th>
+            <th>Gave you</th>
+            <th>heart</th>
+          </tr>
+          <tr>
+            <td>SnorloInutile</td>
+            <td>DenelioPuzza</td>
+            <td>Fr&aelig;nkyLercio</td>
+            <td>MazeTypoman</td>
+          </tr>
+          <tr>
+            <td>SnorloInutile</td>
+            <td>DenelioPuzza</td>
+            <td>Fr&aelig;nkyLercio</td>
+            <td>MazeTypoman</td>
+          </tr>
+          <tr>
+            <td>SnorloInutile</td>
+            <td>DenelioPuzza</td>
+            <td>Fr&aelig;nkyLercio</td>
+            <td>MazeTypoman</td>
+          </tr>
+        </table>
+
+        <h2>large-spacing</h2>
+        <table class="bg-colored std-table large-spacing">
+          <tr>
+            <th>Gave you</th>
+            <th>love</th>
+            <th>Gave you</th>
+            <th>heart</th>
+          </tr>
+          <tr>
+            <td>SnorloInutile</td>
+            <td>DenelioPuzza</td>
+            <td>Fr&aelig;nkyLercio</td>
+            <td>MazeTypoman</td>
+          </tr>
+          <tr>
+            <td>SnorloInutile</td>
+            <td>DenelioPuzza</td>
+            <td>Fr&aelig;nkyLercio</td>
+            <td>MazeTypoman</td>
+          </tr>
+          <tr>
+            <td>SnorloInutile</td>
+            <td>DenelioPuzza</td>
+            <td>Fr&aelig;nkyLercio</td>
+            <td>MazeTypoman</td>
+          </tr>
+        </table>
+
+        <h2>huge-spacing</h2>
+        <table class="bg-colored std-table huge-spacing">
+          <tr>
+            <th>Gave you</th>
+            <th>love</th>
+            <th>Gave you</th>
+            <th>heart</th>
+          </tr>
+          <tr>
+            <td>SnorloInutile</td>
+            <td>DenelioPuzza</td>
+            <td>Fr&aelig;nkyLercio</td>
+            <td>MazeTypoman</td>
+          </tr>
+          <tr>
+            <td>SnorloInutile</td>
+            <td>DenelioPuzza</td>
+            <td>Fr&aelig;nkyLercio</td>
+            <td>MazeTypoman</td>
+          </tr>
+          <tr>
+            <td>SnorloInutile</td>
+            <td>DenelioPuzza</td>
+            <td>Fr&aelig;nkyLercio</td>
+            <td>MazeTypoman</td>
+          </tr>
+        </table>
       </section>
 
   </body>

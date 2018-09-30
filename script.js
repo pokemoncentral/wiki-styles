@@ -6,15 +6,24 @@ axios.interceptors.response.use(null, error => alert(error));
 var name, form;
 const sizes = ['tiny', 'small', 'medium', 'large', 'huge'];
 
-const displayVote = (vote) => {
+const voteTypes = {
+    current: 'table',
+    old: 'grid',
+
+    getType: function(name) {
+        return this[name.trim().split('-').slice(-1)[0]];
+    }
+};
+
+const makeVote = (id, vote) => {
     const row = $('<tr></tr>');
     sizes.forEach(size => {
         const value = vote[size] || 'none';
         row.append(`<td>${ value }</td>`);
     });
     const table = $(`
-        <table id="single-vote">
-            <caption>My vote</caption>
+        <table id="${ id }">
+            <caption>My vote (${ id.split('-').slice(-1)[0] })</caption>
             <tr>
                 <th>Tiny</th>
                 <th>Small</th>
@@ -25,11 +34,10 @@ const displayVote = (vote) => {
         </table>`);
     table.append(row);
 
-    $('#single-vote').remove();
-    form.after(table);
+    return table;
 };
 
-const displayVotes = votes => {
+const makeAllVotes = (id, votes) => {
     const rows = votes.map(row => $(`
         <tr>
             <td>${ row.size }</td>
@@ -38,8 +46,8 @@ const displayVotes = votes => {
         </tr>
     `));
     const table = $(`
-        <table id="all-votes">
-            <caption>All votes</caption>
+        <table id="${ id }">
+            <caption>All votes (${ id.split('-').slice(-1)[0] })</caption>
             <tr>
                 <th>Size</th>
                 <th>Value</th>
@@ -48,7 +56,11 @@ const displayVotes = votes => {
         </table>`);
     table.append(rows);
 
-    $('#all-votes').remove();
+    return table;
+};
+
+const displayTable = table => {
+    $(`#${ table.attr('id') }`).remove();
     form.after(table);
 };
 
@@ -65,11 +77,13 @@ const getName = () => {
 
 $(function() {
     form = $('form[name="vote"]');
+
     const inputs = sizes.reduce((acc, size) => {
         const className = size + '-spacing';
         acc[size] = $(`[name="${ className }"]`);
         return acc;
     }, {});
+
     name = $('[name="voter-name"]');
 
     sizes.forEach(size => {
@@ -91,9 +105,10 @@ $(function() {
         });
     });
 
-    $('[name="submit-vote"]').click(function() {
+    $('[name^="submit-vote"]').click(function() {
+        const voteType = voteTypes.getType($(this).attr('name'));
         const voter = getName();
-        const endpoint = `/votes/${ name.val().trim() }`;
+        const endpoint = `/votes/${ voteType }/${ voter }`;
 
         const vote = Object.keys(inputs).reduce((acc, size) => {
             const input = inputs[size];
@@ -106,19 +121,20 @@ $(function() {
 
         const method = $('[name="request-method"]:checked').val();
         axios[method](endpoint, vote)
-             .then(resp => displayVote(typeof(resp.data) === 'object'
-                    ? resp.data : vote));
+             .then(resp => displayTable(makeVote(`single-${ voteType }`,
+                    typeof(resp.data) === 'object' ? resp.data : vote)));
     });
 
-    $('[name="get-vote"]').click(function() {
+    $('[name^="get-vote"]').click(function() {
+        const voteType = voteTypes.getType($(this).attr('name'));
         const voter = getName();
-        const endpoint = `/votes/${ voter }`;
+        const endpoint = `/votes/${ voteType }/${ voter }`;
 
         axios.get(endpoint)
              .then(resp => {
                  const vote = resp.data;
 
-                 displayVote(vote);
+                 displayTable(makeVote(`single-${ voteType }`, vote));
                  sizes.forEach(size => {
                      const value = vote[size];
                      if (value) {
@@ -130,9 +146,11 @@ $(function() {
              });
     });
 
-    $('[name="get-all"]').click(function() {
-        axios.get('/votes')
-             .then(resp => displayVotes(resp.data));
+    $('[name^="get-all"]').click(function() {
+        const voteType = voteTypes.getType($(this).attr('name'));
+        axios.get(`/votes/${ voteType }`)
+             .then(resp => displayTable(
+                 makeAllVotes(`all-${ voteType }`, resp.data)));
     });
 });
 
