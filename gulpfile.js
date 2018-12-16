@@ -48,10 +48,6 @@ const opts = {
         destDir: `${ conf.src }/icons`
     },
 
-    prefix: {
-        browsers: 'last 10 versions'
-    },
-
     remote: {
         base: 'https://media.pokemoncentral.it/social/'
     },
@@ -85,7 +81,7 @@ gulp.task('icons', () =>
 gulp.task('compile', gulp.series('icons', () =>
     gulp.src(`${ conf.src }/**/*.scss`)
         .pipe(sass(opts.scss).on('error', sass.logError))
-        .pipe(prefix(opts.prefix))
+        .pipe(prefix())
         .pipe(gulp.dest(conf.dest))
 ));
 
