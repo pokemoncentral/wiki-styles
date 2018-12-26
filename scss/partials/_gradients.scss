@@ -1,0 +1,40 @@
+////
+///     This file contains classes that add background gradients
+////
+
+/**************************************************
+
+Gradients styles
+
+**************************************************/
+
+// Type gradients
+
+$all-types: _concat($types, coleot);
+
+@each $type0 in $all-types {
+    @each $type1 in $all-types {
+        // Need to use str-prefix to consider colet and coleottero the same
+        $is-same: str-is-prefix($type0, $type1)
+            or str-is-prefix($type1, $type0);
+        $color0: get-color($type0, if($is-same, light, normale));
+        $color1: get-color($type1, normale);
+
+        .horiz-grad-#{$type0}-#{$type1} {
+            background-size: 100%;
+            background-image: linear-gradient(to right, $color0, $color1);
+        }
+    }
+}
+
+// Damage categories gradients
+
+@each $category in $damage-categories {
+    $start: get-color($category, light);
+    $end: get-color($category, normale);
+
+    .horiz-grad-#{$category} {
+        background-size: 100%;
+        background-image: linear-gradient(to right, $start, $end);
+    }
+}

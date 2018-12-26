@@ -5,6 +5,7 @@
 $colors: (
 
     // Types
+
     acciaio: (normale: #AAAABB, light: #DFDFE1, dark: #74747B),
     acqua: (normale: #3399FF, light: #9FCEFF, dark: #0D6AC8),
     buio: (normale: #775544, light: #BDA396, dark: #442C21),
@@ -17,23 +18,23 @@ $colors: (
     ghiaccio: (normale: #77DDFF, light: #DBF6FF, dark: #13A8D9),
     lotta: (normale: #BB5544, light: #EA9A8D, dark: #912E1E),
     normale: (normale: #BBBBAA, light: #E7E7D8, dark: #8A8A7B),
+    ombra: (normale: #604E82, light: #8674A8, dark: #3E3355),
     psico: (normale: #FF5599, light: #FF9CC4, dark: #D00053),
     roccia: (normale: #BBAA66, light: #E1D08C, dark: #88762C),
+    sconosciuto: (normale: #68A090, light: #9DC1B7, dark: #44685E),
     spettro: (normale: #6666BB, light: #9F9FEC, dark: #42428E),
     terra: (normale: #DDBB55, light: #F1DDA0, dark: #B59226),
     veleno: (normale: #AA5599, light: #C689BA, dark: #792F6A),
     volante: (normale: #6699FF, light: #9CBDFF, dark: #3678FF),
 
-    // Other types
-    ombra: (normale: #604E82, light: #8674A8, dark: #3E3355),
-    sconosciuto: (normale: #68A090, light: #9DC1B7, dark: #44685E),
-
     // Damage categories
+
     fisico: (normale: #C92112, light: #D96358, dark: #82150B, text: #F67A1A),
     speciale: (normale: #4F5870, light: #83899A, dark: #333948, text: #FFFFFF),
     stato: (normale: #8C888C, light: #AEABAE, dark: #5B585B, text: #F7F7F7),
 
-    // Main games
+    // Games
+
     verde: (normale: #11BB11, light: #A7DB8D, dark: #0B7A0B),
     rosso: (normale: #FF1111, light: #FF7777, dark: #A60B0B),
     blu: (normale: #1111FF, light: #7777FF, dark: #0B0BA6),
@@ -61,127 +62,137 @@ $colors: (
     zaffiro-alpha: (normale: #26649C, light: #729ABF, dark: #194166),
     sole: (normale: #F2952D, light: #FFC587, dark: #A45500),
     luna: (normale: #5599C8, light: #9ACFF4, dark: #155785),
-
-    // Mystery Dungeon games
+    ultrasole: (normale: #EE7936, light: #FFB58C, dark: #B54000),
+    ultraluna: (normale: #884799, light: #AF8DB7, dark: #440E52),
+    lgp: (normale: #FFCF11, light: #FFF4C3, dark: #D09E2A),
+    lge: (normale: #C47E39, light: #F9C876, dark: #6A3F31),
+    colo: (normale: #B6CAE4, light: #CFDCED, dark: #768394),
+    xd: (normale: #604E82, light: #8674A8, dark: #3E3355),
+    battle-revolution: (normale: #DCA202, light: #FFD461, dark: #684D02),
     md: (normale: #D78144, light: #DECAA9, dark: #7C4B2D),
     md-rosso: (normale: #C50C50, light: #D85C8A, dark: #840836),
     md-blu: (normale: #095BAF, light: #5A91C9, dark: #063D75),
     md-tempo: (normale: #2190C7, light: #6AB5D9, dark: #166185),
-    md-oscurità: (normale: #C3141B, light: #D76166, dark: #830D12),
+    md-oscurita: (normale: #C3141B, light: #D76166, dark: #830D12),
     md-cielo: (normale: #7BB54F, light: #A6CD89, dark: #527935),
     md-portali: (normale: #7D6A7A, light: #AE9EAC, dark: #4D3249),
     md-super: (normale: #A5A3D2, light: #CCC9FF, dark: #7471A6),
-
-    // Ranger games
     ranger: (normale: #F7681A, light: #FA9D6A, dark: #A14411),
     osa: (normale: #2D4B98, light: #768ABC, dark: #1D3163),
     tl: (normale: #2CB8E9, light: #76D1F1, dark: #1D7898),
+    conquest: (normale: #EC9722, light: #F8DF9D, dark: #945F13),
 
-    // Other games
-    colosseum: (normale: #B6CAE4, light: #CFDCED, dark: #768394),
-    xd: (normale: #604E82, light: #8674A8, dark: #3E3355),
-    battle-revolution: (normale: #DCA202, light: #FFD461, dark: #684D02),
+    // Regions
 
-    // Main regions
-    kanto: (normale: #6A12AB, light: #9E65C8, dark: #360A58),
-    johto: (normale: #00647f, light: #1CB0D9, dark: #023D4E),
-    hoenn: (normale: #1AB81A, light: #65CF65, dark: #117B11),
-    sinnoh: (normale: #47443A, light: #9F9982, dark: #272520),
-    unima: (normale: #CB410B, light: #DA7953, dark: #8E2D07),
-    kalos: (normale: #CB0B4F, light: #CF517E, dark: #870735),
-    kalos-montana: (normale: #981128, light: #EA1A3E, dark: #76071A),
-    kalos-costiera: (normale: #013D6C, light: #026FC4, dark: #002847),
-    kalos-centrale: (normale: #D1D1D1, light: #EAEAEA, dark: #BBBBBB),
-    alola: (normale: #FFD900, light: #FFE86A, dark: #EC9000),
-
-    // Other regions
+    kanto: (normale: #FF3600, light: #FFA48C, dark: #6A0000),
+    johto: (normale: #FF7D00, light: #FFC791, dark: #9D4E00),
+    hoenn: (normale: #FFC300, light: #FFF99A, dark: #BA8300),
+    sinnoh: (normale: #00DB05, light: #96FF96, dark: #008303),
+    unima: (normale: #00A2FF, light: #A3DDFF, dark: #0057CD),
     settipelago: (normale: #52CC91, light: #8DEBBC, dark: #2B915E),
     auros: (normale: #817548, light: #ADA588, dark: #544C2F),
-
-    // Anime regions
+    kalos: (normale: #AE45FF, light: #D49CFF, dark: #5A009F),
+    kalos-centrale: (normale: #D1D1D1, light: #EAEAEA, dark: #BBBBBB),
+    kalos-costiera: (normale: #013D6C, light: #026FC4, dark: #002847),
+    kalos-montana: (normale: #981128, light: #EA1A3E, dark: #76071A),
     orange: (normale: #FF7F00, light: #FFAC59, dark: #A65300),
+    alola: (normale: #EE82EE, light: #FCCAFC, dark: #AC4BAB),
     cristalline: (normale: #FFB200, light: #FFD36B, dark: #AE7E00),
 
-    // Stats
-    ps: (normale: #FF0000, light: #FF5959, dark: #A60000),
-    attacco: (normale: #F08030, light: #F5AC78, dark: #9C531F),
-    difesa: (normale: #F8D030, light: #FAE078, dark: #A1871F),
-    attacco-speciale: (normale: #6890F0, light: #9DB7F5, dark: #445E9C),
-    difesa-speciale: (normale: #78C850, light: #A7DB8D, dark: #4E8234),
-    velocità: (normale: #F85888, light: #FA92B2, dark: #A13959),
+    // Statistics
 
-    // PokéAthlon stats
+    abilita: (normale: #317BEE, light: #83B4FF, dark: #2052A4),
+    agilita: (normale: #38BD62, light: #83EEA4, dark: #188339),
+    attacco: (normale: #EACA2F, light: #FFFBE6, dark: #B88C00),
+    attacco-speciale: (normale: #26BAE0, light: #B2E3EF, dark: #15687D),
+    difesa: (normale: #E5721D, light: #FFC499, dark: #8E3600),
+    difesa-speciale: (normale: #4C6CD4, light: #9EB5FF, dark: #0A163D),
     forza: (normale: #FF4131, light: #FF9494, dark: #BD2018),
+    ps: (normale: #58E810, light: #E1FFD3, dark: #2E7A08),
     resistenza: (normale: #EECD31, light: #FFE683, dark: #C58308),
+    speciali: (normale: #3ECDB4, light: #A3FFEF, dark: #179881),
+    velocita: (normale: #D425CE, light: #EF8DEC, dark: #380036),
     thlon: (normale: #90a8e0, light: #B7C6EB, dark: #5E6D92),
 
-    // Areas
-    zona_cenere: (normale: #9C8583, light: #B8A09E, dark: #856765),
-    zona_città: (normale: #D9D9D9, light: #E6E6E6, dark: #CCCCCC),
-    zona_distorsione: (normale: #5A65DB, light: #CC8562, dark: #2622A8, text: #E0FAFF),
-    zona_edificio: (normale: #A8B9BD, light: #C3D8DE, dark: #8A9CA1),
-    zona_foresta: (normale: #3A822D, light: #71AD64, dark: #34612D),
-    zona_grotta: (normale: #CC8F66, light: #E0B192, dark: #A66A42),
-    zona_lago: (normale: #66BDCC, light: #85D4DE, dark: #538FBD),
-    zona_montagna: (normale: #B8907D, light: #D4B5A7, dark: #7A5443),
-    zona_nebbia: (normale: #B5ADC7, light: #CAC1DE, dark: #9E98AD),
-    zona_neve: (normale: #DCEBEF, light: #E1EFF2, dark: #BBCDD1),
-    zona_oceano: (normale: #485CC2, light: #5A98F5, dark: #1E3F94),
-    zona_ombra: (normale: #472E63, light: #604E82, dark: #1A0A2C, text: #FFFFFF),
-    zona_palude: (normale: #7792BD, light: #BDA595, dark: #3D6633, text: #573118),
-    zona_rovine: (normale: #BFB895, light: #EBE5CA, dark: #9E9773),
-    zona_sabbia: (normale: #D6BD7C, light: #DBCFA0, dark: #B59B59),
-    zona_sottacqua: (normale: #6053AD, light: #737AC7, dark: #553894),
-    zona_spazio: (normale: #222222, light: #555555, dark: #000000, text: #FFFFFF),
-    zona_strada: (normale: #ABA9A4, light: #CFCDC7, dark: #949391),
-    zona_terra: (normale: #75C977, light: #A2E0A3, dark: #4AA14D),
-    zona_vulcano: (normale: #D20000, light: #D23434, dark: #A30000, text: #FFBC00),
+    // Zones
+
+    zona-grotta: (normale: #CC8F66, light: #E0B192, dark: #A66A42),
+    zona-terra: (normale: #75C977, light: #A2E0A3, dark: #4AA14D),
+    zona-foresta: (normale: #3A822D, light: #71AD64, dark: #34612D),
+    zona-nebbia: (normale: #B5ADC7, light: #CAC1DE, dark: #9E98AD),
+    zona-palude: (normale: #7792BD, light: #BDA595, dark: #3D6633,
+        text: #573118),
+    zona-cenere: (normale: #9C8583, light: #B8A09E, dark: #856765),
+    zona-rovine: (normale: #BFB895, light: #EBE5CA, dark: #9E9773),
+    zona-sabbia: (normale: #D6BD7C, light: #DBCFA0, dark: #B59B59),
+    zona-lago: (normale: #66BDCC, light: #85D4DE, dark: #538FBD),
+    zona-oceano: (normale: #485CC2, light: #5A98F5, dark: #1E3F94),
+    zona-sottacqua: (normale: #6053AD, light: #737AC7, dark: #553894),
+    zona-montagna: (normale: #B8907D, light: #D4B5A7, dark: #7A5443),
+    zona-vulcano: (normale: #D20000, light: #D23434, dark: #A30000,
+        text: #FFBC00),
+    zona-neve: (normale: #DCEBEF, light: #E1EFF2, dark: #BBCDD1),
+    zona-spazio: (normale: #222222, light: #555555, dark: #000000,
+        text: #FFFFFF),
+    zona-distorsione: (normale: #5A65DB, light: #CC8562, dark: #2622A8,
+        text: #E0FAFF),
+    zona-ombra: (normale: #472E63, light: #604E82, dark: #1A0A2C,
+        text: #FFFFFF),
+    zona-edificio: (normale: #A8B9BD, light: #C3D8DE, dark: #8A9CA1),
+    zona-strada: (normale: #ABA9A4, light: #CFCDC7, dark: #949391),
+    zona-citta: (normale: #D9D9D9, light: #E6E6E6, dark: #CCCCCC),
 
     // PCWiki
-    pcwiki: (normale: #7CBAFF, light: #D0E6FF, medium-light: #B1D6FF, dark: #0078FF, medium-dark: #5BA0FF),
 
-    // Time
+    pcwiki: (normale: #7CBAFF, light: #D0E6FF, medium-light: #B1D6FF,
+        medium-dark: #5BA0FF, dark: #0078FF),
+
+    // Time of the day
+
+    giorno: (normale: #5ED0FF, light: #96E0FF, dark: #4192B3),
+    mattina: (normale: #FFFFAA, light: #FFFFC8, dark: #B3B377),
     notte: (normale: #003366, light: #597A9B, dark: #002347, text: #FFFF99),
-    mattina: (normale: #FFFFAA, light: #FFFFC8, dark: #B3B377, text: #000000),
-    giorno: (normale: #5ED0FF, light: #96E0FF, dark: #4192B3, text: #000000),
-    sera: (normale: #FF8741, light: #FEAD7E, dark: #AD3F00, text: #000000),
+    sera: (normale: #FF8741, light: #FEAD7E, dark: #AD3F00),
 
     // Seasons
-    inverno: (normale: #F0D8F8, light: #F4E3FA, dark: #A897AE),
-    primavera: (normale: #B0F858, light: #C7FA89, dark: #7BAE3D),
-    estate: (normale: #78D0F8, light: #A0DEFA, dark: #5492AE),
+
     autunno: (normale: #F89058, light: #FAB189, dark: #AE653D),
+    inverno: (normale: #F0D8F8, light: #F4E3FA, dark: #A897AE),
+    estate: (normale: #78D0F8, light: #A0DEFA, dark: #5492AE),
+    primavera: (normale: #B0F858, light: #C7FA89, dark: #7BAE3D),
 
     // Contests
+
     acume: (normale: #78C850, light: #A7DB8D, dark: #4E8234),
     bellezza: (normale: #6890F0, light: #9DB7F5, dark: #445E9C),
     classe: (normale: #F08030, light: #F5AC78, dark: #9C531F),
+    gara: (normale: #E090A8, light: #EBB7C6, dark: #925E6D),
     grazia: (normale: #F85888, light: #FA92B2, dark: #A13959),
     grinta: (normale: #F8D030, light: #FAE078, dark: #A1871F),
-    gara: (normale: #E090A8, light: #EBB7C6, dark: #925E6D),
 
     // GCC
+
     acqua-gcc: (normale: #5BC7E5, light: #94DBEE, dark: #3B8295),
+    lampo-gcc: (normale: #FAB536, light: #FCCE7C, dark: #A37523),
     drago-gcc: (normale: #C6A114, light: #DAC266, dark: #81690D),
     erba-gcc: (normale: #7DB808, light: #AAD15E, dark: #517805),
     folletto-gcc: (normale: #E03A83, light: #EA7EAE, dark: #912555),
     fuoco-gcc: (normale: #E24242, light: #EC8484, dark: #932B2B),
     incolore-gcc: (normale: #E5D6D0, light: #EEE4E0, dark: #958B87),
-    lampo-gcc: (normale: #FAB536, light: #FCCE7C, dark: #A37523),
     metallo-gcc: (normale: #8A776E, light: #B3A6A1, dark: #5A4D48),
-    oscurità-gcc: (normale: #2C2E2B, light: #767775, dark: #1D1E1C),
+    oscurita-gcc: (normale: #2C2E2B, light: #767775, dark: #1D1E1C),
     psiche-gcc: (normale: #A65E9A, light: #C596BD, dark: #6C3D64),
-    abilità-gcc: (normale: #C84923, light: #D87F64, dark: #8C3318),
-    aiuto-gcc: (normale: #DC2222, light: #E66363, dark: #9A1717),
-    allenatore-gcc: (normale: #FFE955, light: #FFFCE4, dark: #B3A33B),
-    combattimento-gcc: (normale: #FF501F, light: #FF8D6D, dark: #A63414),
-    pokébody-gcc: (normale: #146837, light: #5A9572, dark: #0E4926),
-    poképower-gcc: (normale: #850921, light: #A95263, dark: #5D0617),
-    stadio-gcc: (normale: #90E183, light: #B7EBAE, dark: #5E9255),
-    strumento-gcc: (normale: #7777EE, light: #A6A6F4, dark: #4D4D9B),
     supporto-gcc: (normale: #DC2222, light: #E66363, dark: #9A1717),
+    combattimento-gcc: (normale: #FF501F, light: #FF8D6D, dark: #A63414),
+    allenatore-gcc: (normale: #FFE955, light: #FFFCE4, dark: #B3A33B),
+    pokebody-gcc: (normale: #146837, light: #5A9572, dark: #0E4926),
+    pokepower-gcc: (normale: #850921, light: #A95263, dark: #5D0617),
+    abilita-gcc: (normale: #C84923, light: #D87F64, dark: #8C3318),
+    strumento-gcc: (normale: #7777EE, light: #A6A6F4, dark: #4D4D9B),
+    stadio-gcc: (normale: #90E183, light: #B7EBAE, dark: #5E9255),
 
     // Battle frontier
+
     arena: (normale: #FFC115, light: #FFD767, dark: #A67E0E),
     azienda: (normale: #3291C1, light: #7AB7D7, dark: #215E7E),
     cupola: (normale: #AD32DA, light: #D35CFF, dark: #71009B),
@@ -194,45 +205,196 @@ $colors: (
     serpe: (normale: #7D000C, light: #B51826, dark: #300105),
     torre: (normale: #D6553C, light: #E49080, dark: #8B3727),
 
-    // Bag slots
-    bacche: (normale: #20A048, light: #30B858, dark: #188030),
-    cristalli-z: (normale: #AB6B07, light: #FFC039, dark: #482C04),
-    macchine: (normale: #80A820, light: #90C030, dark: #709018),
+    // Bag pockets
+
+    bacche: (normale: #6161FD, light: #BBC5FF, dark: #08088C),
+    macchine: (normale: #9248E5, light: #D4ABFD, dark: #1F0042),
+    poke-ball: (normale: #C88820, light: #E0A038, dark: #B87008),
+    rimedi: (normale: #00BE00, light: #99FF99, dark: #006100),
+    strumenti: (normale: #0296C8, light: #6DE0FF, dark: #00384B),
+    strumenti_base: (normale: #F93333, light: #FFA7A7, dark: #8E0808),
+    strumenti_lotta: (normale: #3070E0, light: #4880F0, dark: #2058C8),
     messaggi: (normale: #1890B0, light: #18A8D0, dark: #208090),
-    pokéball: (normale: #C88820, light: #E0A038, dark: #B87008),
-    rimedi: (normale: #E07038, light: #E88050, dark: #D86028),
-    strumenti: (normale: #C86890, light: #D880A8, dark: #B85078),
-    strumenti-base: (normale: #9048D8, light: #A058E8, dark: #7838C0),
-    strumenti-lotta: (normale: #3070E0, light: #4880F0, dark: #2058C8),
+    cristalli-z: (normale: #AB6900, light: #FFB744, dark: #4D1F00),
 
-    // Social
-    facebook: (normale: #3B5998),
-    instagram: (normale: #E03C63),
-    telegram: (normale: #1DA1F2),
-    twitter: (normale: #1DA1F2),
-    youtube: (normale: #FF0000),
+    // Egg groups
 
-    // Pokémon Central flavors
-    chat: (normale: #43BDFF, dark: #009AEE),
-    forum :(normale: #DB435F, dark :#942C3F),
+    mostro-uova: (normale: #D25064, light: #D25064, dark: #933846),
+    acqua-1-uova: (normale: #97B5FD, light: #97B5FD, dark: #697FB1),
+    coleottero-uova: (normale: #AAC22A, light: #AAC22A, dark: #77881D),
+    volante-uova: (normale: #B29AFA, light: #B29AFA, dark: #7C6CAF),
+    campo-uova: (normale: #E0C068, light: #E0C068, dark: #9D8649),
+    magico-uova: (normale: #FFC8F0, light: #FFC8F0, dark: #B38CA8),
+    erba-uova: (normale: #82D25A, light: #82D25A, dark: #5B933F),
+    umanoide-uova: (normale: #D29682, light: #D29682, dark: #93695B),
+    acqua-3-uova: (normale: #5876BE, light: #5876BE, dark: #3D5285),
+    minerale-uova: (normale: #7A6252, light: #7A6252, dark: #554439),
+    amorfo-uova: (normale: #8A8A8A, light: #8A8A8A, dark: #606060),
+    acqua-2-uova: (normale: #729AFA, light: #729AFA, dark: #506CAF),
+    ditto-uova: (normale: #A664BF, light: #A664BF, dark: #744686),
+    drago-uova: (normale: #7A42FF, light: #7A42FF, dark: #552EB3),
+    sconosciuto-uova: (normale: #0080C0, light: #0080C0, dark: #005986),
+    asessuato-uova: (normale: #333333, light: #333333, dark: #232323),
 
     // Misc
-    000000: (normale: #000000),
-    background: (normale: #EAEAEA),
+
+    background: (normale: #EAEAEA, light: #EAEAEA, dark: #EAEAEA),
     bronzo: (normale: #DEAB79, light: #EBCDAF, dark: #856749),
     bulba: (normale: #C4E673, light: #E0F2B6, dark: #80964B),
     camilla: (normale: #525252, light: #8E8E8E, dark: #353535),
+    club-pokemiglia: (normale: #389AD8, light: #9ECEEC, dark: #075282),
     diantha: (normale: #E64A80, light: #F08FB1, dark: #A5385C),
-    dw: (normale: #EF52B2, light: #FFC0CB, dark: #C6007B),
-    ffffff: (normale: #FFFFFF),
+    dream-world: (normale: #E78EA0, light: #F3DBDE, dark: #984852),
+    ffffff: (normale: #FFFFFF, light: #FFFFFF, dark: #FFFFFF),
     ghicocca: (normale: #F0A018, light: #F8C038, dark: #A05840),
     nardo: (normale: #E88058, light: #F0AA8F, dark: #C84040),
     olio: (normale: #BAB1C9, light: #DCD7E3, dark: #978CAE),
-    pokémon: (normale: #E5653C, light: #E2947C, dark: #A62F19)
+    pokemon: (normale: #E5653C, light: #E2947C, dark: #A62F19),
+    pokewalker: (normale: #D82D40, light: #ED7B88, dark: #700A16),
+    safari_amici: (normale: #68AA57, light: #AFDBA5, dark: #447039),
+    000000: (normale: #000000, light: #000000, dark: #000000)
 );
 
 // Type areas
 @each $type in $types {
     $alias: if($type == terra, terratipo, $type);
-    $colors: map-add-alias($colors, unquote('zona_#{$alias}'), $type);
+    $colors: map-add-alias($colors, unquote('zona-#{$alias}'), $type);
 }
+
+// Aliases
+$colors: map-add-alias($colors, coleot, coleottero);
+// $colors: map-add-alias($colors, unquote('???'), sconosciuto);
+//
+// // Glitch aliases
+// $colors: map-add-alias($colors, glitch, sconosciuto);
+// $colors: map-add-alias($colors, iiiitoto, sconosciuto);
+// $colors: map-add-alias($colors, uccello, sconosciuto);
+// $colors: map-add-alias($colors, unquote('6!2?2-a'), sconosciuto);
+// $colors: map-add-alias($colors, unquote('x-v-za'), sconosciuto);
+// $colors: map-add-alias($colors, l, sconosciuto);
+// $colors: map-add-alias($colors, b, sconosciuto);
+// $colors: map-add-alias($colors, unquote(',k-pk(nome-del-giocatore)xx',
+//     sconosciuto),
+// $colors: map-add-alias($colors, unquote('allen.-jr-♀'), sconosciuto);
+// $colors: map-add-alias($colors, unquote('normale-(glitch)'), sconosciuto);
+// $colors: map-add-alias($colors, unquote('pokémaniaco'), sconosciuto);
+// c["Pokémaniaco"], c['pokémaniaco'] = c.sconosciuto, c.sconosciuto
+// c["'l) m) ZM"], c["'l) m) zm"], c["'l)_m)_ZM"], c["'l)_m)_zm"] =
+//     c.sconosciuto, c.sconosciuto, c.sconosciuto, c.sconosciuto
+// c["(Classe dell'ultimo allenatore affrontato)"] =
+//     c.sconosciuto
+// c["(Classe_dell'ultimo_allenatore_affrontato)"] =
+//     c.sconosciuto
+// c["(classe dell'ultimo allenatore affrontato)"] =
+//     c.sconosciuto
+// c["(classe_dell'ultimo_allenatore_affrontato)"] =
+//     c.sconosciuto
+// c['Qi JT(nome del giocatore)? POké BB(nome del Pokémon) de W N'] =
+//     c.sconosciuto
+// c['Qi_JT(nome_del_giocatore)?_POké_BB(nome_del_Pokémon)_de_W_N'] =
+//     c.sconosciuto
+// c['qi jt(nome del giocatore)? poké bb(nome del pokémon) de w n'] =
+//     c.sconosciuto
+// c['qi_jt(nome_del_giocatore)?_poké_bb(nome_del_pokémon)_de_w_n'] =
+//     c.sconosciuto
+// c['Poké BB'], c['poké bb'], c['Poké_BB'], c['poké_bb'] =
+//     c.sconosciuto, c.sconosciuto, c.sconosciuto, c.sconosciuto
+// c['8 8 9 5'], c['8_8_9_5'], c['999'], c['?'] =
+//     c.sconosciuto, c.sconosciuto, c.sconosciuto, c.sconosciuto
+// c['66848.04'], c["' ♀ ♀ ' 2222 37572"], c["'_♀_♀_'_2222_37572"] =
+//     c.sconosciuto, c.sconosciuto, c.sconosciuto
+//
+//
+//
+// -- Alias glitch
+// -- Aliases with the underscore are needed because of module css
+//
+//     c.LG_Pikachu, c.LG_pikachu, c.LGP, c.lgpikachu, c["Let's Go, Pikachu!"] = c.lgp, c.lgp, c.lgp, c.lgp, c.lgp
+// c.LG_Eevee, c.LG_eevee, c.LGE, c.lgeevee, c["Let's Go, Eevee!"] = c.lge, c.lge, c.lge, c.lge, c.lge
+// c.colosseum = c.colo
+// c.super_md = c.md_super
+// c.osA = c.osa
+// c.TL = c.tl
+// c.unova = c.unima
+// c.orre = c.auros
+// c.mele_mele = c.giallo
+// c.mele_Mele = c.mele_mele
+// c.akala = c.psico
+// c.ula_ula = c.rosso
+// c.ula_Ula = c.ula_ula
+// c.poni = c.spettro
+// c.decolora = c.cristalline
+// c.atk = c.attacco
+// c.spatk = c.attacco_speciale
+// c.def = c.difesa
+// c.spdef = c.difesa_speciale
+// c.PS, c.hp = c.ps, c.ps
+// c.spec = c.speciali
+// c.spe = c['velocità']
+// c['pokéAthlon'], c['pokéathlon'] = c.thlon, c.thlon
+// c.zona_cave, c.zona_Grotta, c.zona_caverna = c.zona_grotta, c.zona_grotta, c.zona_grotta
+// c.zona_Terra, c.zona_land = c.zona_terra, c.zona_terra
+// c.zona_Foresta, c.zona_bosco, c.zona_forest = c.zona_foresta, c.zona_foresta, c.zona_foresta
+// c.zona_Nebbia, c.zona_fog = c.zona_nebbia, c.zona_nebbia
+// c.zona_Palude, c.zona_marsh = c.zona_palude, c.zona_palude
+// c.zona_Cenere, c.zona_ash = c.zona_cenere, c.zona_cenere
+// c.zona_Rovine, c.zona_ruins = c.zona_rovine, c.zona_rovine
+// c.zona_Sabbia, c.zona_sand = c.zona_sabbia, c.zona_sabbia
+// c.zona_Lago, c.zona_lake = c.zona_lago, c.zona_lago
+// c.zona_Oceano, c.zona_ocean = c.zona_oceano, c.zona_oceano
+// c.zona_Sottacqua, c.zona_underwater = c.zona_sottacqua, c.zona_sottacqua
+// c.zona_Montagna, c.zona_mountain = c.zona_montagna, c.zona_montagna
+// c.zona_Vulcano, c.zona_volcano = c.zona_vulcano, c.zona_vulcano
+// c.zona_Neve, c.zona_snow = c.zona_neve, c.zona_neve
+// c.zona_Spazio, c.zona_space = c.zona_spazio, c.zona_spazio
+// c.zona_Distorsione, c.zona_distortion = c.zona_distorsione, c.zona_distorsione
+// c.zona_Ombra, c.zona_shadow = c.zona_ombra, c.zona_ombra
+// c.zona_Edificio, c.zona_building, c.zona_palazzo = c.zona_edificio, c.zona_edificio, c.zona_edificio
+// c.zona_Strada, c.zona_road = c.zona_strada, c.zona_strada
+// c.zona_Citta, c.zona_city, c.zona_City = c.zona_citta, c.zona_citta, c.zona_citta
+// c['zona_città'], c['zona_Città'] = c.zona_citta, c.zona_citta
+// c.zona_normale, c.zona_Normale = c.normale, c.normale
+// c.zona_fuoco, c.zona_Fuoco = c.fuoco, c.fuoco
+// c.zona_acqua, c.zona_Acqua = c.acqua, c.acqua
+// c.zona_erba, c.zona_Erba = c.erba, c.erba
+// c.zona_elettro, c.zona_Elettro = c.elettro, c.elettro
+// c.zona_lotta, c.zona_Lotta = c.lotta, c.lotta
+// c.zona_volante, c.zona_Volante = c.volante, c.volante
+// c.zona_veleno, c.zona_Veleno = c.veleno, c.veleno
+// c.zona_coleot, c.zona_Coleot = c.coleottero, c.coleottero
+// c.zona_coleottero, c.zona_Coleottero = c.coleottero, c.coleottero
+// c.zona_roccia, c.zona_Roccia = c.roccia, c.roccia
+// c.zona_terratipo, c.zona_Terratipo = c.terra, c.terra
+// c.zona_psico, c.zona_Psico = c.psico, c.psico
+// c.zona_ghiaccio, c.zona_Ghiaccio = c.ghiaccio, c.ghiaccio
+// c.zona_drago, c.zona_Drago = c.drago, c.drago
+// c.zona_spettro, c.zona_Spettro = c.spettro, c.spettro
+// c.zona_buio, c.zona_Buio = c.buio, c.buio
+// c.zona_acciaio, c.zona_Acciaio = c.acciaio, c.acciaio
+// c.zona_folletto, c.zona_Folletto = c.folletto, c.folletto
+// c.zona_rosso, c.zona_Rosso = c.rosso, c.rosso
+// c.zona_blu, c.zona_Blu = c.blu, c.blu
+// c.zona_verde, c.zona_Verde = c.verde, c.verde
+// c.zona_giallo, c.zona_Giallo = c.giallo, c.giallo
+// c.amaro = c.acume
+// c.secco = c.bellezza
+// c.pepato = c.classe
+// c.dolce = c.grazia
+// c.aspro = c.grinta
+// c.arcobaleno_gcc = c.incolore_gcc
+// c['oscurità_gcc'] = c.oscurita_gcc
+// c.aiuto_gcc = c.supporto_gcc
+// c.trainer_gcc = c.allenatore_gcc
+// c['poké-body_gcc'] = c['pokébody_gcc']
+// c['poké-power_gcc'] = c['poképower_gcc']
+// c.fabbrica = c.azienda
+// c.MT_e_MN = c.macchine
+// c['poké_Ball'] = c['poké_ball']
+// c.cristalli_Z = c.cristalli_z
+// c['acqua 1_uova'] = c.acqua_1_uova
+// c.coleot_uova = c.coleot_uova
+// c['acqua 3_uova'] = c.acqua_3_uova
+// c['acqua 2_uova'] = c.acqua_2_uova
+// c.DW, c['dream world'] = c.dw, c.dw
+// c.arancione = c.orange
+// c['000'] = c['000000']

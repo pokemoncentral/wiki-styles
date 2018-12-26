@@ -15,10 +15,9 @@
 }
 
 ///
-/// Removes the portion of a string ranging between
-/// two indexes, bounds included. Both indexes can be
-/// negative, which means counting from the end of the
-/// string backwards.
+/// Removes the portion of a string ranging between two indexes, bounds
+/// included. Both indexes can be negative, which means counting backwards
+/// from the end of the string.
 ///
 /// @param {string} $string - The source string.
 /// @param {int} $start - Start of the slice to be removed.
@@ -29,4 +28,15 @@
     $lead: str-slice($string, 1, $start - 1);
     $trail: str-slice($string, $end + 1, str-length($string));
     @return unquote("#{$lead}#{$trail}");
+}
+
+///
+/// Determines whether a string is a prefix of a given string.
+///
+/// @param {string} $string - The string that shoudl contain the prefix.
+/// @param {string} $prefix - The prefix being checked.
+/// @return {boolean} Whether $prefix is a prefix of $string.
+///
+@function str-is-prefix($string, $prefix) {
+    @return str-slice($string, 1, str-length($prefix)) == $prefix;
 }

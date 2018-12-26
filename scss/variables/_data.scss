@@ -24,6 +24,12 @@ $types: (
     volante
 );
 
+$damage-categories: (
+    fisico,
+    speciale,
+    stato
+);
+
 $games: (
     verde,
     rosso,
@@ -51,5 +57,9 @@ $games: (
     rubino-omega,
     zaffiro-alpha,
     sole,
-    luna
+    luna,
+    ultrasole,
+    ultraluna,
+    lgp,
+    lge
 );
