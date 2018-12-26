@@ -9,7 +9,7 @@ Overused styles
 
 **************************************************/
 
-.black-text, .black-white {
+.black-text, .text-black {
     &, & a {
         color: get-color(000000);
     }
@@ -26,6 +26,12 @@ Overused styles
 .white-text, .text-white {
     &, & a {
         color: get-color(ffffff);
+    }
+}
+
+@each $category in $damage-categories {
+    .text-#{$category}, .#{$category}-text {
+        color: get-color($category, text);
     }
 }
 
