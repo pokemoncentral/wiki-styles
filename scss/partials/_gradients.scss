@@ -10,10 +10,8 @@ Gradients styles
 
 // Type gradients
 
-$all-types: _concat($types, coleot);
-
-@each $type0 in $all-types {
-    @each $type1 in $all-types {
+@each $type0 in $types {
+    @each $type1 in $types {
         // Need to use str-prefix to consider colet and coleottero the same
         $is-same: str-is-prefix($type0, $type1)
             or str-is-prefix($type1, $type0);
@@ -25,6 +23,22 @@ $all-types: _concat($types, coleot);
             background-image: linear-gradient(to right, $color0, $color1);
         }
     }
+
+    .horiz-grad-#{$type0} {
+        @extend .horiz-grad-#{$type0}-#{$type0};
+    }
+
+    .horiz-grad-#{$type0}-coleot {
+        @extend .horiz-grad-#{$type0}-coleottero;
+    }
+
+    .horiz-grad-coleot-#{$type0} {
+        @extend .horiz-grad-coleottero-#{$type0};
+    }
+}
+
+.horiz-grad-coleot-coleot, .horiz-grad-coleot {
+    @extend .horiz-grad-coleottero-coleottero;
 }
 
 // Damage categories gradients
