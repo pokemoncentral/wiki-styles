@@ -5,7 +5,6 @@
 $colors: (
 
     // Types
-
     acciaio: (normale: #AAAABB, light: #DFDFE1, dark: #74747B),
     acqua: (normale: #3399FF, light: #9FCEFF, dark: #0D6AC8),
     buio: (normale: #775544, light: #BDA396, dark: #442C21),
@@ -28,13 +27,11 @@ $colors: (
     volante: (normale: #6699FF, light: #9CBDFF, dark: #3678FF),
 
     // Damage categories
-
     fisico: (normale: #C92112, light: #D96358, dark: #82150B, text: #F67A1A),
     speciale: (normale: #4F5870, light: #83899A, dark: #333948, text: #FFFFFF),
     stato: (normale: #8C888C, light: #AEABAE, dark: #5B585B, text: #F7F7F7),
 
     // Games
-
     verde: (normale: #11BB11, light: #A7DB8D, dark: #0B7A0B),
     rosso: (normale: #FF1111, light: #FF7777, dark: #A60B0B),
     blu: (normale: #1111FF, light: #7777FF, dark: #0B0BA6),
@@ -83,7 +80,6 @@ $colors: (
     conquest: (normale: #EC9722, light: #F8DF9D, dark: #945F13),
 
     // Regions
-
     kanto: (normale: #FF3600, light: #FFA48C, dark: #6A0000),
     johto: (normale: #FF7D00, light: #FFC791, dark: #9D4E00),
     hoenn: (normale: #FFC300, light: #FFF99A, dark: #BA8300),
@@ -100,7 +96,6 @@ $colors: (
     cristalline: (normale: #FFB200, light: #FFD36B, dark: #AE7E00),
 
     // Statistics
-
     abilita: (normale: #317BEE, light: #83B4FF, dark: #2052A4),
     agilita: (normale: #38BD62, light: #83EEA4, dark: #188339),
     attacco: (normale: #EACA2F, light: #FFFBE6, dark: #B88C00),
@@ -115,7 +110,6 @@ $colors: (
     thlon: (normale: #90a8e0, light: #B7C6EB, dark: #5E6D92),
 
     // Zones
-
     zona-grotta: (normale: #CC8F66, light: #E0B192, dark: #A66A42),
     zona-terra: (normale: #75C977, light: #A2E0A3, dark: #4AA14D),
     zona-foresta: (normale: #3A822D, light: #71AD64, dark: #34612D),
@@ -143,26 +137,22 @@ $colors: (
     zona-citta: (normale: #D9D9D9, light: #E6E6E6, dark: #CCCCCC),
 
     // PCWiki
-
     pcwiki: (normale: #7CBAFF, light: #D0E6FF, medium-light: #B1D6FF,
         medium-dark: #5BA0FF, dark: #0078FF),
 
     // Time of the day
-
     giorno: (normale: #5ED0FF, light: #96E0FF, dark: #4192B3),
     mattina: (normale: #FFFFAA, light: #FFFFC8, dark: #B3B377),
     notte: (normale: #003366, light: #597A9B, dark: #002347, text: #FFFF99),
     sera: (normale: #FF8741, light: #FEAD7E, dark: #AD3F00),
 
     // Seasons
-
     autunno: (normale: #F89058, light: #FAB189, dark: #AE653D),
     inverno: (normale: #F0D8F8, light: #F4E3FA, dark: #A897AE),
     estate: (normale: #78D0F8, light: #A0DEFA, dark: #5492AE),
     primavera: (normale: #B0F858, light: #C7FA89, dark: #7BAE3D),
 
     // Contests
-
     acume: (normale: #78C850, light: #A7DB8D, dark: #4E8234),
     bellezza: (normale: #6890F0, light: #9DB7F5, dark: #445E9C),
     classe: (normale: #F08030, light: #F5AC78, dark: #9C531F),
@@ -171,7 +161,6 @@ $colors: (
     grinta: (normale: #F8D030, light: #FAE078, dark: #A1871F),
 
     // GCC
-
     acqua-gcc: (normale: #5BC7E5, light: #94DBEE, dark: #3B8295),
     lampo-gcc: (normale: #FAB536, light: #FCCE7C, dark: #A37523),
     drago-gcc: (normale: #C6A114, light: #DAC266, dark: #81690D),
@@ -192,7 +181,6 @@ $colors: (
     stadio-gcc: (normale: #90E183, light: #B7EBAE, dark: #5E9255),
 
     // Battle frontier
-
     arena: (normale: #FFC115, light: #FFD767, dark: #A67E0E),
     azienda: (normale: #3291C1, light: #7AB7D7, dark: #215E7E),
     cupola: (normale: #AD32DA, light: #D35CFF, dark: #71009B),
@@ -206,7 +194,6 @@ $colors: (
     torre: (normale: #D6553C, light: #E49080, dark: #8B3727),
 
     // Bag pockets
-
     bacche: (normale: #6161FD, light: #BBC5FF, dark: #08088C),
     macchine: (normale: #9248E5, light: #D4ABFD, dark: #1F0042),
     poke-ball: (normale: #C88820, light: #E0A038, dark: #B87008),
@@ -218,7 +205,6 @@ $colors: (
     cristalli-z: (normale: #AB6900, light: #FFB744, dark: #4D1F00),
 
     // Egg groups
-
     mostro-uova: (normale: #D25064, light: #D25064, dark: #933846),
     acqua-1-uova: (normale: #97B5FD, light: #97B5FD, dark: #697FB1),
     coleottero-uova: (normale: #AAC22A, light: #AAC22A, dark: #77881D),
@@ -236,8 +222,18 @@ $colors: (
     sconosciuto-uova: (normale: #0080C0, light: #0080C0, dark: #005986),
     asessuato-uova: (normale: #333333, light: #333333, dark: #232323),
 
-    // Misc
+    // Social
+    facebook: (normale: #3B5998, light: #3B5998, dark: #3B5998),
+    instagram: (normale: #E03C63, light: #E03C63, dark: #E03C63),
+    telegram: (normale: #1DA1F2, light: #1DA1F2, dark: #1DA1F2),
+    twitter: (normale: #1DA1F2, light: #1DA1F2, dark: #1DA1F2),
+    youtube: (normale: #FF0000, light: #FF0000, dark: #FF0000),
 
+    // Pokémon Central flavors
+    chat: (normale: #43BDFF, light: #43BDFF, dark: #009AEE),
+    forum :(normale: #DB435F, light: #DB435F, dark :#942C3F),
+
+    // Misc
     background: (normale: #EAEAEA, light: #EAEAEA, dark: #EAEAEA),
     bronzo: (normale: #DEAB79, light: #EBCDAF, dark: #856749),
     bulba: (normale: #C4E673, light: #E0F2B6, dark: #80964B),
