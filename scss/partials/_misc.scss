@@ -82,8 +82,10 @@ Miscellaneous styles
 .sitenotice {
     @extend .roundy-20, .pull-center, .text-center;
 
+    box-sizing: border-box;
+    margin-top: 1.5ex;
     margin-bottom: 1.5ex;
-    padding: 0.5ex;
+    padding: 0.5ex 1ex;
     background: linear-gradient(to right,
         get-color(pcwiki, light), get-color(pcwiki, normale));
 }
