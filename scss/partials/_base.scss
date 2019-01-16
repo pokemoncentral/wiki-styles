@@ -35,7 +35,7 @@ Root styles
 **************************************************/
 
 html, body {
-    font-family: map-get($font-families, base);
+    font-family: map-get($font-families, base) !important;
 }
 
 body {
