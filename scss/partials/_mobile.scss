@@ -9,9 +9,12 @@ Overriding of system mobile styles
 
 ******************************************/
 
-.content {
-    tbody {
-        width: 100%;
-        display: table;
+/*
+    The id in he selector is to make the selector more specific and be sure
+    that these styles override the built-in mediawiki ones.
+*/
+#mw-content-text {
+    table {
+        border-collapse: separate;
     }
 }
