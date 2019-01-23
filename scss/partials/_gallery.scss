@@ -8,28 +8,27 @@ Gallery styles
 
 **************************************************/
 
+ul.gallery {
+    @extend .flex, .flex-row, .flex-wrap, .flex-items-stretch;
+}
+
 li.gallerybox {
     @extend .roundy;
-    display: inline-block;
+
+    margin: px-to-rem(2px);
     background: linear-gradient(to right,
         get-color(pcwiki, light), get-color(pcwiki, normale));
-    height: px-to-rem(205px);
-    vertical-align: top;
 
     div.thumb {
-        $margin: px-to-rem(2px);
+        @extend .roundy, .text-center;
 
-        @extend .roundy;
-        margin: $margin $margin 0 $margin;
-        text-align: center;
+        margin: 0.125rem 0.125rem 0 0.125rem;
     }
 }
 
 div.gallerytext {
-    padding: 0 px-to-rem(4px);
-    height: px-to-rem(50px);
+    padding: 0 0.25rem;
     font-size: 85%;
     line-height: 1.1;
-    overflow: hidden;
     word-wrap: break-word;
 }
