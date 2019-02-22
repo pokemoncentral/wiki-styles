@@ -41,6 +41,16 @@ Gradients styles
     @extend .horiz-grad-coleottero-coleottero;
 }
 
+/* Sconosciuto type is most often single */
+
+.horiz-grad-sconosciuto-sconosciuto, .horiz-grad-sconosciuto {
+    $color0: get-color(sconosciuto, light);
+    $color1: get-color(sconosciuto, normale);
+
+    background-size: 100%;
+    background-image: linear-gradient(to right, $color0, $color1);
+}
+
 // Damage categories gradients
 
 @each $category in $damage-categories {
