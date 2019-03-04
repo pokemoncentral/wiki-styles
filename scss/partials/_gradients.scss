@@ -58,12 +58,12 @@ Gradients styles
     $end: get-color($item, normale);
     $text: get-color($item, text);
 
-    .box.#{$item} {
+    .box-#{$item} {
         background-size: 100%;
         background-image: linear-gradient(to right, $start, $end);
 
         @if $text != #000000 and $text != #FFFFFF {
-            color: $text;
+            @include text-color($text);
         }
     }
 }
