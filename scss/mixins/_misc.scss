@@ -1,0 +1,15 @@
+////
+///     This file contains miscellaneous mixin that don't have home anywhere
+///     else
+////
+
+///
+/// Sets the text color on an element and its descendants links.
+///
+/// @param {color} $color - The color to set the text to.
+///
+@mixin text-color($color) {
+    &, & a {
+        color: $color;
+    }
+}
