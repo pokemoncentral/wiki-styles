@@ -41,14 +41,19 @@ Gradients styles
     @extend .horiz-grad-coleottero-coleottero;
 }
 
-// Damage categories gradients
+// Box gradients
 
-@each $category in $damage-categories {
-    $start: get-color($category, light);
-    $end: get-color($category, normale);
+@each $item in _concat($types, $damage-categories) {
+    $start: get-color($item, dark);
+    $end: get-color($item, normale);
+    $text: get-color($item, text);
 
-    .horiz-grad-#{$category} {
+    .box.#{$item} {
         background-size: 100%;
         background-image: linear-gradient(to right, $start, $end);
+
+        @if $text != #000000 and $text != #FFFFFF {
+            color: $text;
+        }
     }
 }

@@ -11,7 +11,6 @@
 /// @return {number} $px converted to rem unit, using $rem as root font-size.
 ///
 @function px-to-rem($px, $rem: 16px) {
-
     // Division strips unit, multiplication adds rem
     @return $px / $rem * 1rem;
 }

@@ -1,0 +1,34 @@
+////
+///     This file contains classes for all box styles but gradients, which are
+///     found in the gradients partial.
+////
+
+/**************************************************
+
+Box styles
+
+**************************************************/
+
+.box {
+    @include text-color(get-color(ffffff));
+
+    border-radius: px-to-rem($unitless-roundyness * 1px);
+    text-align: center;
+
+    &.thick {
+        border-radius: px-to-rem(5px);
+        padding: 0.5ex;
+    }
+
+    &.thin {
+        border-radius: px-to-rem(5px);
+        padding: 0 0.5ex;
+        font-size: 90%;
+    }
+
+    &.tiny {
+        border-radius: px-to-rem(5px);
+        padding: 0 0.3ex;
+        font-size: smaller;
+    }
+}
