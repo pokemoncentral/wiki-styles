@@ -24,6 +24,8 @@ $types: (
     volante
 );
 
+$boxtypes: join((sconosciuto, ombra), $types);
+
 $damage-categories: (
     fisico,
     speciale,

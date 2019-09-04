@@ -53,7 +53,7 @@ Gradients styles
 
 // Box gradients
 
-@each $item in _concat($types, $damage-categories) {
+@each $item in _concat($boxtypes, $damage-categories) {
     $start: get-color($item, dark);
     $end: get-color($item, normale);
     $text: get-color($item, text);
