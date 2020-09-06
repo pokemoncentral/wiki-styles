@@ -24,13 +24,13 @@
   },
   "homepage": "https://github.com/pokemoncentral/wiki-styles#readme",
   "dependencies": {
-    "bootstrap": "^4.2.1",
-    "gulp": "^4.0.0",
-    "gulp-autoprefixer": "^6.0.0",
+    "bootstrap": "^4.5.2",
+    "gulp": "^4.0.2",
+    "gulp-autoprefixer": "^6.1.0",
     "gulp-remote-src": "^0.4.4",
-    "gulp-sass": "^4.0.2",
+    "gulp-sass": "^4.1.0",
     "gulp-sass-inline-svg": "^1.0.3",
-    "gulp-svgmin": "^2.1.0",
+    "gulp-svgmin": "^2.2.0",
     "sassdash": "^0.9.0"
   },
   "browserslist": [
