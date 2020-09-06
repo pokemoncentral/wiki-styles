@@ -261,7 +261,7 @@ $colors: (
 
 // Aliases
 $colors: map-add-alias($colors, coleot, coleottero);
-// $colors: map-add-alias($colors, unquote('???'), sconosciuto);
+$colors: map-add-alias($colors, unquote('\\?\\?\\?'), sconosciuto);
 //
 // // Glitch aliases
 // $colors: map-add-alias($colors, glitch, sconosciuto);
