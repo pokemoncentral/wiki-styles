@@ -22,6 +22,8 @@ const sassInlineSvg = require('gulp-sass-inline-svg');
 const sassDash = require.resolve('sassdash/package.json');
 const svgmin = require('gulp-svgmin');
 
+sass.compiler = require('dart-sass');
+
 /**
  * Gulp-related configuration values.
  */

@@ -25,6 +25,7 @@
   "homepage": "https://github.com/pokemoncentral/wiki-styles#readme",
   "dependencies": {
     "bootstrap": "^4.5.2",
+    "dart-sass": "^1.25.0",
     "gulp": "^4.0.2",
     "gulp-autoprefixer": "^6.1.0",
     "gulp-remote-src": "^0.4.4",
