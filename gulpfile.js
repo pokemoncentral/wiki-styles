@@ -11,8 +11,9 @@
 
 
 const bootstrap = require.resolve('bootstrap/package.json');
-const fs= require('fs');
 const gulp = require('gulp');
+const icons = require('./json/icons.json');
+const jsonImporter = require('node-sass-json-importer');
 const path = require('path');
 const prefix = require('gulp-autoprefixer');
 const remoteSrc = require('gulp-remote-src');
@@ -27,15 +28,13 @@ const svgmin = require('gulp-svgmin');
 const conf = {
     dest: 'css',
 
-    /*
-        The icons list is taken from the SCSS file. It is much easier than
-        taking it from JavaScript in SCSS.
-    */
-    icons: fs.readFileSync(path.join('scss', 'variables', '_icons.scss'),
-                {encoding: 'UTF-8'})
-            .match(/\$icons: ([\w,\s]+);/)[1]
-            .split(/,\s*/)
-            .map(icon => icon.toLowerCase() + '.svg'),
+    icons: icons.map(icon => {
+        const iconName = icon.iconName || icon.id.toLowerCase();
+        const baseUrl = icon.baseUrl
+            ? icon.baseUrl.match("'?([^']+)'?")[1]
+            : 'https://media.pokemoncentral.it/social/';
+        return `${ baseUrl }/${ iconName }.svg`;
+    }),
 
     src: 'scss'
 };
@@ -49,14 +48,17 @@ const opts = {
     },
 
     remote: {
-        base: 'https://media.pokemoncentral.it/social/'
+        base: null
     },
 
     scss: {
+        importer: jsonImporter(),
+
         includePaths: [
             bootstrap,
             sassDash
-        ].map(lib => path.join(path.dirname(lib), 'scss')),
+        ].map(lib => path.join(path.dirname(lib), 'scss'))
+        .concat([`${ __dirname }/json`]),
 
         indentWidth: 4,
         outputStyle: 'expanded'

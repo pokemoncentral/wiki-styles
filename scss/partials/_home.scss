@@ -22,11 +22,9 @@ Home styles
         }
     }
 
-    @each $icon-id in $icons {
-        $icon-name: to-lower-case($icon-id);
-
+    @each $icon-id in _pluck($icons, 'id') {
         #home-#{$icon-id}-icon a::before {
-            @extend %icon-#{$icon-name};
+            @extend %icon-#{$icon-id};
         }
     }
 }

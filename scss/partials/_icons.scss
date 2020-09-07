@@ -17,17 +17,20 @@ Shared styles for icons
 }
 
 // Standard icons
-@each $icon in _map($icons, to-lower-case) {
-    %icon-#{$icon} {
-        background-image: inline-svg($icon, get-color($icon));
+$icon-svgs: _map($icons, _ary(_partial-right(_at, 'id', 'iconName'), 1));
+@each $icon-name, $svg-name in $icon-svgs {
+    %icon-#{$icon-name} {
+        background-image: inline-svg($svg-name,
+            get-color(to-lower-case($icon-name)));
     }
-
 }
 
 // Pokémon Central logo variations
-@each $logo in _map($pc-logos, to-lower-case) {
+@each $logo in $pc-logos {
+    $color-name: to-lower-case($logo);
+
     %icon-#{$logo} {
-        background-image: inline-svg(pc-logo, get-color($logo),
-            get-color($logo, dark));
+        background-image: inline-svg(pc-logo, get-color($color-name),
+            get-color($color-name, dark));
     }
 }

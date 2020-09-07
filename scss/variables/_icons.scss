@@ -2,8 +2,26 @@
 ///     This file holds all icons related variables
 ////
 
+///
+/// Normalize an icon map, so that it has both 'id' and 'iconName' keys.
+/// 'iconName' is set to the lowercase value of 'id' if not present.
+///
+/// @param {Map} $icon - The icon map to be normalized
+/// @return {Map} $icon with normalized keys
+///
+@function normalize-icons($icon) {
+    /*
+        By having the new map as first argument, we override 'iconName' if
+        present in $icon
+    */
+    @return map-merge((
+        'iconName': to-lower-case(map-get($icon, 'id'))
+    ), $icon);
+}
+
 // Normal icons
-$icons: Facebook, Instagram, Telegram, Twitter, YouTube;
+@import 'icons.json';
+$icons: _map($icons, _ary(normalize-icons, 1));
 
 // Pokémon Central logo variations
 $pc-logos: Chat, Forum;
