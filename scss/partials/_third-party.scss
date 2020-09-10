@@ -26,16 +26,3 @@ Twitter timeline desktop styles
     */
     position: absolute !important;
 }
-
-/**************************************************
-
-Zebra tooltip styles
-
-**************************************************/
-
-.Zebra_Tooltip_Message {
-    /*
-    !important to override Zebra_Tooltip default, imported after this file.
-    */
-    box-shadow: none !important;
-}
