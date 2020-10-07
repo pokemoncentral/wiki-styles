@@ -8,7 +8,7 @@ Sidebar styles
 
 **************************************************/
 
-.vector-menu-content-list {
+nav[id='p-Pokémon Central'] {
 
     [id^="n-"] a::before {
         @extend %icon;
