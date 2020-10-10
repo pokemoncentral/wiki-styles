@@ -39,7 +39,7 @@ html, body {
 }
 
 body.skin-vector {
-    font-size: map-get($font-sizes, body);
+    font-size: map-get($font-sizes, body-vector);
 }
 
 #mw-content-text *:not(.thumbinner) {
