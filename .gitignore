@@ -9,6 +9,7 @@
 
 # IDE files
 /.idea
+/.vscode
 
 # Misc
 /.sass-cache
