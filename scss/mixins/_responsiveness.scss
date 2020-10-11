@@ -86,11 +86,10 @@
         $smaller: nth($breakpoints, $this-index - 1);
 
         /*
-            #{$smaller} responsive visible class:
-            desktop-first approach means that elements
-            should be hidden from the immediately larger
-            breakpoint upwards, that leads to #{$smaller}
-            being in #{$breakpoint} media query.
+            #{$smaller} responsive visible class: desktop-first approach means
+            that elements should be hidden from the immediately larger
+            breakpoint upwards, that leads to #{$smaller} being in
+            #{$breakpoint} media query.
         */
         .visible-#{$smaller} {
             display: none;

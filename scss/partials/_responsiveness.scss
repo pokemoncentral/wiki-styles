@@ -35,10 +35,8 @@ Responsive design classes
 
         /* #{$breakpoint} responsive-margins classes */
 
-        /*
-            !important because margins are
-            usually set in style tags
-        */
+        /* !important because margins are usually set in style tags */
+
         .no-margin-#{$breakpoint} {
             margin-right: initial !important;
             margin-left: initial !important;
