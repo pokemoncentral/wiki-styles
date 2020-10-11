@@ -38,7 +38,7 @@ html, body {
     font-family: map-get($font-families, base) !important;
 }
 
-body {
+body.skin-vector {
     font-size: map-get($font-sizes, body);
 }
 

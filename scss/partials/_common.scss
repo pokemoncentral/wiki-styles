@@ -22,6 +22,10 @@ Desktop-only styles
 
 **************************************************/
 
+body.skin-minerva {
+    @extend .skin-vector;
+}
+
 .sitenotice {
     font-size: 0.875em;
 }
