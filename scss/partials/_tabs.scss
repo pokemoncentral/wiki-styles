@@ -1,0 +1,19 @@
+////
+///     This file contains the styles for tabs.
+////
+
+.tabs-select {
+	cursor: pointer;
+}
+
+.tabs-select-active {
+	color: red;
+}
+
+.tabs-tab {
+	display: none;
+}
+
+.tabs-tab.tabs-tab-active {
+	display: block;
+}
