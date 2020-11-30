@@ -8,7 +8,7 @@ Sidebar styles
 
 **************************************************/
 
-nav[id='p-Pokémon Central'] {
+nav[id='p-Pokémon Central'], div[id="p-Pok.C3.A9mon_Central"] {
 
     [id^="n-"] a::before {
         @extend %icon;
