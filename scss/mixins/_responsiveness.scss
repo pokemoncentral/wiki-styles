@@ -15,9 +15,11 @@
     $selector: _join(list-purge($width-type width $breakpoint $width), '-');
     $width-prop: _join(list-purge($width-type width), '-');
     $is-perc: type-of($width) == 'number';
+    $prop-val: if($is-perc, percentage($width / 100),
+                  if(($width-type == max) and ($width == auto), none, $width));
 
     .#{$selector} {
-        #{$width-prop}: if($is-perc, percentage($width / 100), $width);
+        #{$width-prop}: $prop-val;
 
         @if $is-perc and $width >= $no-float-with {
             float: none;
