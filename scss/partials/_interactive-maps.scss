@@ -1,0 +1,135 @@
+////
+///     This styles contains styles related to interactive and zoomable maps.
+////
+
+/*
+ * MapaLPAInteractivo v1.5
+ * Copyright (c) 2022 Jesús Martínez (User:Ciencia_Al_Poder)
+ *
+ * Styles for zoomable and interactive maps.
+ *
+ * This program is free software; you can redistribute it and/or modify
+ *   it under the terms of the GNU General Public License as published by
+ *   the Free Software Foundation; either version 2 of the License, or
+ *   (at your option) any later version
+*/
+
+/**************************************************
+
+Zoomable maps
+
+**************************************************/
+
+.zoomablemap {
+	position: relative;
+	overflow: auto;
+}
+
+.zoomablemap.loadcomplete {
+	overflow: hidden;
+}
+
+.zoomablemap > .mapcontent {
+	position: relative;
+	max-height: 90vh;
+	overflow: hidden;
+	cursor: move;
+	user-select: none;
+	touch-action: none;
+}
+
+.zoomablemap > .mapcontent > .mapinner {
+	transform-origin: left top;
+}
+
+.zoomablemap.loadcomplete > .mapcontent > .mapinner {
+	transition: transform .5s, height .5s;
+}
+
+.zoomablemap.loadcomplete > .mapcontent.pointerdown > .mapinner {
+	transition: none;
+}
+
+.zoomablemap > .mapcontrols {
+	position: absolute;
+	top: 10px;
+	left: 10px;
+	width: 20px;
+	font-family: sans-serif;
+	box-shadow: 1px 1px 2px #777;
+	user-select: none;
+}
+
+.zoomablemap > .mapcontrols > .control {
+	box-sizing: border-box;
+	width: 20px;
+	height: 20px;
+	text-align: center;
+	font-weight: bold;
+	font-size: 18px;
+	line-height: 18px;
+	background: #eeeeee;
+	background: linear-gradient(135deg, #eeeeee 0%,#cccccc 100%);
+	color: #000000;
+	border: 1px solid #222;
+	cursor: pointer;
+}
+
+.zoomablemap > .mapcontrols > .control:active {
+	background: linear-gradient(315deg, #eeeeee 0%,#cccccc 100%);
+}
+
+
+/**************************************************
+
+Interactive maps
+
+**************************************************/
+.zoomablemap {
+	border: 1px solid brown;
+}
+
+#interactive-map {
+	display: grid;
+	grid-template-columns: 1fr;
+}
+
+#interactive-map > div {
+	grid-row-start: 1;
+	grid-column-start: 1;
+}
+
+.zoomablemap .markupmap {
+  cursor: crosshair;
+}
+
+.zoomablemap .mapcontent.dragging .markupmap {
+  cursor: inherit;
+}
+
+#interactive-map-controller .det > span,
+#interactive-map-controller .map > span {
+  display: inline-block;
+  border: 1px solid #3c335f;
+  border-radius: 5px;
+  padding: 2px 6px;
+  margin-right: .5em;
+  background: #3c335f;
+  color: #fff;
+  font-size: 90%;
+  white-space: nowrap;
+  cursor: pointer;
+}
+
+#interactive-map-controller .det > input,
+#interactive-map-controller .map > input {
+  float: left;
+  margin-left: -50px;
+  z-index: -1;
+  opacity: 0.01;
+}
+#interactive-map-controller .det > input:checked + span,
+#interactive-map-controller .map > input:checked + span {
+  background: #bbf;
+  color: #333;
+}
