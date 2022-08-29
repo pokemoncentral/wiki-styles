@@ -17,12 +17,10 @@ const jsonImporter = require('node-sass-json-importer');
 const path = require('path');
 const prefix = require('gulp-autoprefixer');
 const remoteSrc = require('gulp-remote-src');
-const sass = require('gulp-sass');
+const sass = require('gulp-sass')(require('dart-sass'));
 const sassInlineSvg = require('gulp-sass-inline-svg');
 const sassDash = require.resolve('sassdash/package.json');
 const svgmin = require('gulp-svgmin');
-
-sass.compiler = require('dart-sass');
 
 /**
  * Gulp-related configuration values.
