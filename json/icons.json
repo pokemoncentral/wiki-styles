@@ -15,11 +15,6 @@
         "id": "YouTube"
     },
     {
-        "id": "Discord",
-        "iconName": "f8389ca1a741a115313bede9ac02e2c0",
-        "baseUrl": "'https://discord.com/assets'"
-    },
-    {
         "id": "GitHub",
         "iconName": "Octicons-mark-github",
         "baseUrl": "'https://upload.wikimedia.org/wikipedia/commons/9/91/'"
