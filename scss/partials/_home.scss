@@ -28,3 +28,12 @@ Home styles
         }
     }
 }
+
+@include media-breakpoint-up(lg) {
+    #home-lmopcw {
+        overflow: hidden scroll;
+        position: absolute;
+        height: calc(100% - 2ex);
+        width: calc(100% - 2ex);
+    }
+}
