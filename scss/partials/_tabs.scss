@@ -2,12 +2,16 @@
 ///     This file contains the styles for tabs.
 ////
 
-.tabs-select {
-	cursor: pointer;
-}
+.tabs-header {
+    .tabs-select {
+        cursor: pointer;
+        display: inline-block;
+        padding: 0 0.5ex 0;
+    }
 
-.tabs-select-active {
-	color: red;
+    .tabs-select-active {
+        color: red;
+    }
 }
 
 .tabs-tab {
@@ -16,4 +20,46 @@
 
 .tabs-tab.tabs-tab-active {
 	display: block;
+}
+
+.tabs.tabs-bordered {
+    border-color: black;
+    border-radius: px-to-rem($unitless-roundyness * 1px);
+
+    .tabs-content {
+        border-radius: inherit;
+        border-style: solid;
+        border-color: inherit;
+        border-width: 0.5ex;
+        background-color: white;
+
+        .tabs-tab {
+            padding: 0.5ex;
+        }
+    }
+
+    .tabs-header {
+        border-color: inherit;
+        border-radius: inherit;
+        padding-inline-start: 2ex;
+        padding-inline-end: 2ex;
+        margin-bottom: -0.4ex;
+
+        .tabs-select {
+            background: lightgray;
+            border-style: solid;
+            border-color: inherit;
+            border-width: 0.5ex;
+            border-radius: inherit;
+            border-bottom-left-radius: 0;
+            border-bottom-right-radius: 0;
+            border-bottom-style: none;
+        }
+
+        .tabs-select.tabs-select-active {
+            background: white;
+            border-bottom-style: solid;
+            border-bottom-color: white;
+        }
+    }
 }
