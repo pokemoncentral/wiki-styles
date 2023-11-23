@@ -63,3 +63,35 @@
         }
     }
 }
+
+.tabs.tabs-transparent {
+    border-radius: px-to-rem($unitless-roundyness * 1px);
+
+    .tabs-content {
+        border-radius: px-to-rem($unitless-roundyness * 1px);
+        background-color: white;
+
+        .tabs-tab {
+            padding: 0.5ex;
+        }
+    }
+
+    .tabs-header {
+        border-radius: inherit;
+        padding-inline-start: 1.5ex;
+        padding-inline-end: 1.5ex;
+
+        .tabs-select {
+            color: inherit;
+            background-color: transparent;
+            border-radius: inherit;
+            border-bottom-left-radius: 0;
+            border-bottom-right-radius: 0;
+        }
+
+        .tabs-select.tabs-select-active {
+            color: black;
+            background-color: white;
+        }
+    }
+}
