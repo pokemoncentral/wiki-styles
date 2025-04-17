@@ -13,17 +13,3 @@ Modal styles
     text-decoration: underline dotted;
     cursor: pointer;
 }
-
-/**************************************************
-
-Twitter timeline desktop styles
-
-**************************************************/
-
-.twitter-timeline {
-    /*
-    !important to override Twitter inline default.
-    */
-    position: absolute !important;
-    width: 100%;
-}
