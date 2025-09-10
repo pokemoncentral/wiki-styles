@@ -1,0 +1,74 @@
+{
+  "lockfile_version": "1",
+  "packages": {
+    "github:NixOS/nixpkgs/nixpkgs-unstable": {
+      "last_modified": "2025-09-05T01:14:44Z",
+      "resolved": "github:NixOS/nixpkgs/ca77296380960cd497a765102eeb1356eb80fed0?lastModified=1757034884&narHash=sha256-PgLSZDBEWUHpfTRfFyklmiiLBE1i1aGCtz4eRA3POao%3D"
+    },
+    "nodejs@16.16.0": {
+      "last_modified": "2022-08-16T08:43:52Z",
+      "plugin_version": "0.0.2",
+      "resolved": "github:NixOS/nixpkgs/6c6409e965a6c883677be7b9d87a95fab6c3472e#nodejs",
+      "source": "devbox-search",
+      "version": "16.16.0",
+      "systems": {
+        "aarch64-darwin": {
+          "outputs": [
+            {
+              "name": "out",
+              "path": "/nix/store/cl3h00ksp4hkwpl8722ad0ka2d9hgna7-nodejs-16.16.0",
+              "default": true
+            },
+            {
+              "name": "libv8",
+              "path": "/nix/store/9rrj30ww8xacaznsbgzbn84y1fin8370-nodejs-16.16.0-libv8"
+            }
+          ],
+          "store_path": "/nix/store/cl3h00ksp4hkwpl8722ad0ka2d9hgna7-nodejs-16.16.0"
+        },
+        "aarch64-linux": {
+          "outputs": [
+            {
+              "name": "out",
+              "path": "/nix/store/hfxdlkaaf1ya3sx34glbbypd3hlf8gja-nodejs-16.16.0",
+              "default": true
+            },
+            {
+              "name": "libv8",
+              "path": "/nix/store/jlil5rgyh2pizrc814dxm1r7shqbw8wv-nodejs-16.16.0-libv8"
+            }
+          ],
+          "store_path": "/nix/store/hfxdlkaaf1ya3sx34glbbypd3hlf8gja-nodejs-16.16.0"
+        },
+        "x86_64-darwin": {
+          "outputs": [
+            {
+              "name": "out",
+              "path": "/nix/store/m4mj5jhslkjf94a3cysf0qh7c79b2yqi-nodejs-16.16.0",
+              "default": true
+            },
+            {
+              "name": "libv8",
+              "path": "/nix/store/s6f723qrh1fycss5v3gpgx4a0jp0am79-nodejs-16.16.0-libv8"
+            }
+          ],
+          "store_path": "/nix/store/m4mj5jhslkjf94a3cysf0qh7c79b2yqi-nodejs-16.16.0"
+        },
+        "x86_64-linux": {
+          "outputs": [
+            {
+              "name": "out",
+              "path": "/nix/store/9f0ihs732i6szxlc63yywgz1zfxs8czp-nodejs-16.16.0",
+              "default": true
+            },
+            {
+              "name": "libv8",
+              "path": "/nix/store/c02rpvklxfm1n54vfl7108h9r2g5ag1j-nodejs-16.16.0-libv8"
+            }
+          ],
+          "store_path": "/nix/store/9f0ihs732i6szxlc63yywgz1zfxs8czp-nodejs-16.16.0"
+        }
+      }
+    }
+  }
+}
